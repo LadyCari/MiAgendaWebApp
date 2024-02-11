@@ -15,7 +15,11 @@ public class PersonajeService {
     @Autowired
     private PersonajeRepository personajeRepository;
 
-    private EntityManager entityManager;
+    private final EntityManager entityManager;
+
+    public PersonajeService(EntityManager entityManager) {
+        this.entityManager = entityManager;
+    }
 
     public List<PersonajeConFotoDTO> getPersonajesConFoto(){
         List<PersonajeConFotoDTO> personajeList = new ArrayList<>();
@@ -31,7 +35,7 @@ public class PersonajeService {
             PersonajeConFotoDTO pj = new PersonajeConFotoDTO();
             pj.setIdPersonaje(Long.valueOf(result[0].toString()));
             pj.setNombre(result[1].toString());
-            pj.setFoto(result[2].toString().getBytes());
+            pj.setFoto((result[2] == null) ? new byte[0] : (result[2].toString().getBytes()));
             pj.setClase(result[3].toString());
             personajeList.add(pj);
         }
