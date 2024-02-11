@@ -1,0 +1,621 @@
+{
+    "items":[
+        {
+            "nombre": "Hoja dulce",
+            "imagen": "https://palia.wiki.gg/images/9/93/Sweet_Leaf.png",
+            "precio": 15,
+            "lumigusanos": 1,
+            "speedyGro": 3,
+            "harversBoost": 0
+        },
+        {
+            "nombre": "Arándano",
+            "imagen": "https://palia.wiki.gg/images/9/9e/Blueberry.png",
+            "precio": 39,
+            "lumigusanos": 1,
+            "speedyGro": 3,
+            "harversBoost": 0
+        },
+        {
+            "nombre": "Manzana",
+            "imagen": "https://palia.wiki.gg/images/7/7d/Apple.png",
+            "precio": 64,
+            "lumigusanos": 1,
+            "speedyGro": 4,
+            "harversBoost": 0
+        },
+        {
+            "nombre": "Hongo",
+            "imagen": "https://palia.wiki.gg/images/5/55/Mountain_Morel.png",
+            "precio": 8,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 3
+        },
+        {
+            "nombre": "Carne ostra",
+            "imagen": "https://palia.wiki.gg/images/6/67/Oyster_Meat.png",
+            "precio": 9,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 3
+        },
+        {
+            "nombre": "Carne sernuk",
+            "imagen": "https://palia.wiki.gg/images/4/46/Sernuk_Meat.png",
+            "precio": 13,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 3
+        },
+        {
+            "nombre": "Ajo silvestre",
+            "imagen": "https://palia.wiki.gg/images/2/2c/Wild_Garlic.png",
+            "precio": 15,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 3
+        },
+        {
+            "nombre": "Carne chapaa",
+            "imagen": "https://palia.wiki.gg/images/b/b8/Chapaa_Meat.png",
+            "precio": 13,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 3
+        },
+        {
+            "nombre": "Zanahoria",
+            "imagen": "https://palia.wiki.gg/images/c/c3/Carrot.png",
+            "precio": 23,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 4
+        },
+        {
+            "nombre": "Tomate",
+            "imagen": "https://palia.wiki.gg/images/9/9d/Tomato.png",
+            "precio": 23,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 4
+        },
+        {
+            "nombre": "Arroz",
+            "imagen": "https://palia.wiki.gg/images/d/da/Rice.png",
+            "precio": 27,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 5
+        },
+        {
+            "nombre": "Hongo brillante",
+            "imagen": "https://palia.wiki.gg/images/8/8d/Brightshroom.png",
+            "precio": 30,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 5
+        },
+        {
+            "nombre": "Cebolla",
+            "imagen": "https://palia.wiki.gg/images/5/51/Onion.png",
+            "precio": 30,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 5
+        },
+        {
+            "nombre": "Pimiento picante",
+            "imagen": "https://palia.wiki.gg/images/9/97/Spicy_Pepper.png",
+            "precio": 32,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 5
+        },
+        {
+            "nombre": "Trigo",
+            "imagen": "https://palia.wiki.gg/images/e/e2/Wheat.png",
+            "precio": 33,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 5
+        },
+        {
+            "nombre": "Maiz",
+            "imagen": "https://palia.wiki.gg/images/f/f8/Corn.png",
+            "precio": 40,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 6
+        },
+        {
+            "nombre": "Papa",
+            "imagen": "https://palia.wiki.gg/images/c/c2/Potato.png",
+            "precio": 45,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 6
+        },
+        {
+            "nombre": "Macarrón",
+            "imagen": "https://palia.wiki.gg/images/thumb/e/e4/Macaron.png/300px-Macaron.png",
+            "precio": 31,
+            "lumigusanos": 1,
+            "speedyGro": 4,
+            "harversBoost": 0
+        },
+        {
+            "nombre": "Pastel de arándanos",
+            "imagen": "https://palia.wiki.gg/images/3/32/Blueberry_Pie.png",
+            "precio": 91,
+            "lumigusanos": 4,
+            "speedyGro": 10,
+            "harversBoost": 0
+        },
+        {
+            "nombre": "tarta de manzana",
+            "imagen": "https://palia.wiki.gg/images/f/fb/Apple_Pie.png",
+            "precio": 148,
+            "lumigusanos": 6,
+            "speedyGro": 15,
+            "harversBoost": 0
+        },
+        {
+            "nombre": "Pastel de cumpleaños",
+            "imagen": "https://palia.wiki.gg/images/8/81/Celebration_Cake.png",
+            "precio": 0,
+            "lumigusanos": 5,
+            "speedyGro": 25,
+            "harversBoost": 0
+        },
+        {
+            "nombre": "Pastel de cumpleaños *",
+            "imagen": "https://palia.wiki.gg/images/8/81/Celebration_Cake.png",
+            "precio": 0,
+            "lumigusanos": 7,
+            "speedyGro": 37,
+            "harversBoost": 0
+        },
+        {
+            "nombre": "Sopa cebolla",
+            "imagen": "https://palia.wiki.gg/images/b/be/Palian_Onion_Soup.png",
+            "precio": 25,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 7
+        },
+        {
+            "nombre": "Sopa verduras *",
+            "imagen": "https://palia.wiki.gg/images/4/4c/Hearty_Vegetable_Soup.png",
+            "precio": 23,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 7
+        },
+        {
+            "nombre": "Guiso de pescado *",
+            "imagen": "https://palia.wiki.gg/images/6/6f/Fish_Stew.png",
+            "precio": 25,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 9
+        },
+        {
+            "nombre": "Ramen *",
+            "imagen": "https://palia.wiki.gg/images/f/f8/Ramen.png",
+            "precio": 34,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 9
+        },
+        {
+            "nombre": "Sopa cremosa de zanahoria",
+            "imagen": "https://palia.wiki.gg/images/1/13/Creamy_Carrot_Soup.png",
+            "precio": 41,
+            "lumigusanos": 2,
+            "speedyGro": 0,
+            "harversBoost": 10
+        },
+        {
+            "nombre": "Salteado carne *",
+            "imagen": "https://palia.wiki.gg/images/9/9a/Meaty_Stir_Fry.png",
+            "precio": 44,
+            "lumigusanos": 2,
+            "speedyGro": 0,
+            "harversBoost": 11
+        },
+        {
+            "nombre": "Chapiñones rellenos de tocino *",
+            "imagen": "https://palia.wiki.gg/images/d/db/Bacon-Stuffed_Mushrooms.png",
+            "precio": 0,
+            "lumigusanos": 2,
+            "speedyGro": 0,
+            "harversBoost": 12
+        },
+        {
+            "nombre": "Cena bistec",
+            "imagen": "https://palia.wiki.gg/images/d/df/Steak_Dinner.png",
+            "precio": 50,
+            "lumigusanos": 2,
+            "speedyGro": 0,
+            "harversBoost": 12
+        },
+        {
+            "nombre": "Cena bagre frito *",
+            "imagen": "https://palia.wiki.gg/images/0/0f/Fried_Catfish_Dinner.png",
+            "precio": 56,
+            "lumigusanos": 2,
+            "speedyGro": 0,
+            "harversBoost": 13
+        },
+        {
+            "nombre": "Guiso de fideos sernuk",
+            "imagen": "https://palia.wiki.gg/images/7/7d/Sernuk_Noodle_Stew.png",
+            "precio": 57,
+            "lumigusanos": 2,
+            "speedyGro": 0,
+            "harversBoost": 13
+        },
+        {
+            "nombre": "Arroz frito con verduras",
+            "imagen": "https://palia.wiki.gg/images/a/a9/Veggie_Fried_Rice.png",
+            "precio": 58,
+            "lumigusanos": 2,
+            "speedyGro": 0,
+            "harversBoost": 14
+        },
+        {
+            "nombre": "Sashimi *",
+            "imagen": "https://palia.wiki.gg/images/4/41/Sashimi.png",
+            "precio": 63,
+            "lumigusanos": 3,
+            "speedyGro": 0,
+            "harversBoost": 15
+        },
+        {
+            "nombre": "Crema de champiñones *",
+            "imagen": "https://palia.wiki.gg/images/6/67/Cream_of_Mushroom_Soup.png",
+            "precio": 66,
+            "lumigusanos": 3,
+            "speedyGro": 0,
+            "harversBoost": 17
+        },
+        {
+            "nombre": "Crema de tomate",
+            "imagen": "https://palia.wiki.gg/images/2/2a/Cream_of_Tomato_Soup.png",
+            "precio": 65,
+            "lumigusanos": 3,
+            "speedyGro": 0,
+            "harversBoost": 15
+        },
+        {
+            "nombre": "Cena de trucha *",
+            "imagen": "https://palia.wiki.gg/images/7/7b/Trout_Dinner.png",
+            "precio": 61,
+            "lumigusanos": 3,
+            "speedyGro": 0,
+            "harversBoost": 15
+        },
+        {
+            "nombre": "Akwinduu chapaa",
+            "imagen": "https://palia.wiki.gg/images/7/76/Akwinduu_Chapaa.png",
+            "precio": 68,
+            "lumigusanos": 3,
+            "speedyGro": 0,
+            "harversBoost": 16
+        },
+        {
+            "nombre": "Sopa de papa cargada",
+            "imagen": "https://palia.wiki.gg/images/6/6c/Loaded_Potato_Soup.png",
+            "precio": 71,
+            "lumigusanos": 3,
+            "speedyGro": 0,
+            "harversBoost": 16
+        },
+        {
+            "nombre": "Bullabesa *",
+            "imagen": "https://palia.wiki.gg/images/9/9d/Bouillabaisse.png",
+            "precio": 76,
+            "lumigusanos": 3,
+            "speedyGro": 0,
+            "harversBoost": 18
+        },
+        {
+            "nombre": "Chapa masala",
+            "imagen": "https://palia.wiki.gg/images/0/0d/Chapaa_Masala.png",
+            "precio": 120,
+            "lumigusanos": 5,
+            "speedyGro": 0,
+            "harversBoost": 26
+        },
+        {
+            "nombre": "Sushi *",
+            "imagen": "https://palia.wiki.gg/images/6/6d/Sushi.png",
+            "precio": 126,
+            "lumigusanos": 5,
+            "speedyGro": 0,
+            "harversBoost": 29
+        },
+        {
+            "nombre": "Mermelada de arándanos",
+            "imagen": "https://palia.wiki.gg/images/3/3d/Blueberry_Jam.png",
+            "precio": 59,
+            "lumigusanos": 1,
+            "speedyGro": 8,
+            "harversBoost": 0
+        },
+        {
+            "nombre": "Mermelada de arándanos *",
+            "imagen": "https://palia.wiki.gg/images/3/3d/Blueberry_Jam.png",
+            "precio": 88,
+            "lumigusanos": 2,
+            "speedyGro": 11,
+            "harversBoost": 0
+        },
+        {
+            "nombre": "Mermelada de manzana",
+            "imagen": "https://palia.wiki.gg/images/6/6c/Apple_Jam.png",
+            "precio": 96,
+            "lumigusanos": 2,
+            "speedyGro": 12,
+            "harversBoost": 0
+        },
+        {
+            "nombre": "Mermelada de manzana *",
+            "imagen": "https://palia.wiki.gg/images/6/6c/Apple_Jam.png",
+            "precio": 144,
+            "lumigusanos": 3,
+            "speedyGro": 16,
+            "harversBoost": 0
+        },
+        {
+            "nombre": "Encurtido zanahoria",
+            "imagen": "https://palia.wiki.gg/images/7/77/Pickled_Carrots.png",
+            "precio": 34,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 5
+        },
+        {
+            "nombre": "Encurtido zanahoria *",
+            "imagen": "https://palia.wiki.gg/images/7/77/Pickled_Carrots.png",
+            "precio": 51,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 7
+        },
+        {
+            "nombre": "Encurtido tomate",
+            "imagen": "https://palia.wiki.gg/images/4/44/Pickled_Tomatoes.png",
+            "precio": 34,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 5
+        },
+        {
+            "nombre": "Encurtido tomate *",
+            "imagen": "https://palia.wiki.gg/images/4/44/Pickled_Tomatoes.png",
+            "precio": 51,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 7
+        },
+        {
+            "nombre": "Encurtido cebolla",
+            "imagen": "https://palia.wiki.gg/images/c/cf/Pickled_Onions.png",
+            "precio": 67,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 9
+        },
+        {
+            "nombre": "Encurtido cebolla *",
+            "imagen": "https://palia.wiki.gg/images/c/cf/Pickled_Onions.png",
+            "precio": 45,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 6
+        },
+        {
+            "nombre": "Encurtido patata",
+            "imagen": "https://palia.wiki.gg/images/0/07/Pickled_Potatoes.png",
+            "precio": 68,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 9
+        },
+        {
+            "nombre": "Encurtido patata *",
+            "imagen": "https://palia.wiki.gg/images/0/07/Pickled_Potatoes.png",
+            "precio": 102,
+            "lumigusanos": 3,
+            "speedyGro": 0,
+            "harversBoost": 17
+        },
+        {
+            "nombre": "Encurtido maiz",
+            "imagen": "https://palia.wiki.gg/images/d/da/Pickled_Corn.png",
+            "precio": 60,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 8
+        },
+        {
+            "nombre": "Encurtido maiz *",
+            "imagen": "https://palia.wiki.gg/images/d/da/Pickled_Corn.png",
+            "precio": 90,
+            "lumigusanos": 2,
+            "speedyGro": 0,
+            "harversBoost": 11
+        },
+        {
+            "nombre": "Encurtido pimiento picante",
+            "imagen": "https://palia.wiki.gg/images/d/dd/Pickled_Spicy_Pepper.png",
+            "precio": 48,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 7
+        },
+        {
+            "nombre": "Encurtido pimiento picante *",
+            "imagen": "https://palia.wiki.gg/images/d/dd/Pickled_Spicy_Pepper.png",
+            "precio": 72,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 9
+        },
+        {
+            "nombre": "Champinion asado *",
+            "imagen": "https://palia.wiki.gg/images/b/bf/Grilled_Mushroom.png",
+            "precio": 0,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 4
+        },
+        {
+            "nombre": "Carne de la parrilla *",
+            "imagen": "https://palia.wiki.gg/images/e/e8/Grilled_Meat.png",
+            "precio": 26,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 5
+        },
+        {
+            "nombre": "Ostra a la parrilla",
+            "imagen": "https://palia.wiki.gg/images/3/3e/Grilled_Oyster.png",
+            "precio": 27,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 5
+        },
+        {
+            "nombre": "Pescado a la plancha *",
+            "imagen": "https://palia.wiki.gg/images/d/dd/Grilled_Fish.png",
+            "precio": 0,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 7
+        },
+        {
+            "nombre": "Comida arruinada",
+            "imagen": "https://palia.wiki.gg/images/e/ed/Ruined_Food.png",
+            "precio": 5,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 2
+        },
+        {
+            "nombre": "Bullabesa",
+            "imagen": "https://palia.wiki.gg/images/9/9d/Bouillabaisse.png",
+            "precio": 117,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 8
+        },
+        {
+            "nombre": "Abundante sopa de verdura",
+            "imagen": "https://palia.wiki.gg/images/4/4c/Hearty_Vegetable_Soup.png",
+            "precio": 0,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 4
+        },
+        {
+            "nombre": "Cena bistec",
+            "imagen": "https://palia.wiki.gg/images/d/df/Steak_Dinner.png",
+            "precio": 0,
+            "lumigusanos": 1,
+            "speedyGro": 0,
+            "harversBoost": 6
+        },
+        {
+            "nombre": "Poke bowl *",
+            "imagen": "https://palia.wiki.gg/images/7/72/Poke_Bowl.png",
+            "precio": 163,
+            "lumigusanos": 7,
+            "speedyGro": 0,
+            "harversBoost": 35
+        },
+        {
+            "nombre": "Onigiri de chapaa",
+            "imagen": "https://palia.wiki.gg/images/1/18/Chapaa_Onigiri.png",
+            "precio": 50,
+            "lumigusanos": 2,
+            "speedyGro": 0,
+            "harversBoost": 12
+        },
+        {
+            "nombre": "Phoenicfire relleno",
+            "imagen": "https://palia.wiki.gg/images/2/23/Phoenixfire_Relleno.png",
+            "precio": 44,
+            "lumigusanos": 2,
+            "speedyGro": 0,
+            "harversBoost": 14
+        },
+        {
+            "nombre": "Salteado picante",
+            "imagen": "https://palia.wiki.gg/images/e/ee/Spicy_Stir_Fry.png",
+            "precio": 0,
+            "lumigusanos": 2,
+            "speedyGro": 0,
+            "harversBoost": 14
+        },
+        {
+            "nombre": "Bolas de masa de aceite de chile *",
+            "imagen": "https://palia.wiki.gg/images/c/c1/Chili_Oil_Dumplings.png",
+            "precio": 0,
+            "lumigusanos": 3,
+            "speedyGro": 0,
+            "harversBoost": 17
+        },
+        {
+            "nombre": "Chapaa asada tacos",
+            "imagen": "https://palia.wiki.gg/images/c/ce/Chapaa_Asada_Tacos.png",
+            "precio": 0,
+            "lumigusanos": 3,
+            "speedyGro": 0,
+            "harversBoost": 16
+        },
+        {
+            "nombre": "Chapaa asada tacos *",
+            "imagen": "https://palia.wiki.gg/images/c/ce/Chapaa_Asada_Tacos.png",
+            "precio": 0,
+            "lumigusanos": 2,
+            "speedyGro": 0,
+            "harversBoost": 11
+        },
+        {
+            "nombre": "Pastel de cangrejo *",
+            "imagen": "https://palia.wiki.gg/images/c/c3/Crab_Pot_Pie.png",
+            "precio": 90,
+            "lumigusanos": 4,
+            "speedyGro": 0,
+            "harversBoost": 20
+        },
+        {
+            "nombre": "Pastel de carne",
+            "imagen": "https://palia.wiki.gg/images/6/6e/Shepp%27s_Pie.png",
+            "precio": 0,
+            "lumigusanos": 4,
+            "speedyGro": 0,
+            "harversBoost": 20
+        }
+    ],
+    "Constantes":[
+        {
+            "nombre": "Lumigusanos",
+            "imagen": "https://palia.wiki.gg/images/e/ef/Glow_Worm.png",
+            "precio": 25
+        },
+        {
+            "nombre": "SpeedyGro",
+            "imagen": "https://palia.wiki.gg/images/f/fc/SpeedyGro_Fertilizer.png",
+            "precio": 5
+        },
+        {
+            "nombre": "HarversBoost",
+            "imagen": "https://palia.wiki.gg/images/c/ce/HarvestBoost_Fertilizer.png",
+            "precio": 5
+        }
+    ]
+}
