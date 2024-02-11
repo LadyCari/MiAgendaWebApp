@@ -16,6 +16,7 @@ export class ModalCargarPjComponent implements OnInit{
   pag = 1;
   readonly url = Url;
   listaClasesPjs: any;
+  previsualizar: any;
 
   constructor(private httpService: HttpService, private formBuilder: FormBuilder, public dialogRef: MatDialogRef<ModalCargarPjComponent>, private sanitizer: DomSanitizer){
   }
@@ -87,7 +88,8 @@ export class ModalCargarPjComponent implements OnInit{
     const archivoCapturado = event.target.files[0]
     this.extraerBase64(archivoCapturado).then((imagen: any) => {
       (this.formNuevoPersonaje.get(foto) as FormControl).setValue(imagen.base);
-
+console.log(imagen.base);
+console.log(this.formNuevoPersonaje.get(foto)?.value);
     })
 
   }
@@ -100,7 +102,8 @@ export class ModalCargarPjComponent implements OnInit{
       reader.onload = () => {
         resolve({
           base: reader.result
-        });
+          
+        });this.previsualizar = reader.result
       };
       reader.onerror = error => {
         reject(error); // Rechaza la promesa en caso de error de lectura

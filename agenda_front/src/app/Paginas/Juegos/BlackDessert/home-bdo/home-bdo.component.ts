@@ -29,11 +29,23 @@ export class HomeBdoComponent implements OnInit {
         this.listaPjsVistaPrevia = data.data;
         console.log(data);
         this.listaPjsVistaPrevia.forEach((personaje: any) => {
-          this.extraerBase64(personaje.foto);
+          personaje.foto = this.arrayBufferToBase64(personaje.foto);
         });
+        console.log(this.listaPjsVistaPrevia);
       }
-    })
+    });
+}
+arrayBufferToBase64(buffer: ArrayBuffer): string {
+  let binary = '';
+  const bytes = new Uint8Array(buffer);
+  const len = bytes.byteLength;
+  for (let i = 0; i < len; i++) {
+    binary += String.fromCharCode(bytes[i]);
   }
+  console.log(binary)
+  return 'data:image/jpeg;base64,' + btoa(binary);
+}
+
 
 public crearPersonaje(){
   this.dialog.open(ModalCargarPjComponent, {
@@ -62,5 +74,12 @@ extraerBase64 = async ($event: any) => new Promise((resolve, reject) => {
   // Retorna null si ocurre algún error
   return null;
 });
+
+getImagenSrc(base64Data: string): string {
+  if (base64Data) {
+    return `data:image/jpeg;base64,/9j/${base64Data}`;
+  }
+  return ''; // Si no hay datos, retorna una cadena vacía
+}
 
 }

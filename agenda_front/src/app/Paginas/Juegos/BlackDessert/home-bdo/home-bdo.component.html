@@ -1,6 +1,7 @@
 <div class="cuerpo">
   <div class="listaPj">
     <div class="tarjetaPJ" *ngFor="let personaje of listaPjsVistaPrevia">
+      <img [src]="personaje.foto" alt="">
       <div class="texto">
         <p>{{personaje.nombre}}</p>
         <p>{{personaje.clase}}</p>
