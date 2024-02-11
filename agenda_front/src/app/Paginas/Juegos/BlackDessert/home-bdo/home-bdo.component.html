@@ -1,83 +1,13 @@
 <div class="cuerpo">
   <div class="listaPj">
-    <div class="tarjetaPJ shai">
+    <div class="tarjetaPJ" *ngFor="let personaje of listaPjsVistaPrevia">
       <div class="texto">
-        <p>Little_Moon</p>
-        <p>Shai</p>
+        <p>{{personaje.nombre}}</p>
+        <p>{{personaje.clase}}</p>
       </div>
     </div>
-
-    <div class="tarjetaPJ wusa">
-      <div class="texto">
-        <p>Lady_Farfalla</p>
-        <p>Wusa</p>
-      </div>
+    <div class="tarjetaPJ">
+      <button mat-mini-fab (click)="crearPersonaje()"><i class="fa-solid fa-plus"></i></button>
     </div>
-
-    <div class="tarjetaPJ barter">
-      <div class="texto">
-        <p>Lady_Barter</p>
-        <p>Corsair</p>
-      </div>
-    </div>
-
-    <div class="tarjetaPJ lahn">
-      <div class="texto">
-        <p>Stelliita</p>
-        <p>Lahn</p>
-      </div>
-    </div>
-
-    <div class="tarjetaPJ bruja">
-      <div class="texto">
-        <p>LadyCari</p>
-        <p>Bruja</p>
-      </div>
-    </div>
-
-    <div class="tarjetaPJ ranger">
-      <div class="texto">
-        <p>Lady_Marii</p>
-        <p>Ranger</p>
-      </div>
-    </div>
-
-    <div class="tarjetaPJ musa">
-      <div class="texto">
-        <p>Lord_Pableishon</p>
-        <p>Musa</p>
-      </div>
-    </div>
-
-    <div class="tarjetaPJ hashashin">
-      <div class="texto">
-        <p>Arenitas_UwU</p>
-        <p>Hashashin</p>
-      </div>
-    </div>
-
-    <div class="tarjetaPJ nova">
-      <div class="texto">
-        <p>Lady_Maeh</p>
-        <p>Nova</p>
-      </div>
-    </div>
-
-    <div class="tarjetaPJ maegu">
-      <div class="texto">
-        <p>Lady_Foxy</p>
-        <p>Maegu</p>
-      </div>
-    </div>
-
-    <div class="tarjetaPJ bruja">
-      <div class="texto">
-        <p>LadyCari</p>
-        <p>Bruja</p>
-      </div>
-    </div>
-
-
-
   </div>
 </div>

@@ -1,0 +1,140 @@
+<form [formGroup]="formNuevoPersonaje" (ngSubmit)="crearPersonaje()">
+
+    <h2>Cargar datos Personaje</h2>
+
+    <section *ngIf="pag==1">
+
+        <div class="nombre">
+            <p>Nombre</p>
+            <input type="text" formControlName="nombre">
+        </div>
+
+        <div class="clases"> 
+            <p>Clase</p>
+            <select formControlName="idClase">
+                <option value="" disabled selected> Seleccione una clase</option>
+                <option [value]="clase.claseId" *ngFor="let clase of listaClasesPjs">{{clase.nombre}}</option>
+            </select>
+        </div>
+
+        <div class="fotoPj">
+            <p>Foto personaje</p>
+            <input type="file" (change)="capturarFile($event, 'foto')">
+        </div>
+
+        <div class="setPj">
+            <p>Foto set pj</p>
+            <input type="file" (change)="capturarFile($event, 'fotoSet')">
+        </div>
+
+        <div class="funcion">
+            <p>Objetivo</p>
+            <input type="text" formControlName="objetivo">
+        </div>
+
+        <div class="flechitas">
+            <button (click)="seleccionarPaso(2)" type="button"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+    </section>
+
+    <section *ngIf="pag==2">
+
+        <div class="slide">
+            <p>Tiene version temporada?</p>
+            <mat-slide-toggle formControlName="temporada"></mat-slide-toggle>
+        </div>
+
+        <div class="slide"> 
+            <p>Tiene todas las misiones de inventario?</p>
+            <mat-slide-toggle formControlName="inventario"></mat-slide-toggle>
+        </div>
+
+        <div class="slide"> 
+            <p>Tiene todas las misiones del chenga?</p>
+            <mat-slide-toggle formControlName="chenga"></mat-slide-toggle>
+        </div>
+
+        <div class="flechitas">
+            <button (click)="seleccionarPaso(1)" type="button"><i class="fa-solid fa-arrow-left"></i></button>
+            <button (click)="seleccionarPaso(3)" type="button"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+    </section>
+
+    <section *ngIf="pag==3">
+
+        <div class="tuvala">
+            <div class="slide">
+                <p>Casco V?</p>
+                <mat-slide-toggle formControlName="casco"></mat-slide-toggle>
+            </div>
+            
+            <div class="slide"> 
+                <p>Guante V?</p>
+                <mat-slide-toggle formControlName="guante"></mat-slide-toggle>
+            </div>
+            
+            <div class="slide">
+                <p>Zapato V?</p>
+                <mat-slide-toggle formControlName="zapato"></mat-slide-toggle>
+            </div>
+            
+            <div class="slide">
+                <p>Pechera V?</p>
+                <mat-slide-toggle formControlName="pechera"></mat-slide-toggle>
+            </div>
+            
+            <div class="slide">
+                <p>Anillo1 V?</p>
+                <mat-slide-toggle formControlName="anillo1"></mat-slide-toggle>
+            </div>
+            
+            <div class="slide">
+                <p>Anillo2 V?</p>
+                <mat-slide-toggle formControlName="anillo2"></mat-slide-toggle>
+            </div>
+            
+            <div class="slide">
+                <p>Arete1 V?</p>
+                <mat-slide-toggle formControlName="arete1"></mat-slide-toggle>
+            </div>
+            
+            <div class="slide">
+                <p>Arete2 V?</p>
+                <mat-slide-toggle formControlName="arete2"></mat-slide-toggle>
+            </div>
+            
+            <div class="slide">
+                <p>Cinturon V?</p>
+                <mat-slide-toggle formControlName="cinturon"></mat-slide-toggle>
+            </div>
+            
+            <div class="slide">
+                <p>Collar V?</p>
+                <mat-slide-toggle formControlName="collar"></mat-slide-toggle>
+            </div>
+            
+            <div class="slide">
+                <p>Arma principal V?</p>
+                <mat-slide-toggle formControlName="armaPrincipal"></mat-slide-toggle>
+            </div>
+            
+            <div class="slide">
+                <p>Arma secundaria V?</p>
+                <mat-slide-toggle formControlName="armaSecundaria"></mat-slide-toggle>
+            </div>
+            
+            <div class="slide">
+                <p>Arma despertar V?</p>
+                <mat-slide-toggle formControlName="armaDespertar"></mat-slide-toggle>
+            </div>            
+        </div>
+
+        <div class="flechitas">
+            <button class="cancelar" type="button" (click)="cancelar()">Cancelar</button>
+            <button class="Confirmar" type="submit" [disabled]="!validarFinalizar()">Terminar</button>
+        </div>
+
+    </section>
+</form>

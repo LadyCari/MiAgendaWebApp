@@ -44,58 +44,13 @@ font-size: 1.3rem;
     flex-wrap: wrap;
 }
 
-.shai{
-    background-image: url("../../../../../assets/img/LittleMoon.jpg");
+.tarjetaPJ button i{
+    font-size: 5rem;
 }
 
-.bruja{
-    background-image: url("../../../../../assets/img/LadyCari.jpg");
-}
-
-.shai{
-    background-image: url("../../../../../assets/img/LittleMoon.jpg");
-}
-
-.wusa{
-    background-image: url("../../../../../assets/img/LadyFarfalla.jpg");
-}
-
-.barter{
-    background-image: url("../../../../../assets/img/LadyBarter.jpg");
-}
-
-.lahn{
-    background-image: url("../../../../../assets/img/Stellita.jpg");
-}
-
-.ranger{
-    background-image: url("../../../../../assets/img/LadyMari.jpg");
-}
-
-.musa{
-    background-image: url("../../../../../assets/img/LordPableshion.jpg");
-}
-
-.hashashin{
-    background-image: url("../../../../../assets/img/ArenitaUwU.jpg");
-}
-
-.nova{
-    background-image: url("../../../../../assets/img/LadyMaeh.jpg");
-}
-
-.maegu{
-    background-image: url("../../../../../assets/img/LadyFoxy.jpg");
-}
-
-.hashashin{
-    background-image: url("../../../../../assets/img/ArenitaUwU.jpg");
-}
-
-.hashashin{
-    background-image: url("../../../../../assets/img/ArenitaUwU.jpg");
-}
-
-.hashashin{
-    background-image: url("../../../../../assets/img/ArenitaUwU.jpg");
+.tarjetaPJ button{
+    background: none;
+    border-radius: 100%;
+    width: 5rem;
+    height: 5rem;
 }

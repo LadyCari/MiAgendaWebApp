@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { SocialComponent } from './Shared/social/social.component';
 import { NavBarComponent } from './Shared/nav-bar/nav-bar.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
@@ -16,9 +16,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { LoadingComponent } from './Paginas/loading/loading.component';
 import { HomeBdoComponent } from './Paginas/Juegos/BlackDessert/home-bdo/home-bdo.component';
+import { ModalCargarPjComponent } from './Modales/modal-cargar-pj/modal-cargar-pj.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 @NgModule({
-  declarations: [AppComponent, SocialComponent, NavBarComponent, HomePaliaComponent, LoadingComponent, HomeBdoComponent],
+  declarations: [AppComponent, SocialComponent, NavBarComponent, HomePaliaComponent, LoadingComponent, HomeBdoComponent, ModalCargarPjComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,7 +33,11 @@ import { HomeBdoComponent } from './Paginas/Juegos/BlackDessert/home-bdo/home-bd
     MatTableModule,
     MatSortModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatSlideToggleModule,
+    ReactiveFormsModule
   ],
   exports:[
     MatPaginatorModule,
