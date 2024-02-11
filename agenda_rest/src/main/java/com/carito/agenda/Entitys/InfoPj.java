@@ -28,14 +28,14 @@ public class InfoPj {
     private byte[] set;
 
     @Column(name = "id_clase")
-    private Integer idClase;
+    private Long idClase;
 
     @Column(name = "id_inventario_tuvala")
-    private Integer idInventarioTuvala;
+    private Long idInventarioTuvala;
 
     @Column(name = "id_misiones_pj")
-    private Integer idMisiones;
+    private Long idMisiones;
 
     @Column(name = "id_detalles_pj")
-    private Integer idDetalles;
+    private Long idDetalles;
 }

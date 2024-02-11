@@ -19,7 +19,7 @@ public class DetallesPj {
     private Long detallesId;
 
     @Column(name = "temporada")
-    private String temporada;
+    private boolean temporada;
 
     @Column(name = "objetivo")
     private String objetivo;
