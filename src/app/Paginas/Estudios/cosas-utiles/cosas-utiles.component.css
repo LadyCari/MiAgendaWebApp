@@ -1,0 +1,177 @@
+/* cuerpo pagina */
+
+#cuerpo {
+    background-image: url("https://img.freepik.com/free-vector/gradient-pastel-sky-background_23-2148917404.jpg?w=2000");
+    margin: 0;
+    padding: 0;
+    font-family: "Bitter", serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    overflow: auto;
+  }
+  
+  h2 {
+    text-align: center;
+    font-family: "Gluten", cursive;
+    margin: 1rem;
+    font-size: 2rem;
+  }
+  
+  h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Gluten", cursive;
+    padding: 1rem;
+  }
+  
+  p {
+    font-size: "Bitter", serif;
+  }
+  
+  /* cuerpo del sector */
+  
+  #tituloSeccion {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  
+  #tituloSeccion img {
+    width: 5%;
+    border: none;
+    margin-left: 2rem;
+  }
+  
+  #contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  #contenedor div div img{
+      width: 80%;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+  }
+  
+  .estilo1:hover {
+    height: 19rem;
+  }
+  
+  .estilo2:hover {
+    height: 19rem;
+  }
+  
+  .estilo3:hover {
+    height: 19rem;
+  }
+  
+  .estilo4:hover {
+    height: 19rem;
+  }
+  
+  .cuerpoPagina img {
+    width: 70%;
+    height: 70%;
+    border-radius: 10px;
+    border: 2px solid black;
+  }
+  
+  a {
+    text-decoration: none;
+    color: blueviolet;
+    font-size: 1rem;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+  .estilo1 {
+    width: 350px;
+    height: 13rem;
+    border-radius: 20px;
+    box-shadow: 4px 3px 5px #000000;
+    padding: 1rem;
+    overflow: hidden;
+    transition: 1s;
+    text-align: center;
+    margin: 1rem;
+    background-color: #ffce8e;
+  }
+  
+  .estilo2 {
+    width: 350px;
+    height: 13rem;
+    border-radius: 20px;
+    box-shadow: 4px 3px 5px #000000;
+    padding: 1rem;
+    overflow: hidden;
+    transition: 1s;
+    text-align: center;
+    margin: 1rem;
+    background-color: #c1ff8e;
+  }
+  
+  .estilo3 {
+    width: 350px;
+    height: 13rem;
+    border-radius: 20px;
+    box-shadow: 4px 3px 5px #000000;
+    padding: 1rem;
+    overflow: hidden;
+    transition: 1s;
+    text-align: center;
+    margin: 1rem;
+    background-color: #8ebbffb9;
+  }
+  
+  .estilo4 {
+    width: 350px;
+    height: 13rem;
+    border-radius: 20px;
+    box-shadow: 4px 3px 5px #000000;
+    padding: 1rem;
+    overflow: hidden;
+    transition: 1s;
+    text-align: center;
+    margin: 1rem;
+    background-color: #fc89c2;
+  }
+  
+  /* responsive */
+  
+  @media (max-width: 720px) {
+    #contenedor {
+      flex-wrap: wrap;
+    }
+  
+    #contenedor > div {
+      width: 400px;
+      height: 14rem;
+    }
+  
+    #contenedor > div:hover {
+      height: 18rem;
+    }
+  }
+  
+  @media (max-width: 1244px) {
+    #logoPortada {
+      display: none;
+    }
+  
+    header {
+      width: 100%;
+    }
+  
+    nav {
+      width: 100%;
+    }
+  }
+  

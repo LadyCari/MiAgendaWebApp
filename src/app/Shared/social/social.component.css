@@ -1,0 +1,22 @@
+#social {
+    position: fixed;
+    right: 0;
+    top: 220px;
+  }
+  
+  #social ul {
+    list-style: none;
+  }
+  
+  #social ul li a i {
+    display: flex;
+  justify-content: center;
+    font-size: 2.5rem;
+    margin: 3px;
+    text-align: center;
+  }
+  
+  #social ul li a{
+    text-decoration: none;
+  }
+  

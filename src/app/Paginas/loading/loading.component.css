@@ -1,0 +1,13 @@
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://wallpapercosmos.com/w/full/0/7/9/1209979-3840x2160-desktop-4k-glow-in-the-dark-background-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .loading img {
+    width: 20rem;
+  }
