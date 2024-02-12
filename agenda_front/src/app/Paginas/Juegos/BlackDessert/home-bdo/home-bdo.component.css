@@ -7,6 +7,10 @@
     border-top-left-radius: 20px;
     position: relative;
     margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 2px black;
 }
 
 .texto{

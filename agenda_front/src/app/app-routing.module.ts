@@ -6,6 +6,7 @@ import { HomeEstudiosComponent } from './Paginas/Estudios/home-estudios/home-est
 import { CosasUtilesComponent } from './Paginas/Estudios/cosas-utiles/cosas-utiles.component';
 import { CodoACodoComponent } from './Paginas/Estudios/Cursos/codo-a-codo/codo-a-codo.component';
 import { HomeBdoComponent } from './Paginas/Juegos/BlackDessert/home-bdo/home-bdo.component';
+import { HomeJuegosComponent } from './Paginas/Juegos/home-juegos/home-juegos.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,6 +16,7 @@ export const routes: Routes = [
   { path: 'cosas-utiles', component: CosasUtilesComponent },
   { path: 'codo-a-codo', component: CodoACodoComponent },
   { path: 'home-bdo', component: HomeBdoComponent},
+  { path: 'home-juegos', component: HomeJuegosComponent},
 ];
 
 

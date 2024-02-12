@@ -20,9 +20,11 @@ import { ModalCargarPjComponent } from './Modales/modal-cargar-pj/modal-cargar-p
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { VistaPersonajeBdoComponent } from './Paginas/Juegos/BlackDessert/vista-personaje-bdo/vista-personaje-bdo.component';
+import { HomeJuegosComponent } from './Paginas/Juegos/home-juegos/home-juegos.component';
 
 @NgModule({
-  declarations: [AppComponent, SocialComponent, NavBarComponent, HomePaliaComponent, LoadingComponent, HomeBdoComponent, ModalCargarPjComponent],
+  declarations: [AppComponent, SocialComponent, NavBarComponent, HomePaliaComponent, LoadingComponent, HomeBdoComponent, ModalCargarPjComponent, VistaPersonajeBdoComponent, HomeJuegosComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
