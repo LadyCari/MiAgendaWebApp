@@ -75,6 +75,8 @@ input{
     border-radius: 100%;
 }
 
+
+
 .flechitas button:hover{
     background-color: rgba(95, 0, 0, 0.582);
 }
@@ -90,4 +92,25 @@ mat-slide-toggle{
 
 .slide p{
     font-size: 1.8rem;
+}
+
+.botones{
+    display: flex;
+}
+
+.botones button{
+    font-size: 3rem;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+}
+
+.cancelar :hover {
+    border-radius: 20px !important;
+    background-color: rgba(95, 0, 0, 0.582) !important;
+}
+
+.confirmar :hover {
+    border-radius: 20px !important;
+    background-color: rgba(0, 95, 29, 0.582) !important;
 }

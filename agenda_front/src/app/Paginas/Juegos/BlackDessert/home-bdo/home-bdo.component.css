@@ -11,6 +11,13 @@
     justify-content: center;
     align-items: center;
     box-shadow: 2px 2px 2px black;
+    overflow: hidden;
+}
+
+.tarjetaPJ img{
+    height: auto;
+    width: 100%;
+    display: block;
 }
 
 .texto{
@@ -57,4 +64,10 @@ font-size: 1.3rem;
     border-radius: 100%;
     width: 5rem;
     height: 5rem;
+}
+
+.tarjetaPJ:hover{
+    height: 220px;
+    width: 220px;
+    transition: 1s;
 }

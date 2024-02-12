@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 import { ModalCargarPjComponent } from 'src/app/Modales/modal-cargar-pj/modal-cargar-pj.component';
 import { HttpService } from 'src/app/Servicios/http.service';
 import { Url } from 'src/app/url';
@@ -16,7 +17,7 @@ export class HomeBdoComponent implements OnInit {
   readonly url = Url;
   listaPjsVistaPrevia: any;
 
-  constructor(private httpService: HttpService, private dialog: MatDialog, private sanitizer: DomSanitizer) {
+  constructor(private httpService: HttpService, private dialog: MatDialog, private sanitizer: DomSanitizer, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -48,6 +49,10 @@ getImagenSrc(base64Data: string): string {
     return `data:image/jpeg;base64,${base64Data}`;
   }
   return '';
+}
+
+public detallePjBdo (id: number){
+this.router.navigate(['/vista-personaje-bdo/' + id]);
 }
 
 }

@@ -132,9 +132,10 @@
             </div>            
         </div>
 
-        <div class="flechitas">
+        <div class="botones">
+            <button (click)="seleccionarPaso(2)" type="button" class="flechitas"><i class="fa-solid fa-arrow-left"></i></button>
             <button class="cancelar" type="button" (click)="cancelar()">Cancelar</button>
-            <button class="Confirmar" type="submit" [disabled]="!validarFinalizar()">Terminar</button>
+            <button class="confirmar" type="submit" [disabled]="!validarFinalizar()">Terminar</button>
         </div>
 
     </section>

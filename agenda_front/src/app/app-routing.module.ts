@@ -7,6 +7,7 @@ import { CosasUtilesComponent } from './Paginas/Estudios/cosas-utiles/cosas-util
 import { CodoACodoComponent } from './Paginas/Estudios/Cursos/codo-a-codo/codo-a-codo.component';
 import { HomeBdoComponent } from './Paginas/Juegos/BlackDessert/home-bdo/home-bdo.component';
 import { HomeJuegosComponent } from './Paginas/Juegos/home-juegos/home-juegos.component';
+import { VistaPersonajeBdoComponent } from './Paginas/Juegos/BlackDessert/vista-personaje-bdo/vista-personaje-bdo.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,6 +18,7 @@ export const routes: Routes = [
   { path: 'codo-a-codo', component: CodoACodoComponent },
   { path: 'home-bdo', component: HomeBdoComponent},
   { path: 'home-juegos', component: HomeJuegosComponent},
+  { path: 'vista-personaje-bdo/:id', component: VistaPersonajeBdoComponent},
 ];
 
 
