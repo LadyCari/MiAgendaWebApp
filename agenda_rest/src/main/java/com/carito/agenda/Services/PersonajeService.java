@@ -14,9 +14,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Base64;
-import java.nio.charset.StandardCharsets;
+import java.util.List;
 
 @Service
 public class PersonajeService {
@@ -90,8 +89,8 @@ public class PersonajeService {
         /// GUARDAR PJ
         InfoPj nuevoPersonaje = new InfoPj();
         nuevoPersonaje.setNombre(personaje.getNombre());
-        nuevoPersonaje.setFoto(personaje.getFoto().getBytes());
-        nuevoPersonaje.setSet(personaje.getFotoSet().getBytes());
+        nuevoPersonaje.setFoto(personaje.getFoto());
+        nuevoPersonaje.setSet(personaje.getFotoSet());
         nuevoPersonaje.setIdClase(personaje.getIdClase());
         nuevoPersonaje.setIdDetalles(detallesPj.getDetallesId());
         nuevoPersonaje.setIdMisiones(misionesPj.getMisionesId());

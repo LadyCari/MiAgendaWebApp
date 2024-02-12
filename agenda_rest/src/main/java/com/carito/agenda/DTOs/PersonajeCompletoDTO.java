@@ -26,10 +26,10 @@ public class PersonajeCompletoDTO {
     private String objetivo;
 
     @JsonProperty("foto")
-    private String foto;
+    private byte[] foto;
 
     @JsonProperty("fotoSet")
-    private String fotoSet;
+    private byte[] fotoSet;
 
     @JsonProperty("temporada")
     private boolean temporada;

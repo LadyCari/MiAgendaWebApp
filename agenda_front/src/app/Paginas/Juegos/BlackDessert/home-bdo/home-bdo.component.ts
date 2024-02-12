@@ -27,23 +27,12 @@ export class HomeBdoComponent implements OnInit {
     this.httpService.realizarGet(this.url.getPersonajesVistaPrevia).subscribe((data: any) => {
       if (data.state == 'OK') {
         this.listaPjsVistaPrevia = data.data;
-        console.log(data);
         this.listaPjsVistaPrevia.forEach((personaje: any) => {
-          personaje.foto = this.arrayBufferToBase64(personaje.foto);
+          personaje.foto = this.getImagenSrc(personaje.foto);
         });
         console.log(this.listaPjsVistaPrevia);
       }
     });
-}
-arrayBufferToBase64(buffer: ArrayBuffer): string {
-  let binary = '';
-  const bytes = new Uint8Array(buffer);
-  const len = bytes.byteLength;
-  for (let i = 0; i < len; i++) {
-    binary += String.fromCharCode(bytes[i]);
-  }
-  console.log(binary)
-  return 'data:image/jpeg;base64,' + btoa(binary);
 }
 
 
@@ -54,32 +43,11 @@ public crearPersonaje(){
   });
 }
 
-extraerBase64 = async ($event: any) => new Promise((resolve, reject) => {
-  try {
-    const unsafeImg = window.URL.createObjectURL($event);
-    const image = this.sanitizer.bypassSecurityTrustUrl(unsafeImg);
-    const reader = new FileReader();
-    reader.readAsDataURL($event);
-    reader.onload = () => {
-      resolve({
-        base: reader.result
-      });
-    };
-    reader.onerror = error => {
-      reject(error); // Rechaza la promesa en caso de error de lectura
-    };
-  } catch (e) {
-    reject(e); // Rechaza la promesa en caso de cualquier otro error
-  }
-  // Retorna null si ocurre algún error
-  return null;
-});
-
 getImagenSrc(base64Data: string): string {
   if (base64Data) {
-    return `data:image/jpeg;base64,/9j/${base64Data}`;
+    return `data:image/jpeg;base64,${base64Data}`;
   }
-  return ''; // Si no hay datos, retorna una cadena vacía
+  return '';
 }
 
 }

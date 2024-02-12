@@ -10,7 +10,7 @@ import { Url } from 'src/app/url';
   templateUrl: './modal-cargar-pj.component.html',
   styleUrls: ['./modal-cargar-pj.component.css']
 })
-export class ModalCargarPjComponent implements OnInit{
+export class ModalCargarPjComponent implements OnInit {
 
   formNuevoPersonaje: FormGroup = this.formBuilder.group({});
   pag = 1;
@@ -18,7 +18,7 @@ export class ModalCargarPjComponent implements OnInit{
   listaClasesPjs: any;
   previsualizar: any;
 
-  constructor(private httpService: HttpService, private formBuilder: FormBuilder, public dialogRef: MatDialogRef<ModalCargarPjComponent>, private sanitizer: DomSanitizer){
+  constructor(private httpService: HttpService, private formBuilder: FormBuilder, public dialogRef: MatDialogRef<ModalCargarPjComponent>, private sanitizer: DomSanitizer) {
   }
 
   ngOnInit(): void {
@@ -26,7 +26,7 @@ export class ModalCargarPjComponent implements OnInit{
     this.iniciarFormularioNuevoPj();
   }
 
-  private iniciarFormularioNuevoPj(){
+  private iniciarFormularioNuevoPj() {
     this.formNuevoPersonaje = this.formBuilder.group({
       nombre: ['', Validators.required],
       idClase: ['', Validators.required],
@@ -52,7 +52,7 @@ export class ModalCargarPjComponent implements OnInit{
     })
   }
 
-  public validarFinalizar(){
+  public validarFinalizar() {
     return this.formNuevoPersonaje.valid
   }
 
@@ -60,59 +60,59 @@ export class ModalCargarPjComponent implements OnInit{
     this.httpService.realizarGet(this.url.getClasesPjs).subscribe((data: any) => {
       if (data.state == 'OK') {
         this.listaClasesPjs = data.data;
-        console.log(data);
       }
     })
   }
 
-  seleccionarPaso(pagina:number){
+  seleccionarPaso(pagina: number) {
     this.pag = pagina;
-    console.log(this.pag);
   }
-  
-  crearPersonaje(){
+
+  crearPersonaje() {
     const personajeCreado = this.formNuevoPersonaje.value;
     console.log(personajeCreado);
     this.httpService.realizarPost(this.url.postNuevoPj, personajeCreado).subscribe((data: any) => {
-      if(data.state == 'OK'){
+      if (data.state == 'OK') {
         this.dialogRef.close();
       }
     })
   }
 
-  public cancelar(){
+  public cancelar() {
     this.dialogRef.close();
   }
 
   capturarFile(event: any, foto: any): any {
     const archivoCapturado = event.target.files[0]
-    this.extraerBase64(archivoCapturado).then((imagen: any) => {
+    this.fileToByteArray(archivoCapturado).then((imagen: any) => {
       (this.formNuevoPersonaje.get(foto) as FormControl).setValue(imagen.base);
-console.log(imagen.base);
-console.log(this.formNuevoPersonaje.get(foto)?.value);
     })
 
   }
-  extraerBase64 = async ($event: any) => new Promise((resolve, reject) => {
-    try {
-      const unsafeImg = window.URL.createObjectURL($event);
-      const image = this.sanitizer.bypassSecurityTrustUrl(unsafeImg);
+  fileToByteArray(file: File): Promise<{ base: string, type: string }> {
+    return new Promise((resolve, reject) => {
       const reader = new FileReader();
-      reader.readAsDataURL($event);
-      reader.onload = () => {
-        resolve({
-          base: reader.result
-          
-        });this.previsualizar = reader.result
+      
+      reader.onloadend = () => {
+        const base64String = reader.result as string;
+        const separatorIndex = base64String.indexOf('/9j/');
+        
+        if (separatorIndex !== -1) {
+          const base64Data = base64String.substring(separatorIndex);
+          const type = base64String.substring(5, separatorIndex); // Considerando que el tipo MIME siempre estará antes de la base64
+        
+          resolve({ base: base64Data, type: type });
+        } else {
+          reject("No se encontró el separador '/9j/' en la cadena base64.");
+        }
       };
-      reader.onerror = error => {
-        reject(error); // Rechaza la promesa en caso de error de lectura
+  
+      reader.onerror = (error) => {
+        reject(error);
       };
-    } catch (e) {
-      reject(e); // Rechaza la promesa en caso de cualquier otro error
-    }
-    // Retorna null si ocurre algún error
-    return null;
-  });
+  
+      reader.readAsDataURL(file);
+    });
+  }
   
 }
