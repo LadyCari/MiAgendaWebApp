@@ -1,3 +1,9 @@
+form{
+    height: auto;
+    width: auto;
+    background-color: rgb(63, 63, 63);
+}
+
 .tuvala{
     display: flex;
     flex-direction: column;
@@ -28,6 +34,10 @@ h2{
     font-size: 1rem;
     border-radius: 20px;
     padding: 0.3rem;
+    width: 60%;
+    background-color: rgba(34, 34, 34, 0.822);
+    color: white;
+    border: none;
 }
 
 .fotoPj{
@@ -50,14 +60,13 @@ p{
     -webkit-text-stroke: 1px black;
 }
 
-form{
-    background-color: rgb(63, 63, 63);
-}
-
 input{
     padding: 0.5rem;
     border-radius: 20px;
     border: none;
+    width: 60%;
+    background-color: rgba(34, 34, 34, 0.822);
+    color: white;
 }
 
 .flechitas{
@@ -79,15 +88,20 @@ input{
 
 .flechitas button:hover{
     background-color: rgba(95, 0, 0, 0.582);
+    box-shadow: 2px 2px 2px black;
 }
 
 mat-slide-toggle{
     padding: 0.5rem;
+    display: flex;
+    align-items: center;
 }
 
 .slide{
     display: flex;
     justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .slide p{
@@ -96,6 +110,9 @@ mat-slide-toggle{
 
 .botones{
     display: flex;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .botones button{
@@ -103,14 +120,23 @@ mat-slide-toggle{
     background: none;
     border: none;
     padding: 0.5rem;
+    padding-left: 1rem;
 }
 
-.cancelar :hover {
-    border-radius: 20px !important;
+.cancelar:hover {
+    border-radius: 10px;
     background-color: rgba(95, 0, 0, 0.582) !important;
+    box-shadow: 2px 2px 2px black;
 }
 
-.confirmar :hover {
-    border-radius: 20px !important;
+.confirmar:hover {
+    border-radius: 10px;
     background-color: rgba(0, 95, 29, 0.582) !important;
+    box-shadow: 2px 2px 2px black;
+}
+
+.flecha:hover{
+    background-color: rgba(95, 0, 0, 0.582) !important;
+    border-radius: 100%;
+    box-shadow: 2px 2px 2px black;
 }
