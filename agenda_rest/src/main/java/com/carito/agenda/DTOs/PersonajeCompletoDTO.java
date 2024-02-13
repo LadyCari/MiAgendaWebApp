@@ -79,4 +79,7 @@ public class PersonajeCompletoDTO {
     @JsonProperty("armaDespertar")
     private boolean armaDespertar;
 
+    @JsonProperty("clase")
+    private String clase;
+
 }

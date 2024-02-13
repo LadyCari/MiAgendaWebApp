@@ -1,24 +1,16 @@
 package com.carito.agenda.Controllers;
 
 import com.carito.agenda.DTOs.PersonajeCompletoDTO;
-import com.carito.agenda.DTOs.PersonajeConFotoDTO;
-import com.carito.agenda.Entitys.Clase;
-import com.carito.agenda.Services.ClaseService;
 import com.carito.agenda.Services.PersonajeService;
 import com.carito.agenda.web.AjaxResponseGenerator;
 import com.carito.agenda.web.AjaxResponseObject;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.*;
 
 @Log4j2
 @RestController
-public class CargarPjController {
+public class PersonajeController {
     @Autowired
     private PersonajeService personajeService;
 
@@ -26,5 +18,10 @@ public class CargarPjController {
     public AjaxResponseObject postPersonaje(@RequestBody PersonajeCompletoDTO data) {
         personajeService.guardarPersonaje(data);
         return AjaxResponseGenerator.createSimpleResponseOK("OK");
+    }
+    @RequestMapping(value = "/personaje-completo", produces = { "application/json" }, method = RequestMethod.GET)
+    public AjaxResponseObject getPersonajeCompleto(@RequestParam("id") Long id) {
+        PersonajeCompletoDTO personaje = personajeService.getPersonajeById(id);
+        return AjaxResponseGenerator.createSimpleResponseOK(personaje);
     }
 }
