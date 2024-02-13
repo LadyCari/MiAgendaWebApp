@@ -58,6 +58,49 @@ public class PersonajeService {
         return personajeList;
     }
 
+    public PersonajeCompletoDTO getPersonajeById(Long id){
+        String nativeQuery = "select ip.nombre_pj, cp.nombre_clase, dp.temporada, dp.objetivo, mp.chenga, mp.inventario, tv.casco, tv.guante, tv.zapato, tv.pechera, tv.anillo1, tv.anillo2, tv.arete1, tv.arete2, tv.collar, tv.cinturon, tv.arma_principal, tv.arma_secundaria, tv.arma_despertar, ip.foto_pj, ip.set_pj " +
+                "from info_pj ip " +
+                "join clase_pj cp on cp.id_clase = ip.id_clase " +
+                "join detalles_pj dp on dp.id_detalles_pj = ip.id_detalles_pj " +
+                "join misiones_pj mp on mp.id_misiones_pj = ip.id_misiones_pj " +
+                "join tuvala_v tv on tv.id_inventario_tuvala = ip.id_inventario_tuvala " +
+                "where ip.id_pj = :id";
+        Query query = entityManager.createNativeQuery(nativeQuery);
+        query.setParameter("id", id);
+
+        @SuppressWarnings("unchecked")
+        List<Object[]> auxObject = query.getResultList();
+
+        PersonajeCompletoDTO personaje = new PersonajeCompletoDTO();
+        if (!auxObject.isEmpty()) {
+            Object[] result = auxObject.get(0);
+            personaje.setNombre(result[0].toString());
+            personaje.setClase(result[1].toString());
+            personaje.setTemporada((Boolean) result[2]);
+            personaje.setObjetivo(result[3].toString());
+            personaje.setChenga((Boolean) result[4]);
+            personaje.setInventario((Boolean) result[5]);
+            personaje.setCasco((Boolean) result[6]);
+            personaje.setGuante((Boolean) result[7]);
+            personaje.setZapato((Boolean) result[8]);
+            personaje.setPechera((Boolean) result[9]);
+            personaje.setAnillo1((Boolean) result[10]);
+            personaje.setAnillo2((Boolean) result[11]);
+            personaje.setArete1((Boolean) result[12]);
+            personaje.setArete2((Boolean) result[13]);
+            personaje.setCollar((Boolean) result[14]);
+            personaje.setCinturon((Boolean) result[15]);
+            personaje.setArmaPrincipal((Boolean) result[16]);
+            personaje.setArmaSecundaria((Boolean) result[17]);
+            personaje.setArmaDespertar((Boolean) result[18]);
+            personaje.setIdPersonaje(id);
+            personaje.setFoto((byte[]) result[19]);
+            personaje.setFotoSet((byte[]) result[20]);
+        }
+        return personaje;
+    }
+
     @Transactional
     public void guardarPersonaje(PersonajeCompletoDTO personaje) {
         /// GUARDAR DETALLES
