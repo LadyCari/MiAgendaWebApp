@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { DomSanitizer } from '@angular/platform-browser';
 import { HttpService } from 'src/app/Servicios/http.service';
 import { Url } from 'src/app/url';
@@ -17,13 +17,19 @@ export class ModalCargarPjComponent implements OnInit {
   readonly url = Url;
   listaClasesPjs: any;
   previsualizar: any;
+  personajeEditable: any;
+  esEdicion = false;
 
-  constructor(private httpService: HttpService, private formBuilder: FormBuilder, public dialogRef: MatDialogRef<ModalCargarPjComponent>, private sanitizer: DomSanitizer) {
+  constructor(private httpService: HttpService, private formBuilder: FormBuilder, public dialogRef: MatDialogRef<ModalCargarPjComponent>, private sanitizer: DomSanitizer,
+    @Inject(MAT_DIALOG_DATA) public data: any) {
   }
 
   ngOnInit(): void {
     this.getClases();
     this.iniciarFormularioNuevoPj();
+    console.log(this.data);
+    if(this.data != null)
+      this.dataToFormularioDeEditarPj()
   }
 
   private iniciarFormularioNuevoPj() {
@@ -71,11 +77,19 @@ export class ModalCargarPjComponent implements OnInit {
   crearPersonaje() {
     const personajeCreado = this.formNuevoPersonaje.value;
     console.log(personajeCreado);
-    this.httpService.realizarPost(this.url.postNuevoPj, personajeCreado).subscribe((data: any) => {
-      if (data.state == 'OK') {
-        this.dialogRef.close();
-      }
-    })
+    if(!this.esEdicion){
+      this.httpService.realizarPost(this.url.postNuevoPj, personajeCreado).subscribe((data: any) => {
+        if (data.state == 'OK') {
+          this.dialogRef.close();
+        }
+      })
+    }else {
+      this.httpService.realizarPut(this.url.editarPJ, personajeCreado).subscribe((data: any) => {
+        if (data.state == 'OK') {
+          this.dialogRef.close();
+        }
+      })
+    }
   }
 
   public cancelar() {
@@ -114,5 +128,34 @@ export class ModalCargarPjComponent implements OnInit {
       reader.readAsDataURL(file);
     });
   }
+
+  private dataToFormularioDeEditarPj(): void {
+    const pj = this.data;
+    this.formNuevoPersonaje.setValue({
+      nombre: pj.nombre,
+      idClase: pj.idClase,
+      objetivo: pj.objetivo,
+      temporada: pj.temporada,
+      inventario: pj.inventario,
+      chenga: pj.chenga,
+      casco: pj.casco,
+      guante: pj.guante,
+      zapato: pj.zapato,
+      pechera: pj.pechera,
+      anillo1: pj.anillo1,
+      anillo2: pj.anillo2,
+      arete1: pj.arete1,
+      arete2: pj.arete2,
+      cinturon: pj.cinturon,
+      collar: pj.collar,
+      armaPrincipal: pj.armaPrincipal,
+      armaSecundaria: pj.armaSecundaria,
+      armaDespertar: pj.armaDespertar,
+      foto: null,
+      fotoSet: null
+    });
+    this.esEdicion = true;
+  }
+  
   
 }

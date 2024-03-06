@@ -19,8 +19,8 @@ export class HttpService {
     return this.http.post<boolean>(url, datos);
   }
 
-  public realizarPut(url: string, id: number, update: any): Observable<boolean> {
-    return this.http.put<boolean>(url + id, update);
+  public realizarPut(url: string, update: any): Observable<boolean> {
+    return this.http.put<boolean>(url, update);
   }
 
   public realizarDelete(url: string, id: number): Observable<boolean> {

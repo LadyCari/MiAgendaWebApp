@@ -1,28 +1,108 @@
-<div class="cuerpo">
+<body class="cuerpo">
 
-    <section class="Titulo">
-        <img src="" alt="">
-        <h2>Nombre pj</h2>
-    </section>
+    <section class="sector1">
 
-    <section class="imagenpj">
-        <img src="" alt="">
-    </section>
-
-    <section class="sector3">
-        <div class="imagenset">
+        <div class="imgpj">
+            <img [src]="personaje.foto" alt="foto pj">
             <img src="" alt="">
         </div>
-        <div class="texto">
+
+        <div class="textopj">
+            <h2>{{personaje.nombre}}</h2>
             <h3>Clase:</h3>
-            <p></p>
+            <p>{{personaje.clase}}</p>
             <h3>Objetivo:</h3>
-            <p></p>
+            <p>{{personaje.objetivo}}</p>
         </div>
     </section>
 
-    <section class="info">
+    <section class="sector2">
+        <div class="imagenset">
+            <img [src]="personaje.fotoSet" alt="foto set">
+        </div>
+        <div class="cat1">
+            <h3>Misiones completadas:</h3>
+            <div>
+                <p>Inventario</p>
+                <p [class.cruz]="!personaje.inventario" [class.tilde]="personaje.inventario"></p>
+            </div>
+            <div>
+                <p>Chenga</p>
+            <p [class.cruz]="!personaje.chenga" [class.tilde]="personaje.chenga"></p>
+            </div>
+        </div>
 
+        <div class="tuvala">
+
+            <h3>Partes tuvala V:</h3>
+
+            <div class="cat1">
+                <div>
+                    <p>Arma principal</p>
+                    <p [class.cruz]="!personaje.armaPrincipal" [class.tilde]="personaje.armaPrincipal"></p>
+                </div>
+                <div>
+                    <p>Arma secundaria</p>
+                    <p [class.cruz]="!personaje.armaSecundaria" [class.tilde]="personaje.armaSecundaria"></p>
+                </div>
+                <div>
+                    <p>Arma despertar</p>
+                    <p [class.cruz]="!personaje.armaDespertar" [class.tilde]="personaje.armaDespertar"></p>
+                </div>
+            </div>
+
+            <div class="cat1">
+                <div>
+                    <p>Casco</p>
+                    <p [class.cruz]="!personaje.casco" [class.tilde]="personaje.casco"></p>
+                </div>
+                <div>
+                    <p>Guante</p>
+                    <p [class.cruz]="!personaje.guante" [class.tilde]="personaje.guante"></p>
+                </div>
+                <div>
+                    <p>Zapato</p>
+                    <p [class.cruz]="!personaje.zapato" [class.tilde]="personaje.zapato"></p>
+                </div>
+                <div>
+                    <p>Pechera</p>
+                    <p [class.cruz]="!personaje.pechera" [class.tilde]="personaje.pechera"></p>
+                </div>
+            </div>
+
+            <div class="cat1">
+                <div>
+                    <p>Anillo 1</p>
+                    <p [class.cruz]="!personaje.anillo1" [class.tilde]="personaje.anillo1"></p>
+                </div>
+                <div>
+                    <p>Anillo 2</p>
+                    <p [class.cruz]="!personaje.anillo2" [class.tilde]="personaje.anillo2"></p>
+                </div>
+                <div>
+                    <p>Arete 1</p>
+                    <p [class.cruz]="!personaje.arete1" [class.tilde]="personaje.arete1"></p>
+                </div>
+                <div>
+                    <p>Arete 2</p>
+                    <p [class.cruz]="!personaje.arete2" [class.tilde]="personaje.arete2"></p>
+                </div>
+                <div>
+                    <p>Collar</p>
+                    <p [class.cruz]="!personaje.collar" [class.tilde]="personaje.collar"></p>
+                </div>
+                <div>
+                    <p>Cinturon</p>
+                    <p [class.cruz]="!personaje.cinturon" [class.tilde]="personaje.cinturon"></p>
+                </div>
+            </div>
+
+        </div>
     </section>
 
-</div>
+    <section>
+        <button class="edit" (click)="editarPj()">Modificar</button>
+        <button class="borrar">Borrar</button>
+    </section>
+
+</body>

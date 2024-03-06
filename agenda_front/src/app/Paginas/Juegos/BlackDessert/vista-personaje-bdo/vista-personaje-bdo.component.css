@@ -1,0 +1,86 @@
+section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(54, 54, 54, 0.699);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    padding: 2rem;
+}
+
+.textopj h2{
+    font-size: 5rem;
+    margin-bottom: 5rem;
+    font-family: 'Single Day', cursive;
+}
+
+body{
+    padding-top: 3rem;
+    font-family: 'Single Day', cursive;
+    font-size: 1.5rem;
+}
+
+.imgpj{
+    height: 500px;
+}
+
+.imgpj img{
+    height: 100%;
+    border-radius: 10px;
+}
+
+h3{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-family: 'Single Day', cursive;
+}
+
+.textopj p{
+    margin-bottom: 2rem;
+}
+
+.textopj{
+    width: 50%;
+    background-color: rgba(136, 0, 0, 0.61);
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    padding: 3rem;
+}
+
+.cruz:before {
+    content: "\2715"; /* Código Unicode para la cruz */
+    color: red; /* Color de la cruz */
+}
+
+/* Estilos específicos para la tilde */
+.tilde:before {
+    content: "\2713"; /* Código Unicode para la tilde */
+    color: green; /* Color de la tilde */
+}
+
+.cat1{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+
+.cat1 div{
+    display: flex;
+}
+
+button{
+    font-size: 3rem;
+    border-radius: 20px;
+    border: none;
+    padding: 0.5rem;
+    box-shadow: 2px 2px 2px black;
+}
+
+.edit{
+    background-color: rgba(230, 230, 0, 0.801);
+}
+
+.borrar{
+    background-color: rgba(230, 8, 0, 0.801);
+}
