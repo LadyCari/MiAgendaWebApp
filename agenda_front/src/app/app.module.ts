@@ -22,10 +22,12 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { VistaPersonajeBdoComponent } from './Paginas/Juegos/BlackDessert/vista-personaje-bdo/vista-personaje-bdo.component';
 import { HomeJuegosComponent } from './Paginas/Juegos/home-juegos/home-juegos.component';
-import { TestingComponent } from './Paginas/Estudios/Cursos/testing/testing.component';
+import { CursosHomeComponent } from './Paginas/Estudios/Cursos/cursos-home/cursos-home.component';
+import { TestingCaCComponent } from './Paginas/Estudios/Cursos/testing-ca-c/testing-ca-c.component';
+import { FullStackJavaCaCComponent } from './Paginas/Estudios/Cursos/full-stack-java-ca-c/full-stack-java-ca-c.component';
 
 @NgModule({
-  declarations: [AppComponent, SocialComponent, NavBarComponent, HomePaliaComponent, LoadingComponent, HomeBdoComponent, ModalCargarPjComponent, VistaPersonajeBdoComponent, HomeJuegosComponent, TestingComponent],
+  declarations: [AppComponent, SocialComponent, NavBarComponent, HomePaliaComponent, LoadingComponent, HomeBdoComponent, ModalCargarPjComponent, VistaPersonajeBdoComponent, HomeJuegosComponent, CursosHomeComponent, TestingCaCComponent, FullStackJavaCaCComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -83,12 +83,12 @@ export class ModalCargarPjComponent implements OnInit {
           this.dialogRef.close();
         }
       })
-    }else {
+    }else {/*
       this.httpService.realizarPut(this.url.editarPJ, personajeCreado).subscribe((data: any) => {
         if (data.state == 'OK') {
           this.dialogRef.close();
         }
-      })
+      })*/
     }
   }
 
