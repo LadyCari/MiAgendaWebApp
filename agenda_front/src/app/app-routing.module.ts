@@ -6,8 +6,6 @@ import { HomeJuegosComponent } from './Paginas/Juegos/home-juegos/home-juegos.co
 import { VistaPersonajeBdoComponent } from './Paginas/Juegos/BlackDessert/vista-personaje-bdo/vista-personaje-bdo.component';
 import { HomeComponent } from './Paginas/Home/home.component';
 import { HomeEstudiosComponent } from './Paginas/Estudios/home-estudios/home-estudios.component';
-import { TestingCaCComponent } from './Paginas/Estudios/Cursos/testing-ca-c/testing-ca-c.component';
-import { FullStackJavaCaCComponent } from './Paginas/Estudios/Cursos/full-stack-java-ca-c/full-stack-java-ca-c.component';
 import { HomeLinksUtilesComponent } from './Paginas/Links-utiles/home-links-utiles/home-links-utiles.component';
 import { LinksUtilesProgramacionComponent } from './Paginas/Links-utiles/links-utiles-programacion/links-utiles-programacion.component';
 
@@ -19,8 +17,6 @@ export const routes: Routes = [
   { path: 'home-juegos', component: HomeJuegosComponent},
   { path: 'vista-personaje-bdo/:id', component: VistaPersonajeBdoComponent},
   { path: 'home-estudios', component: HomeEstudiosComponent},
-  { path: 'testing-cac', component: TestingCaCComponent},
-  { path: 'full-stack-java-cac', component: FullStackJavaCaCComponent},
   { path: 'home-links-utiles', component: HomeLinksUtilesComponent},
   { path: 'cosas-utiles-programacion', component: LinksUtilesProgramacionComponent}
 ];

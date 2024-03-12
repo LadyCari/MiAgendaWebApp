@@ -16,12 +16,19 @@
             alt=""
           />
         </div>
-        <ul id="listaPendientes"></ul>
+        <ul id="listaPendientes">
+          <li *ngFor="let pendiente of listaPendientes">
+          <p>[{{pendiente.tipo}}]</p>
+          <p>{{pendiente.descripcion}}</p>
+          <button (click)="eliminarPendiente(pendiente)"><i class="fa-solid fa-trash"></i></button>
+          </li>
+        </ul>
         <br />
         <form>
           <label>Escriba nueva tarea</label>
-          <input type="text" id="tareaNueva" name="tarea" />
-          <button>Nuevo pendiente</button>
+          <input type="text" id="tareaNueva" name="tipoTarea" [(ngModel)]="nuevoPendiente.tipo"/>
+          <input type="text" id="tareaNueva" name="tarea" [(ngModel)]="nuevoPendiente.descripcion"/>
+          <button (click)="postPendientes()" type="button">Nuevo pendiente</button>
         </form>
       </section>
       <section id="horarios">

@@ -16,11 +16,11 @@ public class DashboardService {
         return pendientesRepository.findAll();
     }
 
-    public void saveTareas(Pendientes pendiente) {
-        pendientesRepository.save(pendiente);
+    public Pendientes saveTareas(Pendientes pendiente) {
+        return pendientesRepository.save(pendiente);
     }
 
-    public void deleteTareas(Pendientes pendiente) {
-        pendientesRepository.delete(pendiente);
+    public void deleteTareas(Long id) {
+        pendientesRepository.delete(pendientesRepository.findById(id).get());
     }
 }

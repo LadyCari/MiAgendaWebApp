@@ -23,11 +23,7 @@ export class HttpService {
     return this.http.put<boolean>(url, update);
   }
 
-  public realizarDelete(url: string, id: number): Observable<boolean> {
-    return this.http.delete(url + id)
-    .pipe(
-      map(respuesta => true),
-      catchError(error => of (false))
-    );
+  public realizarDelete(url: string): Observable<boolean> {
+    return this.http.delete<boolean>(url);
   }
 }

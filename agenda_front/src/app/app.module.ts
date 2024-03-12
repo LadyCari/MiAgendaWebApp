@@ -22,17 +22,30 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { VistaPersonajeBdoComponent } from './Paginas/Juegos/BlackDessert/vista-personaje-bdo/vista-personaje-bdo.component';
 import { HomeJuegosComponent } from './Paginas/Juegos/home-juegos/home-juegos.component';
-import { CursosHomeComponent } from './Paginas/Estudios/Cursos/cursos-home/cursos-home.component';
-import { TestingCaCComponent } from './Paginas/Estudios/Cursos/testing-ca-c/testing-ca-c.component';
-import { FullStackJavaCaCComponent } from './Paginas/Estudios/Cursos/full-stack-java-ca-c/full-stack-java-ca-c.component';
 import { HomeLinksUtilesComponent } from './Paginas/Links-utiles/home-links-utiles/home-links-utiles.component';
 import { LinksUtilesProgramacionComponent } from './Paginas/Links-utiles/links-utiles-programacion/links-utiles-programacion.component';
 import { LinksUtilesJuegosComponent } from './Paginas/Links-utiles/links-utiles-juegos/links-utiles-juegos.component';
 import { FullStackJavaCacComponent } from './Paginas/Estudios/finalizado/full-stack-java-cac/full-stack-java-cac.component';
 import { TestingQACacComponent } from './Paginas/Estudios/cursando/testing-qa-cac/testing-qa-cac.component';
+import { HomeComponent } from './Paginas/Home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, SocialComponent, NavBarComponent, HomePaliaComponent, LoadingComponent, HomeBdoComponent, ModalCargarPjComponent, VistaPersonajeBdoComponent, HomeJuegosComponent, CursosHomeComponent, TestingCaCComponent, FullStackJavaCaCComponent, HomeLinksUtilesComponent, LinksUtilesProgramacionComponent, LinksUtilesJuegosComponent, FullStackJavaCacComponent, TestingQACacComponent],
+  declarations: [
+    AppComponent, 
+    SocialComponent, 
+    NavBarComponent, 
+    HomePaliaComponent, 
+    LoadingComponent, 
+    HomeBdoComponent, 
+    ModalCargarPjComponent, 
+    VistaPersonajeBdoComponent, 
+    HomeJuegosComponent, 
+    HomeLinksUtilesComponent, 
+    LinksUtilesProgramacionComponent, 
+    LinksUtilesJuegosComponent, 
+    FullStackJavaCacComponent, 
+    HomeComponent,
+    TestingQACacComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

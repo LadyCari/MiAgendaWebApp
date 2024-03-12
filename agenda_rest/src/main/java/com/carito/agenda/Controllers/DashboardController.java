@@ -8,10 +8,7 @@ import com.carito.agenda.web.AjaxResponseGenerator;
 import com.carito.agenda.web.AjaxResponseObject;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -31,8 +28,8 @@ public class DashboardController {
     @RequestMapping(value = "/crear", produces = { "application/json" }, method = RequestMethod.POST)
     public AjaxResponseObject crearTareaPendiente(@RequestBody Pendientes pendientes) {
         try {
-            dashboardService.saveTareas(pendientes);
-            return AjaxResponseGenerator.createSimpleResponseOK("Tarea guardada correctamente");
+            Pendientes pendiente = dashboardService.saveTareas(pendientes);
+            return AjaxResponseGenerator.createSimpleResponseOK(pendiente);
         }
         catch (CustomException e) {
             return AjaxResponseGenerator.createSimpleResponseError("Ocurrio un error");
@@ -40,9 +37,9 @@ public class DashboardController {
     }
 
     @RequestMapping(value = "/delete", produces = { "application/json" }, method = RequestMethod.DELETE)
-    public AjaxResponseObject deleteTarea(@RequestBody Pendientes pendientes) {
+    public AjaxResponseObject deleteTarea(@RequestParam("id") Long id) {
         try {
-            dashboardService.deleteTareas(pendientes);
+            dashboardService.deleteTareas(id);
             return AjaxResponseGenerator.createSimpleResponseOK("Tarea eliminada correctamente");
         }
         catch (CustomException e) {
