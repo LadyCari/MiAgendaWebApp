@@ -1,0 +1,95 @@
+body{
+    background-image: url("https://img.freepik.com/free-vector/gradient-pastel-sky-background_23-2148917404.jpg?w=2000");
+    margin: 0;
+    padding: 0;
+    font-family: "Bitter", serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    overflow: auto;
+    height: 100vh;
+    font-family: 'Single Day', cursive;
+}
+
+section{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.logo{
+    display: flex;
+    margin-top: 2rem;
+}
+
+.logo img{
+    width: 90px;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+h2{
+    font-size: 4rem;
+    font-family: 'Single Day', cursive;
+    display: flex;
+    align-items: center;
+}
+
+#programacion{
+    background-image: url("https://i.pinimg.com/originals/75/8f/ce/758fce66508ff38809b308e1cf329679.gif");
+}
+
+#juegos{
+    background-image: url("https://img.freepik.com/premium-photo/kawaii-girl-playing-video-games-cute-gamer-kid-illustration_691560-5895.jpg?w=360");
+}
+
+#animes{
+    background-image: url("https://steamuserimages-a.akamaihd.net/ugc/2292957114624075748/D32852C58B3C8BDF7A4C989AB1899914688B2168/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false");
+}
+
+#mangas{
+    background-image: url("https://i.pinimg.com/736x/dd/08/9c/dd089cd2fbbd4b940f37af2c79242215.jpg");
+}
+
+#idiomas{
+    background-image: url("https://media.giphy.com/media/IbreStuFUdPluU2gkm/giphy.gif");
+}
+
+.mostrarLink{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    overflow: hidden;
+    width: 15rem;
+    height: 15rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 2rem;
+}
+
+.mostrarLink a{
+padding: 1rem;
+font-size: 1.5rem;
+background-color: rgba(5, 5, 5, 0.733);
+color: white;
+text-decoration: none;
+transition: 1s;
+width: 100%;
+}
+
+.mostrarLink a:hover{
+    padding: 2rem;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
