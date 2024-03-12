@@ -59,7 +59,7 @@ public class PersonajeService {
     }
 
     public PersonajeCompletoDTO getPersonajeById(Long id){
-        String nativeQuery = "select ip.nombre_pj, cp.nombre_clase, dp.temporada, dp.objetivo, mp.chenga, mp.inventario, tv.casco, tv.guante, tv.zapato, tv.pechera, tv.anillo1, tv.anillo2, tv.arete1, tv.arete2, tv.collar, tv.cinturon, tv.arma_principal, tv.arma_secundaria, tv.arma_despertar, ip.foto_pj, ip.set_pj " +
+        String nativeQuery = "select ip.nombre_pj, cp.nombre_clase, dp.temporada, dp.objetivo, mp.chenga, mp.inventario, tv.casco, tv.guante, tv.zapato, tv.pechera, tv.anillo1, tv.anillo2, tv.arete1, tv.arete2, tv.collar, tv.cinturon, tv.arma_principal, tv.arma_secundaria, tv.arma_despertar, ip.foto_pj, ip.set_pj, ip.id_clase " +
                 "from info_pj ip " +
                 "join clase_pj cp on cp.id_clase = ip.id_clase " +
                 "join detalles_pj dp on dp.id_detalles_pj = ip.id_detalles_pj " +
@@ -97,6 +97,7 @@ public class PersonajeService {
             personaje.setIdPersonaje(id);
             personaje.setFoto((byte[]) result[19]);
             personaje.setFotoSet((byte[]) result[20]);
+            personaje.setIdClase((Long) result[21]);
         }
         return personaje;
     }
