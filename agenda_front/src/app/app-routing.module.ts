@@ -8,6 +8,10 @@ import { HomeComponent } from './Paginas/Home/home.component';
 import { HomeEstudiosComponent } from './Paginas/Estudios/home-estudios/home-estudios.component';
 import { HomeLinksUtilesComponent } from './Paginas/Links-utiles/home-links-utiles/home-links-utiles.component';
 import { LinksUtilesProgramacionComponent } from './Paginas/Links-utiles/links-utiles-programacion/links-utiles-programacion.component';
+import { HomeEstudioCursandoComponent } from './Paginas/Estudios/cursando/home-estudio-cursando/home-estudio-cursando.component';
+import { HomeEstudioFinalizadoComponent } from './Paginas/Estudios/finalizado/home-estudio-finalizado/home-estudio-finalizado.component';
+import { TestingQACacComponent } from './Paginas/Estudios/cursando/testing-qa-cac/testing-qa-cac.component';
+import { FullStackJavaCacComponent } from './Paginas/Estudios/finalizado/full-stack-java-cac/full-stack-java-cac.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,9 +20,13 @@ export const routes: Routes = [
   { path: 'home-bdo', component: HomeBdoComponent},
   { path: 'home-juegos', component: HomeJuegosComponent},
   { path: 'vista-personaje-bdo/:id', component: VistaPersonajeBdoComponent},
-  { path: 'home-estudios', component: HomeEstudiosComponent},
   { path: 'home-links-utiles', component: HomeLinksUtilesComponent},
-  { path: 'cosas-utiles-programacion', component: LinksUtilesProgramacionComponent}
+  { path: 'cosas-utiles-programacion', component: LinksUtilesProgramacionComponent},
+  { path: 'home-estudios', component: HomeEstudiosComponent},
+  { path: 'cursos-cursando-home', component: HomeEstudioCursandoComponent},
+  { path: 'cursos-finalizados-home', component: HomeEstudioFinalizadoComponent},
+  { path: 'curso-testing&QA-cac', component: TestingQACacComponent},
+  { path: 'curso-fullStackJava-cac', component: FullStackJavaCacComponent}
 ];
 
 

@@ -1,3 +1,7 @@
+:root{
+  --color-fondo-tarjetas: #007bff;
+}
+
 body {
     background-image: url("https://img.freepik.com/free-vector/gradient-pastel-sky-background_23-2148917404.jpg?w=2000");
     margin: 0;
@@ -5,124 +9,59 @@ body {
     font-family: var(--fuenteGenerica);
     background-repeat: no-repeat;
     background-size: cover;
-  }
-  
-  main {
-    position: relative;
-    top: 120px;
-    padding-left: 10rem;
-    padding-right: 10rem;
-    overflow: auto;
-  }
-  
-  h2 {
-    text-align: center;
-    font-family: var(--fuenteH2yH3);
-    margin: 3rem;
-    font-size: 2rem;
-  }
-  
-  h3 {
-    text-align: center;
-    font-size: 1.5rem;
-    font-family: var(--fuenteH2yH3);
-    padding: 1rem;
-  }
-  
-  p{
-    font-size: var(--fuenteGenerica);
-  }
-  
-  body a {
-    color: var(--colorLinks);
-    text-decoration: none;
-  }
-  
-  #indiceClases {
-    position: fixed;
-    left: 0;
-    top: 170px;
-    margin: 1rem;
-  }
-  
-  #indiceClases li a {
-    text-decoration: none;
-    color: var(--colorLinks);
-    font-size: 1rem;
-  }
-  
-  #social ol {
-    list-style: none;
-  }
-  
-  #social ol li a {
-    font-size: 2rem;
-    margin: 3px;
-  }
-  
-  .volverInicio{
-      text-align: center;
-  }
-  
-  #cosasImportantes{
-      background-color: var(--fondoCosasImportantes);
-      margin: 1rem;
-      padding: 1rem;
-      border-radius: var(--radioBorde);
-      box-shadow: var(--sombraGenerica);
-  }
-  
-  #clase1, #clase5, #clase9, #clase13{
-      background-color: var(--color1);
-      margin: 1rem;
-      padding: 1rem;
-      border-radius: var(--radioBorde);
-      box-shadow: var(--sombraGenerica);
-  }
-  
-  #clase2, #clase6, #clase10{
-      background-color: var(--color2);
-      margin: 1rem;
-      padding: 1rem;
-      border-radius: var(--radioBorde);
-      box-shadow: var(--sombraGenerica);
-  }
-  
-  #clase3, #clase7, #clase11{
-      background-color: var(--color3);
-      margin: 1rem;
-      padding: 1rem;
-      border-radius: var(--radioBorde);
-      box-shadow: var(--sombraGenerica);
-  }
-  
-  #clase4, #clase8, #clase12{
-      background-color: var(--color4);
-      margin: 1rem;
-      padding: 1rem;
-      border-radius: var(--radioBorde);
-      box-shadow: var(--sombraGenerica);
-  }
-  
-  /*responsive*/
-  
-  @media (max-width:1244px) {
-  
-   .ConejoPortada {
-      display: none;
-    }
-  
-    header {
-      width: 100%;
-    }
-  
-    nav {
-      width: 100%;
-    }
-  }
-  
-  @media (max-width:1020px){
-    span{
-      display: none;
-    }
-  }
+    display: flex;
+}
+
+#logoCurso{
+display: flex;
+justify-content: center;
+}
+
+nav{
+  width: 10%;
+  margin-right: 5rem;
+  position: fixed;
+  padding-top: 5rem;
+  padding-left: 2rem;
+}
+
+body div{
+  position: relative;
+  width: 100%;
+  padding-left: 15rem;
+  padding-right: 15rem;
+}
+
+h3{
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(179, 98, 255);
+}
+
+.cosasImportantes{
+  padding-left: 1rem;
+}
+
+.video {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+section iframe {
+  margin: 0 auto;
+}
+
+.tituloClases{
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+}
+
+#clase0{
+background-color: var(--color-fondo-tarjetas);
+}

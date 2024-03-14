@@ -25,9 +25,8 @@
         </ul>
         <br />
         <form>
-          <label>Escriba nueva tarea</label>
-          <input type="text" id="tareaNueva" name="tipoTarea" [(ngModel)]="nuevoPendiente.tipo"/>
-          <input type="text" id="tareaNueva" name="tarea" [(ngModel)]="nuevoPendiente.descripcion"/>
+          <input type="text" id="tipoTarea" name="tipoTarea" [(ngModel)]="nuevoPendiente.tipo" placeholder="Tipo tarea"/>
+          <input type="text" id="descripcionTarea" name="tarea" [(ngModel)]="nuevoPendiente.descripcion" placeholder="Descripcion tarea"/>
           <button (click)="postPendientes()" type="button">Nuevo pendiente</button>
         </form>
       </section>

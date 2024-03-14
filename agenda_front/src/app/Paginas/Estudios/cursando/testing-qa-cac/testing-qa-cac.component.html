@@ -1,32 +1,27 @@
 <body>
-    <div id="codoAcodo">
-        <ol id="indiceClases">
-            <div id="codoAcodo">
-                <ol id="indiceClases">
-                    <li><a href="#clase1"></a></li>
-                    <li><a href="#clase2"></a></li>
-                    <li><a href="#clase3"></a></li>
-                    <li><a href="#clase4"></a></li>
-                    <li><a href="#clase5"></a></li>
-                    <li><a href="#clase6"></a></li>
-                    <li><a href="#clase7"></a></li>
-                    <li><a href="#clase8"></a></li>
-                    <li><a href="#clase9"></a></li>
-                    <li><a href="#clase10"></a></li>
-                    <li><a href="#clase11"></a></li>
-                    <li><a href="#clase12"></a></li>
-                    <li><a href="#clase13"></a></li>
-                </ol>
-            </div>
+
+    <nav>
+        <ol>
+            <li (click)="moverse('cosasimportantes')">Cosas importantes</li>
+            <li><a href="#clase0">1</a></li>
+            <li><a href="#clase1">2</a></li>
+            <li><a href="#clase2">3</a></li>
+            <li><a href="#clase3">4</a></li>
+            <li><a href="#clase4">5</a></li>
+            <li><a href="#clase5">6</a></li>
+
         </ol>
-    </div>
-    
-    <div id="videos">
-    
-        <img id="logoCursoCodoAcodo" src="../img/137408912-013f0d0c-37d1-4dc2-a1b5-77356c1003f3.png" alt="logoCodoACodo" />
-        <div id="cosasImportantes">
-            <h3>Cosas importantes:</h3>
-    
+    </nav>
+
+    <div>
+        <section id="logoCurso">
+            <img src="../../../../../assets/img/codoAcodo.png" alt="logoCodoACodo" />
+        </section>
+
+        <section class="cosasImportantes">
+
+            <h3 id="cosasimportantes">Cosas importantes:</h3>
+
             <ul>
                 <li>Dias: Martes y Jueves</li>
                 <li>Horario: 18:30 a 20:00</li>
@@ -41,7 +36,8 @@
                 </li>
                 <li>Mail de Docente: ayelen.leclerc@bue.edu.ar</li>
                 <li>
-                    <a href="https://drive.google.com/drive/folders/1NlbSI3u9Q0nhHI8xSZuVw31RwNqk2wOm?usp=sharing" target="_blank">Drive
+                    <a href="https://drive.google.com/drive/folders/1NlbSI3u9Q0nhHI8xSZuVw31RwNqk2wOm?usp=sharing"
+                        target="_blank">Drive
                         pasado por la docente</a>
                 </li>
                 <li>
@@ -57,30 +53,80 @@
                         target="_blank">TP integrador</a>
                 </li>
             </ul>
-        </div>
-    
+
+        </section>
+
         <h2 class="tituloClases">Videos de las clases</h2>
-    
-        <div id="clase1">
-            <h3 id="clase1" class="numeroClase">Clase 1 (31-7-2023)</h3>
-    
+
+        <section class="video">
+
+            <h3 id="clase0" class="centro">Clase 0</h3>
+
             <dl>
                 <dt>
                     <h4>Temas</h4>
                 </dt>
                 <dd>
-                    Presentacion de la cursada, temas administrativos, modalidad y
-                    campus
+                    Presentacion de la cursada
                 </dd>
             </dl>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/CvHPhb7GmIg" title="YouTube video player"
-                frameborder="0"
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/K24dgDJI_b8?si=qoBH9875Q6ULQ6tN"
+                title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
-    
-            <br />
-    
-            <p class="volverInicio"><a href="#logoCursoCodoAcodo">Volver arriba</a></p>
-        </div>
+        </section>
+
+        <section class="video"> 
+            <h3 id="clase1" class="centro">Clase 1</h3>
+
+            <dl>
+                <dt>
+                    <h4>Temas</h4>
+                </dt>
+                <dd>
+                    Teoria del testing parte I
+                </dd>
+            </dl>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/c1I3HMUkhA4?si=pFvT5jyUwXIODTWN"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </section>
+
+        <section class="video"> 
+            <h3 id="clase2" class="centro">Clase 2</h3>
+
+            <dl>
+                <dt>
+                    <h4>Temas</h4>
+                </dt>
+                <dd>
+                    Teoria del testing parte II
+                </dd>
+            </dl>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YXYaHh843Vk?si=-cB1dA97EHu-6S3D"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </section>
+
+        <section class="video">
+            <h3 id="clase3" class="centro">Clase 3</h3>
+
+            <dl>
+                <dt>
+                    <h4>Temas</h4>
+                </dt>
+                <dd>
+                    Teoria del testing parte III
+                </dd>
+            </dl>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/47KGiDaxaXE?si=4YRXVGYiHyE-abDO"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </section>
     </div>
-    </body>
+
+</body>

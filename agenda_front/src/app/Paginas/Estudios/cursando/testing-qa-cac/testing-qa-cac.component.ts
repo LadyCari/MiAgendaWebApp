@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./testing-qa-cac.component.css']
 })
 export class TestingQACacComponent {
+
+  constructor(private viewportScroller: ViewportScroller){
+
+  }
+
+  public moverse(idElementoPagina: any){
+    const idelement = document.getElementById(idElementoPagina);
+    if(idelement){
+      idelement.scrollIntoView({
+        behavior: 'smooth'
+      })
+    }
+  }
 
 }

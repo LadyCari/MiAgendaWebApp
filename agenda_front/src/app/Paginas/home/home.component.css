@@ -76,6 +76,19 @@
     list-style: none;
     margin: 5px;
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+  }
+
+  #notas ul li p{
+    margin: 0px;
+    margin-right: 0.5rem;
+  }
+
+  #notas ul li button{
+    background-color: #4caf4f00;
+    border: 0px;
   }
   
   #tituloNotas {
@@ -99,6 +112,15 @@
     border-radius: 10px;
     margin: 0.3rem;
     border: 0px;
+    padding-left: 10px;
+  }
+
+  #tipoTarea{
+    width: 20%;
+  }
+
+  #descripcionTarea{
+    width: 50%;
   }
   
   #horarios {
