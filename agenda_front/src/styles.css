@@ -1,3 +1,20 @@
+:root {
+
+  /*colores*/
+  --color-rosa: #ffa9ff;
+  --color-naranja: #ffce8e;
+  --color-verde: #c1ff8e;
+  --color-celeste: #8ebbffb9;
+
+  /* personalizacion generica*/
+  --color-violeta-links: rgb(179, 98, 255);
+  --sombra-generica: 4px 3px 5px #000000;
+
+  /*letras*/
+  --estilo-titulos: "Gluten", cursive;
+
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -18,3 +35,87 @@ body {
   height: 100%;
 }
 
+.cuerpo-pagina {
+  background-image: url("https://img.freepik.com/free-vector/gradient-pastel-sky-background_23-2148917404.jpg?w=2000");
+  margin: 0;
+  padding: 0;
+  font-family: "Bitter", serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  overflow: auto;
+  height: 100vh;
+  font-family: 'Single Day', cursive;
+}
+
+/*---------------------------tarjetas---------------------------*/
+
+.tarjeta {
+  height: 200px;
+  width: 200px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  position: relative;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--sombra-generica);
+  overflow: hidden;
+}
+
+.agregar:hover{
+    height: 220px;
+    width: 220px;
+    transition: 1s;
+}
+
+.tarjeta img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.linksCargados i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: var(--color-celeste);
+  padding: 0.5rem;
+  border-radius: 100%;
+  background-color: rgba(5, 5, 5, 0.733);
+  transition: 1s;
+  z-index: 10;
+}
+
+.linksCargados i:hover{
+  font-size: 1rem;
+}
+
+.tarjeta a {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: 0px;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  background-color: rgba(5, 5, 5, 0.733);
+  color: white;
+  text-decoration: none;
+  transition: 1s;
+}
+
+.tarjeta p:hover {
+  height: 5rem;
+}
+
+/*------------------------------------------------------------*/

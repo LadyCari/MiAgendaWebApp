@@ -28,6 +28,10 @@ import { LinksUtilesJuegosComponent } from './Paginas/Links-utiles/links-utiles-
 import { FullStackJavaCacComponent } from './Paginas/Estudios/finalizado/full-stack-java-cac/full-stack-java-cac.component';
 import { TestingQACacComponent } from './Paginas/Estudios/cursando/testing-qa-cac/testing-qa-cac.component';
 import { HomeComponent } from './Paginas/Home/home.component';
+import { LinksUtilesAnimeComponent } from './Paginas/Links-utiles/links-utiles-anime/links-utiles-anime.component';
+import { ManhwasComponent } from './Paginas/Links-utiles/links-utiles-mangas/manhwas/manhwas.component';
+import { LinksUtilesIdiomasComponent } from './Paginas/Links-utiles/links-utiles-idiomas/links-utiles-idiomas.component';
+import { ModalLinkComponent } from './Modales/modal-link/modal-link.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +49,11 @@ import { HomeComponent } from './Paginas/Home/home.component';
     LinksUtilesJuegosComponent, 
     FullStackJavaCacComponent, 
     HomeComponent,
-    TestingQACacComponent],
+    TestingQACacComponent,
+    LinksUtilesAnimeComponent,
+    ManhwasComponent,
+    LinksUtilesIdiomasComponent,
+    ModalLinkComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

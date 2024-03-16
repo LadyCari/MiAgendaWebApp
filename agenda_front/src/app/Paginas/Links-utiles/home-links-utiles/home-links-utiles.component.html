@@ -1,4 +1,4 @@
-<body>
+<body class="cuerpo-pagina">
 
     <section>
         <div class="logo">
@@ -9,27 +9,18 @@
     </section>
         
         <section class="contenedor">
-    
-            <div class="mostrarLink" id="programacion">
-                <a href="/cosas-utiles-programacion">Link programacion</a>
+
+            <div class="tarjeta linksCargados" *ngFor="let link of listaLinks">
+                <i class="fa-solid fa-pen-to-square" (click)="putsLink(link)"></i>
+                <i class="fa-solid fa-trash" (click)="deleteLink(link)"></i>
+                <img src="{{link.imagen}}" alt="">
+                <a href="{{link.url}}">{{link.nombre}}</a>
             </div>
     
-            <div class="mostrarLink" id="juegos">
-                <a href="">Link Juegos</a>
-            </div>
-    
-            <div class="mostrarLink" id="animes">
-                <a href="">Links anime</a>
-            </div>
-    
-            <div class="mostrarLink" id="mangas">
-                <a href="">Links mangas/manhwas</a>
-            </div>
-    
-            <div class="mostrarLink" id="idiomas">
-                <a href="">Links idiomas</a>
-            </div>
-    
+            <div class="tarjeta agregar">
+                <button mat-mini-fab (click)="postLink()"><i class="fa-solid fa-plus"></i></button>
+              </div>
+
         </section>
     
     </body>

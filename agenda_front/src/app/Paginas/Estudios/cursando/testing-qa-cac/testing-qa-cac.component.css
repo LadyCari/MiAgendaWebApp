@@ -1,7 +1,3 @@
-:root{
-  --color-fondo-tarjetas: #007bff;
-}
-
 body {
     background-image: url("https://img.freepik.com/free-vector/gradient-pastel-sky-background_23-2148917404.jpg?w=2000");
     margin: 0;
@@ -10,6 +6,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
+    font-family: "Bitter", serif;
 }
 
 #logoCurso{
@@ -23,6 +20,7 @@ nav{
   position: fixed;
   padding-top: 5rem;
   padding-left: 2rem;
+  z-index: 10;
 }
 
 body div{
@@ -35,6 +33,7 @@ body div{
 h3{
   font-size: 2rem;
   margin-bottom: 2rem;
+  font-family: "Gluten", cursive;
 }
 
 a{
@@ -49,19 +48,47 @@ a{
 .video {
   text-align: center;
   margin-bottom: 3rem;
+  box-shadow: 4px 3px 5px #000000;
+  border-radius: 10px;
+  height: 4rem;
+  overflow: hidden;
+  transition: 1s;
+  padding-top: 1rem;
+}
+
+.video:hover{
+  height: 30rem;
 }
 
 section iframe {
   margin: 0 auto;
 }
 
-.tituloClases{
+#tituloClases{
   text-align: center;
   margin-top: 5rem;
   margin-bottom: 3rem;
   font-size: 3rem;
+  font-family: "Gluten", cursive;
 }
 
-#clase0{
-background-color: var(--color-fondo-tarjetas);
+.tipo1{
+  background-color: #ffce8e;
+}
+
+.tipo2{
+  background-color: #c1ff8e;
+}
+
+.tipo3{
+  background-color: #8ebbffb9;
+}
+
+.tipo4{
+  background-color: #fc89c2;
+}
+
+li{
+  cursor: pointer;
+  margin-bottom: 0.5rem;
 }

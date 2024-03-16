@@ -1,6 +1,8 @@
 package com.carito.agenda.Controllers;
 
 import com.carito.agenda.DTOs.PersonajeCompletoDTO;
+import com.carito.agenda.Entitys.Link;
+import com.carito.agenda.Excepcion.CustomException;
 import com.carito.agenda.Services.PersonajeService;
 import com.carito.agenda.web.AjaxResponseGenerator;
 import com.carito.agenda.web.AjaxResponseObject;
@@ -24,4 +26,22 @@ public class PersonajeController {
         PersonajeCompletoDTO personaje = personajeService.getPersonajeById(id);
         return AjaxResponseGenerator.createSimpleResponseOK(personaje);
     }
+/*
+    @RequestMapping(value = "/modificar-personaje", produces = { "application/json" }, method = RequestMethod.PUT)
+    public AjaxResponseObject editPersonaje(@RequestBody PersonajeCompletoDTO data) {
+        personajeService.modificarLinkUtil(data);
+        return AjaxResponseGenerator.createSimpleResponseOK("OK");
+    }
+
+    @RequestMapping(value = "/delete-link", produces = { "application/json" }, method = RequestMethod.DELETE)
+    public AjaxResponseObject deleteLinkUtil(@RequestParam("linkId") Long id) {
+        try {
+            personajeService.borrarLinkUtil(id);
+            return AjaxResponseGenerator.createSimpleResponseOK("Tarea eliminada correctamente");
+        }
+        catch (CustomException e) {
+            return AjaxResponseGenerator.createSimpleResponseError("Ocurrio un error");
+        }
+    }
+    */
 }

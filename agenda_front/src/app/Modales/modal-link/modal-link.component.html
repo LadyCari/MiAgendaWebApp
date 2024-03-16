@@ -1,0 +1,50 @@
+<form [formGroup]="nuevoLink">
+
+    <h2>Cargar datos Link</h2>
+
+    <section>
+
+        <div class="categoria">
+            <p>Categoria</p>
+            <select formControlName="categoria">
+                <option value="General">General</option>
+                <option value="Programación">Programación</option>
+                <option value="Juego">Juego</option>
+                <option value="Anime">Anime</option>
+                <option value="Manga/Manhwa">Manga/Manhwa</option>
+                <option value="Idioma">Idioma</option>
+            </select>
+        </div>
+
+        <div>
+            <p>Nombre</p>
+            <input type="text" formControlName="nombre" placeholder="Nombre general">
+        </div>
+
+        <div>
+            <p>Capítulo</p>
+            <input type="text" formControlName="capitulo" placeholder="Captiulo actual">
+        </div>
+
+        <div>
+            <p>Descripción</p>
+            <input type="text" formControlName="descripcion" placeholder="Ingrese otra información">
+        </div>
+
+        <div>
+            <p>Imagen</p>
+            <input type="text" formControlName="imagen" placeholder="Ingrese link de la imagen">
+        </div>
+
+        <div> 
+            <p>Link</p>
+            <input type="text" formControlName="url" placeholder="Ingrese link a la pagina">
+        </div>
+
+        <div class="botones">
+            <button class="cancelar" type="button">Cancelar</button>
+            <button class="confirmar" (click)="putsLink()">Terminar</button>
+        </div>
+
+    </section>
+</form>

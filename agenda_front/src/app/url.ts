@@ -9,4 +9,8 @@ export class Url{
     public static getPendiente = "http://localhost:8089/tareas/get-tareas"
     public static PostPendiente = "http://localhost:8089/tareas/crear"
     public static deletePendiente = "http://localhost:8089/tareas/delete?id="
+    public static getLinks = "http://localhost:8089/link-utiles/get-links?categoria="
+    public static editLinks = "http://localhost:8089/link-utiles/modificar-link"
+    public static addLinks = "http://localhost:8089/link-utiles/add-link"
+    public static deleteLinks = "http://localhost:8089/link-utiles/delete-link?linkId="
 }

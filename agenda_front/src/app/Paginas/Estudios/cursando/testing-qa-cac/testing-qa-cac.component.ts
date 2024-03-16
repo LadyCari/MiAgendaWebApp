@@ -12,13 +12,9 @@ export class TestingQACacComponent {
 
   }
 
-  public moverse(idElementoPagina: any){
-    const idelement = document.getElementById(idElementoPagina);
-    if(idelement){
-      idelement.scrollIntoView({
-        behavior: 'smooth'
-      })
-    }
+  public moverse(idElementoPagina: string): void {
+    console.log("entra");
+    this.viewportScroller.scrollToAnchor(idElementoPagina);
   }
 
 }

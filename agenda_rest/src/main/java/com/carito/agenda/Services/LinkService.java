@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class LinkService {
@@ -23,5 +24,10 @@ public class LinkService {
 
     public void modificarLinkUtil(Link nuevoLink) {
         linkRepository.save(nuevoLink);
+    }
+
+    public void borrarLinkUtil(Long linkABorrar) {
+        Optional<Link> linkOptional = linkRepository.findById(linkABorrar);
+        linkOptional.ifPresent(link -> linkRepository.delete(link));
     }
 }
