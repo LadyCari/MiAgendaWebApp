@@ -30,6 +30,7 @@ export const routes: Routes = [
   { path: 'cosas-utiles-idioma', component: LinksUtilesIdiomasComponent},
   { path: 'cosas-utiles-juegos', component: LinksUtilesJuegosComponent},
   { path: 'cosas-utiles-mangas/manhwas', component: ManhwasComponent},
+  { path: 'home-estudios', component: HomeEstudiosComponent},
   { path: 'cursos-cursando-home', component: HomeEstudioCursandoComponent},
   { path: 'cursos-finalizados-home', component: HomeEstudioFinalizadoComponent},
   { path: 'curso-testing&QA-cac', component: TestingQACacComponent},
