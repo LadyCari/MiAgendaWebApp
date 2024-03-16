@@ -1,1 +1,38 @@
-<p>links-utiles-juegos works!</p>
+<body class="cuerpo-pagina">
+
+    <section>
+        <div class="logo">
+            <img src="https://www.creativefabrica.com/wp-content/uploads/2021/11/20/Bear-Game-Console-PNG-File-Cute-Clip-Art-Graphics-20465445-1.png"
+                alt="nifty">
+            <h2>Paginas de juegos</h2>
+            <img src="https://i.pinimg.com/originals/73/66/ac/7366acdcf976006e5f8ba731719ea943.png"
+                alt="utiles">
+        </div>
+    </section>
+
+    <section class="contenedor">
+
+        <div class="tarjeta linksCargados" *ngFor="let link of listaLinks">
+
+            <button mat-icon-button [matMenuTriggerFor]="menu" id="menu">
+                <i class="fa-solid fa-ellipsis"></i>
+            </button>
+            <mat-menu #menu="matMenu" class="menu-personalizado">
+                <button mat-menu-item>
+                    <i class="fa-solid fa-pen-to-square edit" (click)="putsLink(link)"></i>
+                </button>
+                <button mat-menu-item>
+                    <li><i class="fa-solid fa-trash" (click)="deleteLink(link)"></i></li>
+                </button>
+            </mat-menu>
+            <img src="{{link.imagen}}" title="{{link.descripcion}}">
+            <a href="{{link.url}}" target="_blank">{{link.nombre}}</a>
+        </div>
+
+        <div class="tarjeta agregar">
+            <button mat-mini-fab (click)="postLink()"><i class="fa-solid fa-plus"></i></button>
+        </div>
+
+    </section>
+
+</body>

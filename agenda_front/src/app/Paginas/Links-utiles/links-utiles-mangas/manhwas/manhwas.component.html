@@ -1,1 +1,38 @@
-<p>manhwas works!</p>
+<body class="cuerpo-pagina">
+
+    <section>
+        <div class="logo">
+            <img src="https://pbs.twimg.com/media/F__voRVWoAAzR7u.png"
+                alt="nifty">
+            <h2>Mangas y manhwas</h2>
+            <img src="https://www.sukawaii.com/cdn/shop/files/p1001.png?v=1706571234"
+                alt="utiles">
+        </div>
+    </section>
+
+    <section class="contenedor">
+
+        <div class="tarjeta linksCargados" *ngFor="let link of listaLinks">
+
+            <button mat-icon-button [matMenuTriggerFor]="menu" id="menu">
+                <i class="fa-solid fa-ellipsis"></i>
+            </button>
+            <mat-menu #menu="matMenu" class="menu-personalizado">
+                <button mat-menu-item>
+                    <i class="fa-solid fa-pen-to-square edit" (click)="putsLink(link)"></i>
+                </button>
+                <button mat-menu-item>
+                    <li><i class="fa-solid fa-trash" (click)="deleteLink(link)"></i></li>
+                </button>
+            </mat-menu>
+            <img src="{{link.imagen}}" alt="">
+            <a href="{{link.url}}" target="_blank">{{link.nombre}} - {{link.capitulo}}</a>
+        </div>
+
+        <div class="tarjeta agregar">
+            <button mat-mini-fab (click)="postLink()"><i class="fa-solid fa-plus"></i></button>
+        </div>
+
+    </section>
+
+</body>

@@ -1,115 +1,38 @@
-<div id="cuerpo">
-    <div id="tituloSeccion">
-      <h2>Cosas utiles</h2>
-      <img src="../../../../assets/img/seven.png" alt="" />
-    </div>
-    
-    <div id="contenedor">
-      <div class="estilo1">
-        <div><img src="../../../../assets/img/cheatsheet.jpg" alt="" /></div>
-        <a href="https://htmlcheatsheet.com" target="_blank"><h3>CheatSheet</h3></a>
-        <p>Hoja sobre css, html y java scrip.</p>
+<body class="cuerpo-pagina">
+
+  <section>
+      <div class="logo">
+          <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/66d316cf-e03e-4783-a3ce-685463d2e354/debo7gz-26790f96-05c1-4592-80f0-ee6eb26de92a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzY2ZDMxNmNmLWUwM2UtNDc4My1hM2NlLTY4NTQ2M2QyZTM1NFwvZGVibzdnei0yNjc5MGY5Ni0wNWMxLTQ1OTItODBmMC1lZTZlYjI2ZGU5MmEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.OxNLWSRTnxWXWJBqeqreqkP_-57i3l4bSsE1wypULNc"
+              alt="nifty">
+          <h2>Links utiles Programacion</h2>
+          <img src="https://png.pngtree.com/png-clipart/20230916/original/pngtree-school-books-in-chibi-style-by-etsy-for-digital-use-vector-png-image_12229576.png"
+              alt="utiles">
       </div>
-      <div class="estilo2">
-        <div><img src="../../../../assets/img/iconos.jpg" alt="" /></div>
-        <a href="https://fontawesome.com/icons/categories" target="_blank"
-          ><h3>Font Awesome</h3></a
-        >
-        <p>Iconos gratis para el front</p>
+  </section>
+
+  <section class="contenedor">
+
+      <div class="tarjeta linksCargados" *ngFor="let link of listaLinks">
+
+          <button mat-icon-button [matMenuTriggerFor]="menu" id="menu">
+              <i class="fa-solid fa-ellipsis"></i>
+          </button>
+          <mat-menu #menu="matMenu" class="menu-personalizado">
+              <button mat-menu-item>
+                  <i class="fa-solid fa-pen-to-square edit" (click)="putsLink(link)"></i>
+              </button>
+              <button mat-menu-item>
+                  <li><i class="fa-solid fa-trash" (click)="deleteLink(link)"></i></li>
+              </button>
+          </mat-menu>
+          <img src="{{link.imagen}}" alt="" title="{{link.descripcion}}">
+          <a href="{{link.url}}" target="_blank">{{link.nombre}}</a>
       </div>
-      <div class="estilo3">
-        <div>
-          <div><img src="../../../../assets/img/fuentes.jpg" alt="" /></div>
-          <a href="https://fonts.google.com/specimen/Gloock" target="_blank"
-            ><h3>Google Fonts</h3></a
-          >
-          <p>Distintos estilos de fuentes para letras</p>
-        </div>
+
+      <div class="tarjeta agregar">
+          <button mat-mini-fab (click)="postLink()"><i class="fa-solid fa-plus"></i></button>
       </div>
-      <div class="estilo4">
-        <div>
-          <div><img src="../../../../assets/img/lucid.jpg" alt="" /></div>
-          <a
-            href="https://lucid.app/documents#/documents?folder_id=home"
-            target="_blank"
-            ><h3>Lucid</h3></a
-          >
-          <p>Pagina para hacer mapas conceptuales, uml, etc</p>
-        </div>
-      </div>
-      <div class="estilo4">
-        <div>
-          <div><img src="../../../../assets/img/excalidraw.jpg" alt="" /></div>
-          <a
-            href="https://excalidraw.com/#room=4631eebf28fe4c339b50,Tbq2vTmroO52wWtiYIEXjA"
-            target="_blank"
-            ><h3>Excalidraw</h3></a
-          >
-          <p>Pagina util para dibujar, cuadros, esquemas graficos, etc</p>
-        </div>
-      </div>
-      <div class="estilo3">
-        <div>
-          <div><img src="../../../../assets/img/uml.jpg" alt="" /></div>
-          <a
-            href="https://online.visual-paradigm.com/es/diagrams/features/uml-tool/"
-            target="_blank"
-            ><h3>Online UML Diagram Tool</h3></a
-          >
-          <p>Pagina UML</p>
-        </div>
-      </div>
-    
-      <div class="estilo2">
-        <div>
-          <div><img src="../../../../assets/img/ranas.jpg" alt="sitio ranas con flex" /></div>
-          <a href="https://flexboxfroggy.com/#es" target="_blank"
-            ><h3>FlexBox Froggy</h3></a
-          >
-          <p>Practicar flex con ranas</p>
-        </div>
-      </div>
-    
-      <div class="estilo1">
-        <div><img src="../../../../assets/img/udemy.jpg" alt="" /></div>
-        <a href="https://www.udemy.com" target="_blank"><h3>Udemy</h3></a>
-        <p>Cursos de programacion y aveces con ofertas de cursos gratis!</p>
-      </div>
-    
-      <div class="estilo3">
-        <div>
-          <div><img src="../../../../assets/img/cssGenerator.jpg" alt="sitio css generator" /></div>
-          <a
-            href="https://css-generator.netlify.app/layout-grid-items/"
-            target="_blank"
-            ><h3>Css Generator</h3></a
-          >
-          <p>Generador de codigo para css segun la necesidad</p>
-        </div>
-      </div>
-    
-      <div class="estilo1">
-        <div>
-          <div><img src="../../../../assets/img/draw.io.jpg" alt="sitio css generator" /></div>
-          <a href="https://www.drawio.com" target="_blank"><h3>Draw.io</h3></a>
-          <p>Para hacer dragramas para Base de datos y metodologia</p>
-        </div>
-      </div>
-    
-      <div class="estilo4">
-        <div><img src="../../../../assets/img/sqlfuntime.jpg" alt="" /></div>
-        <a href="https://www.sqlfuntime.com" target="_blank"
-          ><h3>SQL fun time</h3></a
-        >
-        <p>Apremder sql (base de datos) de manera divertida?</p>
-      </div>
-    
-      <div class="estilo2">
-        <div><img src="../../../../assets/img/cursosYa.jpg" alt="" /></div>
-        <a href="https://www.tutorialesprogramacionya.com/mysqlya/m" target="_blank"
-          ><h3>Cursos ya</h3></a
-        >
-        <p>Cursos de varias cosas</p>
-      </div>
-    </div>
-    </div>
+
+  </section>
+
+</body>

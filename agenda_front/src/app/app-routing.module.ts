@@ -12,6 +12,10 @@ import { HomeEstudioCursandoComponent } from './Paginas/Estudios/cursando/home-e
 import { HomeEstudioFinalizadoComponent } from './Paginas/Estudios/finalizado/home-estudio-finalizado/home-estudio-finalizado.component';
 import { TestingQACacComponent } from './Paginas/Estudios/cursando/testing-qa-cac/testing-qa-cac.component';
 import { FullStackJavaCacComponent } from './Paginas/Estudios/finalizado/full-stack-java-cac/full-stack-java-cac.component';
+import { LinksUtilesAnimeComponent } from './Paginas/Links-utiles/links-utiles-anime/links-utiles-anime.component';
+import { LinksUtilesIdiomasComponent } from './Paginas/Links-utiles/links-utiles-idiomas/links-utiles-idiomas.component';
+import { LinksUtilesJuegosComponent } from './Paginas/Links-utiles/links-utiles-juegos/links-utiles-juegos.component';
+import { ManhwasComponent } from './Paginas/Links-utiles/links-utiles-mangas/manhwas/manhwas.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,7 +26,10 @@ export const routes: Routes = [
   { path: 'vista-personaje-bdo/:id', component: VistaPersonajeBdoComponent},
   { path: 'home-links-utiles', component: HomeLinksUtilesComponent},
   { path: 'cosas-utiles-programacion', component: LinksUtilesProgramacionComponent},
-  { path: 'home-estudios', component: HomeEstudiosComponent},
+  { path: 'cosas-utiles-anime', component: LinksUtilesAnimeComponent},
+  { path: 'cosas-utiles-idioma', component: LinksUtilesIdiomasComponent},
+  { path: 'cosas-utiles-juegos', component: LinksUtilesJuegosComponent},
+  { path: 'cosas-utiles-mangas/manhwas', component: ManhwasComponent},
   { path: 'cursos-cursando-home', component: HomeEstudioCursandoComponent},
   { path: 'cursos-finalizados-home', component: HomeEstudioFinalizadoComponent},
   { path: 'curso-testing&QA-cac', component: TestingQACacComponent},

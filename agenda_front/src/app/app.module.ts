@@ -32,6 +32,7 @@ import { LinksUtilesAnimeComponent } from './Paginas/Links-utiles/links-utiles-a
 import { ManhwasComponent } from './Paginas/Links-utiles/links-utiles-mangas/manhwas/manhwas.component';
 import { LinksUtilesIdiomasComponent } from './Paginas/Links-utiles/links-utiles-idiomas/links-utiles-idiomas.component';
 import { ModalLinkComponent } from './Modales/modal-link/modal-link.component';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,10 @@ import { ModalLinkComponent } from './Modales/modal-link/modal-link.component';
     MatDialogModule,
     MatButtonModule,
     MatSlideToggleModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatButtonModule, 
+    MatMenuModule, 
+    MatInputModule
   ],
   exports:[
     MatPaginatorModule,

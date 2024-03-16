@@ -25,26 +25,6 @@ h2{
     align-items: center;
 }
 
-#programacion{
-    background-image: url("https://i.pinimg.com/originals/75/8f/ce/758fce66508ff38809b308e1cf329679.gif");
-}
-
-#juegos{
-    background-image: url("https://img.freepik.com/premium-photo/kawaii-girl-playing-video-games-cute-gamer-kid-illustration_691560-5895.jpg?w=360");
-}
-
-#animes{
-    background-image: url("https://steamuserimages-a.akamaihd.net/ugc/2292957114624075748/D32852C58B3C8BDF7A4C989AB1899914688B2168/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false");
-}
-
-#mangas{
-    background-image: url("https://i.pinimg.com/736x/dd/08/9c/dd089cd2fbbd4b940f37af2c79242215.jpg");
-}
-
-#idiomas{
-    background-image: url("https://media.giphy.com/media/IbreStuFUdPluU2gkm/giphy.gif");
-}
-
 .mostrarLink{
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
