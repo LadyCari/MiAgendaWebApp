@@ -16,6 +16,7 @@ import javax.persistence.EntityManager;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PersonajeService {
@@ -140,5 +141,63 @@ public class PersonajeService {
         nuevoPersonaje.setIdMisiones(misionesPj.getMisionesId());
         nuevoPersonaje.setIdInventarioTuvala(tuvalaV.getInventarioId());
         personajeRepository.save(nuevoPersonaje);
+    }
+
+    @Transactional
+    public void modificarPersonaje(PersonajeCompletoDTO personaje) {
+        /// GUARDAR DETALLES
+        DetallesPj detallesPj = new DetallesPj();
+        detallesPj.setObjetivo(personaje.getObjetivo());
+        detallesPj.setTemporada(personaje.isTemporada());
+        detallesPj = detallesService.save(detallesPj);
+        /// GUARDAR MISIONES
+        MisionesPj misionesPj = new MisionesPj();
+        misionesPj.setChenga(personaje.isChenga());
+        misionesPj.setInventario(personaje.isInventario());
+        misionesPj = misionesService.save(misionesPj);
+        /// GUARDAR TUVALA
+        TuvalaV tuvalaV = new TuvalaV();
+        tuvalaV.setAnillo1(personaje.isAnillo1());
+        tuvalaV.setAnillo2(personaje.isAnillo2());
+        tuvalaV.setArete1(personaje.isArete1());
+        tuvalaV.setArete2(personaje.isArete2());
+        tuvalaV.setCasco(personaje.isCasco());
+        tuvalaV.setCollar(personaje.isCollar());
+        tuvalaV.setCinturon(personaje.isCinturon());
+        tuvalaV.setGuante(personaje.isGuante());
+        tuvalaV.setZapato(personaje.isZapato());
+        tuvalaV.setPechera(personaje.isPechera());
+        tuvalaV.setArmaDespertar(personaje.isArmaDespertar());
+        tuvalaV.setArmaSecundaria(personaje.isArmaSecundaria());
+        tuvalaV.setArmaPrincipal(personaje.isArmaPrincipal());
+        tuvalaV = tuvalaService.save(tuvalaV);
+        /// GUARDAR PJ
+        InfoPj nuevoPersonaje = new InfoPj();
+        nuevoPersonaje.setIdPj(personaje.getIdPersonaje());
+        nuevoPersonaje.setNombre(personaje.getNombre());
+        nuevoPersonaje.setFoto(personaje.getFoto());
+        nuevoPersonaje.setSet(personaje.getFotoSet());
+        nuevoPersonaje.setIdClase(personaje.getIdClase());
+        nuevoPersonaje.setIdDetalles(detallesPj.getDetallesId());
+        nuevoPersonaje.setIdMisiones(misionesPj.getMisionesId());
+        nuevoPersonaje.setIdInventarioTuvala(tuvalaV.getInventarioId());
+        personajeRepository.save(nuevoPersonaje);
+    }
+
+    @Transactional
+    public void deletePersonaje(Long pjId) {
+        Optional<InfoPj> pjOptional = personajeRepository.findById(pjId);
+        if(pjOptional.isPresent()){
+            personajeRepository.delete(pjOptional.get());
+
+            Optional<TuvalaV> tuvalaVOptional = tuvalaService.findById(pjOptional.get().getIdInventarioTuvala());
+            tuvalaVOptional.ifPresent(tuvalaV -> tuvalaService.delete(tuvalaV));
+
+            Optional<MisionesPj> misionesPjOptional = misionesService.findById(pjOptional.get().getIdMisiones());
+            misionesPjOptional.ifPresent(misionesPj -> misionesService.delete(misionesPj));
+
+            Optional<DetallesPj> detallesPjOptional = detallesService.findById(pjOptional.get().getIdDetalles());
+            detallesPjOptional.ifPresent(detallesPj -> detallesService.delete(detallesPj));
+        }
     }
 }

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Log4j2
 @RestController
+@RequestMapping("/personaje")
 public class PersonajeController {
     @Autowired
     private PersonajeService personajeService;
@@ -26,22 +27,22 @@ public class PersonajeController {
         PersonajeCompletoDTO personaje = personajeService.getPersonajeById(id);
         return AjaxResponseGenerator.createSimpleResponseOK(personaje);
     }
-/*
+
     @RequestMapping(value = "/modificar-personaje", produces = { "application/json" }, method = RequestMethod.PUT)
     public AjaxResponseObject editPersonaje(@RequestBody PersonajeCompletoDTO data) {
-        personajeService.modificarLinkUtil(data);
+        personajeService.modificarPersonaje(data);
         return AjaxResponseGenerator.createSimpleResponseOK("OK");
     }
 
-    @RequestMapping(value = "/delete-link", produces = { "application/json" }, method = RequestMethod.DELETE)
+    @RequestMapping(value = "/delete-personaje", produces = { "application/json" }, method = RequestMethod.DELETE)
     public AjaxResponseObject deleteLinkUtil(@RequestParam("linkId") Long id) {
         try {
-            personajeService.borrarLinkUtil(id);
-            return AjaxResponseGenerator.createSimpleResponseOK("Tarea eliminada correctamente");
+            personajeService.deletePersonaje(id);
+            return AjaxResponseGenerator.createSimpleResponseOK("Personaje eliminado correctamente");
         }
         catch (CustomException e) {
             return AjaxResponseGenerator.createSimpleResponseError("Ocurrio un error");
         }
     }
-    */
+
 }
