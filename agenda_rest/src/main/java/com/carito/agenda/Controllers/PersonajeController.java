@@ -35,7 +35,7 @@ public class PersonajeController {
     }
 
     @RequestMapping(value = "/delete-personaje", produces = { "application/json" }, method = RequestMethod.DELETE)
-    public AjaxResponseObject deleteLinkUtil(@RequestParam("linkId") Long id) {
+    public AjaxResponseObject deletePersonaje(@RequestParam("personajeId") Long id) {
         try {
             personajeService.deletePersonaje(id);
             return AjaxResponseGenerator.createSimpleResponseOK("Personaje eliminado correctamente");
