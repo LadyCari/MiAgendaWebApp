@@ -2,10 +2,10 @@
 
   <section>
       <div class="logo">
-          <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/66d316cf-e03e-4783-a3ce-685463d2e354/debo7gz-26790f96-05c1-4592-80f0-ee6eb26de92a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzY2ZDMxNmNmLWUwM2UtNDc4My1hM2NlLTY4NTQ2M2QyZTM1NFwvZGVibzdnei0yNjc5MGY5Ni0wNWMxLTQ1OTItODBmMC1lZTZlYjI2ZGU5MmEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.OxNLWSRTnxWXWJBqeqreqkP_-57i3l4bSsE1wypULNc"
+          <img src="https://i.pinimg.com/originals/f6/48/57/f64857e98b6636b41a972e04c88b8890.png"
               alt="nifty">
           <h2>Links utiles Programacion</h2>
-          <img src="https://png.pngtree.com/png-clipart/20230916/original/pngtree-school-books-in-chibi-style-by-etsy-for-digital-use-vector-png-image_12229576.png"
+          <img src="https://preview.redd.it/all-stolas-official-art-pt-1-v0-7zpbigljspxa1.png?width=500&format=png&auto=webp&s=a614a4a248b99936909c5e1604391b8906cc11bb"
               alt="utiles">
       </div>
   </section>
@@ -32,6 +32,9 @@
       <div class="tarjeta agregar">
           <button mat-mini-fab (click)="postLink()"><i class="fa-solid fa-plus"></i></button>
       </div>
+
+      <mat-paginator [length]="200" [pageSizeOptions]="[10, 50, 100]" aria-label="Select page">
+    </mat-paginator>
 
   </section>
 

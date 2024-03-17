@@ -5,11 +5,11 @@ import { HttpService } from 'src/app/Servicios/http.service';
 import { Url } from 'src/app/url';
 
 @Component({
-  selector: 'app-links-utiles-programacion',
-  templateUrl: './links-utiles-programacion.component.html',
-  styleUrls: ['./links-utiles-programacion.component.css']
+  selector: 'app-links-utiles-estudios-generales',
+  templateUrl: './links-utiles-estudios-generales.component.html',
+  styleUrls: ['./links-utiles-estudios-generales.component.css']
 })
-export class LinksUtilesProgramacionComponent implements OnInit{
+export class LinksUtilesEstudiosGeneralesComponent {
 
   constructor(private httpService: HttpService, private dialog: MatDialog){
   }
@@ -21,10 +21,9 @@ export class LinksUtilesProgramacionComponent implements OnInit{
     readonly url = Url;
     listaLinks: any;
     nuevoLink: any;
-    
   
     private obtenerLista(){
-      this.httpService.realizarGet(this.url.getLinks + 'Programación').subscribe((data: any) =>{
+      this.httpService.realizarGet(this.url.getLinks + 'EstudioGeneral').subscribe((data: any) =>{
         if(data.state == 'OK'){
           this.listaLinks = data.data;
         }

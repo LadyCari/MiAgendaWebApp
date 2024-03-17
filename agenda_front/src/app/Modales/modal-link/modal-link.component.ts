@@ -67,4 +67,9 @@ export class ModalLinkComponent implements OnInit {
     });
     this.esEdicion = true;
   }
+
+  public cancelar() {
+    this.dialogRef.close();
+  }
+  
 }

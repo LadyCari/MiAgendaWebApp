@@ -33,6 +33,8 @@ import { ManhwasComponent } from './Paginas/Links-utiles/links-utiles-mangas/man
 import { LinksUtilesIdiomasComponent } from './Paginas/Links-utiles/links-utiles-idiomas/links-utiles-idiomas.component';
 import { ModalLinkComponent } from './Modales/modal-link/modal-link.component';
 import { MatMenuModule } from '@angular/material/menu';
+import { LinksOtrosComponent } from './Paginas/Links-utiles/links-otros/links-otros.component';
+import { LinksUtilesEstudiosGeneralesComponent } from './Paginas/Links-utiles/links-utiles-estudios-generales/links-utiles-estudios-generales.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import { MatMenuModule } from '@angular/material/menu';
     LinksUtilesAnimeComponent,
     ManhwasComponent,
     LinksUtilesIdiomasComponent,
-    ModalLinkComponent],
+    ModalLinkComponent,
+    LinksOtrosComponent,
+    LinksUtilesEstudiosGeneralesComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

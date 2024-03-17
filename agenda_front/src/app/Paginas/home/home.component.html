@@ -16,7 +16,7 @@
 
         <h2>Pendientes</h2>
         <img src="https://cdn-icons-png.freepik.com/512/4436/4436002.png" alt="notas" />
-      
+
       </div>
 
       <ul id="listaPendientes">
@@ -28,12 +28,12 @@
       </ul>
 
       <form>
-        
+
         <input type="text" id="tipoTarea" name="tipoTarea" [(ngModel)]="nuevoPendiente.tipo" placeholder="Tipo tarea" />
         <input type="text" id="descripcionTarea" name="tarea" [(ngModel)]="nuevoPendiente.descripcion"
           placeholder="Descripcion tarea" />
         <button (click)="postPendientes()" type="button" class="botonEstilo botonNotas">Nuevo pendiente</button>
-      
+
       </form>
 
     </div>
@@ -104,8 +104,10 @@
     <div class="tituloCuadros">
 
       <h2>Calendario</h2>
-      <img src="https://images.vexels.com/media/users/3/321862/isolated/preview/d9cff9e55f1fb0512996a91068e34c79-gatito-con-un-calendario.png" alt="">
-    
+      <img
+        src="https://images.vexels.com/media/users/3/321862/isolated/preview/d9cff9e55f1fb0512996a91068e34c79-gatito-con-un-calendario.png"
+        alt="">
+
     </div>
 
     <ul id="listaColoresCalendario">
@@ -182,7 +184,7 @@
     </table>
 
     <div class="botonCentro"><button class="botonEstilo botonCalendario">Agregar</button></div>
-  
+
   </section>
 
 </body>
