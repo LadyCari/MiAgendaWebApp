@@ -5,6 +5,8 @@
   --color-naranja: #ffce8e;
   --color-verde: #c1ff8e;
   --color-celeste: #8ebbffb9;
+  --color-amarillo: rgb(255, 248, 157);
+  --color-rojo: rgba(252, 107, 107, 0.767);
 
   /* personalizacion generica*/
   --color-violeta-links: rgb(179, 98, 255);
@@ -13,27 +15,13 @@
 
   /*letras*/
   --estilo-titulos: "Gluten", cursive;
-
+  --estilo-letra-generico: Roboto, "Helvetica Neue", sans-serif;
 }
 
+/*---------------------------body paginas---------------------------*/
 * {
   margin: 0px;
   padding: 0px;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
-html,
-body {
-  height: 100%;
 }
 
 .cuerpo-pagina {
@@ -46,9 +34,11 @@ body {
   padding-left: 10rem;
   padding-right: 10rem;
   overflow: auto;
-  height: 100vh;
   font-family: 'Single Day', cursive;
 }
+
+/*------------------------------------------------------------------*/
+
 
 /*---------------------------tarjetas---------------------------*/
 
