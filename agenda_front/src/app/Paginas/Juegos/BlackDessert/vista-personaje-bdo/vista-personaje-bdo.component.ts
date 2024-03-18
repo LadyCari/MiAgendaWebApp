@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { ModalCargarPjComponent } from 'src/app/Modales/modal-cargar-pj/modal-cargar-pj.component';
 import { HttpService } from 'src/app/Servicios/http.service';
 import { Url } from 'src/app/url';
@@ -16,7 +16,8 @@ export class VistaPersonajeBdoComponent implements OnInit{
 readonly url = Url;
 personaje: any;
 
-constructor(private route: ActivatedRoute, private httpService: HttpService, private dialog: MatDialog){
+constructor(private route: ActivatedRoute, private httpService: HttpService, private dialog: MatDialog,
+  private router: Router){
 }
 
 ngOnInit() {
@@ -52,4 +53,14 @@ public editarPj(){
     data: this.personaje,
   });
 }
+
+public deletepj(pj: any) {
+  console.log(pj);
+  this.httpService.realizarDelete(this.url.eliminarPj + pj.idPersonaje).subscribe((data: any) => {
+    if (data.state == "OK") {
+        this.router.navigate(['/home-bdo']);
+    }
+  })
+}
+
 }

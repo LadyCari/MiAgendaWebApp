@@ -1,14 +1,18 @@
 export class Url{
     public static urlItems: any = "http://localhost:3000/items"
     public static urlConstantes: any = "http://localhost:3000/Constantes"
-    public static urlToDo: any = ""
+    /*BDO*/
     public static getPersonajesVistaPrevia = "http://localhost:8089/get-personajes-foto"
     public static getClasesPjs = "http://localhost:8089/get-clases"
-    public static postNuevoPj = "http://localhost:8089/nuevo-personaje"
-    public static getInfoPersonaje = "http://localhost:8089/personaje-completo/?id="
+    public static postNuevoPj = "http://localhost:8089/personaje/nuevo-personaje"
+    public static getInfoPersonaje = "http://localhost:8089/personaje/personaje-completo/?id="
+    public static editarPj = "http://localhost:8089/personaje/modificar-personaje"
+    public static eliminarPj = "http://localhost:8089/personaje/delete-personaje?personajeId="
+    /*Pendientes*/
     public static getPendiente = "http://localhost:8089/tareas/get-tareas"
     public static PostPendiente = "http://localhost:8089/tareas/crear"
     public static deletePendiente = "http://localhost:8089/tareas/delete?id="
+    /*links*/
     public static getLinks = "http://localhost:8089/link-utiles/get-links?categoria="
     public static editLinks = "http://localhost:8089/link-utiles/modificar-link"
     public static addLinks = "http://localhost:8089/link-utiles/add-link"

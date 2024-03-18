@@ -15,28 +15,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.vistaPendientes();
-    this.cargarDatosPagina();
   }
 
   readonly url = Url;
   listaPendientes: any[] = [];
   nuevoPendiente: any = { tipo: '', descripcion: '' };
-  loading = true;
-
-
-  private async cargarDatosPagina() {
-    try {
-      let respuesta = this.httpService.realizarGet(this.url.getPendiente);
-      this.listaPendientes = await lastValueFrom(respuesta);
-      setTimeout(() => {
-        this.loading = false;
-      }, 2000);
-    } catch (error) {
-      console.log('error', error);
-    }
-  }
-
-
 
   private vistaPendientes() {
 

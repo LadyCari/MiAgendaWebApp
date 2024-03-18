@@ -27,9 +27,7 @@ export class ModalCargarPjComponent implements OnInit {
   ngOnInit(): void {
     this.getClases();
     this.iniciarFormularioNuevoPj();
-    console.log(this.data);
-    if(this.data != null)
-      this.dataToFormularioDeEditarPj()
+    this.dataToPj();
   }
 
   private iniciarFormularioNuevoPj() {
@@ -76,24 +74,21 @@ export class ModalCargarPjComponent implements OnInit {
 
   crearPersonaje() {
     const personajeCreado = this.formNuevoPersonaje.value;
-    console.log(personajeCreado);
-    if(!this.esEdicion){
+    if (!this.esEdicion) {
       this.httpService.realizarPost(this.url.postNuevoPj, personajeCreado).subscribe((data: any) => {
         if (data.state == 'OK') {
           this.dialogRef.close();
         }
       })
-    }else {/*
-      this.httpService.realizarPut(this.url.editarPJ, personajeCreado).subscribe((data: any) => {
+    } else {
+      console.log(this.data);
+      personajeCreado.idPersonaje = this.data.idPersonaje;
+      this.httpService.realizarPut(this.url.editarPj, personajeCreado).subscribe((data: any) => {
         if (data.state == 'OK') {
           this.dialogRef.close();
         }
-      })*/
+      })
     }
-  }
-
-  public cancelar() {
-    this.dialogRef.close();
   }
 
   capturarFile(event: any, foto: any): any {
@@ -103,33 +98,34 @@ export class ModalCargarPjComponent implements OnInit {
     })
 
   }
+
   fileToByteArray(file: File): Promise<{ base: string, type: string }> {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
-      
+
       reader.onloadend = () => {
         const base64String = reader.result as string;
         const separatorIndex = base64String.indexOf('/9j/');
-        
+
         if (separatorIndex !== -1) {
           const base64Data = base64String.substring(separatorIndex);
           const type = base64String.substring(5, separatorIndex); // Considerando que el tipo MIME siempre estará antes de la base64
-        
+
           resolve({ base: base64Data, type: type });
         } else {
           reject("No se encontró el separador '/9j/' en la cadena base64.");
         }
       };
-  
+
       reader.onerror = (error) => {
         reject(error);
       };
-  
+
       reader.readAsDataURL(file);
     });
   }
 
-  private dataToFormularioDeEditarPj(): void {
+  private dataToPj(): void {
     const pj = this.data;
     this.formNuevoPersonaje.setValue({
       nombre: pj.nombre,
@@ -156,6 +152,9 @@ export class ModalCargarPjComponent implements OnInit {
     });
     this.esEdicion = true;
   }
-  
-  
+
+  public cancelar() {
+    this.dialogRef.close();
+  }
+
 }

@@ -55,7 +55,6 @@ export class ModalLinkComponent implements OnInit {
   }
 
   private dataToLink(): void {
-    console.log(this.data);
     const link = this.data.link;
     this.nuevoLink.setValue({
       nombre: link.nombre,

@@ -26,8 +26,9 @@ export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   /*juegos*/
   { path: 'home-palia', component: HomePaliaComponent },
-  { path: 'home-bdo', component: HomeBdoComponent},
   { path: 'home-juegos', component: HomeJuegosComponent},
+  /*bdo*/
+  { path: 'home-bdo', component: HomeBdoComponent},
   { path: 'vista-personaje-bdo/:id', component: VistaPersonajeBdoComponent},
   /*links*/
   { path: 'home-links-utiles', component: HomeLinksUtilesComponent},

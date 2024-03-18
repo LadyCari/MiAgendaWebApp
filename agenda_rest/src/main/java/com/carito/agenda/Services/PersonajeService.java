@@ -98,7 +98,7 @@ public class PersonajeService {
             personaje.setIdPersonaje(id);
             personaje.setFoto((byte[]) result[19]);
             personaje.setFotoSet((byte[]) result[20]);
-            personaje.setIdClase((Long) result[21]);
+            personaje.setIdClase(Long.valueOf(result[21].toString()));
         }
         return personaje;
     }
