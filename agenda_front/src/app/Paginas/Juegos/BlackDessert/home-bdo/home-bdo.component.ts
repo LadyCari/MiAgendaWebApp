@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { ModalCargarPjComponent } from 'src/app/Modales/modal-cargar-pj/modal-cargar-pj.component';
 import { HttpService } from 'src/app/Servicios/http.service';
 import { Url } from 'src/app/url';
+import {MatTableModule} from '@angular/material/table';
 
 @Component({
   selector: 'app-home-bdo',
@@ -20,6 +21,8 @@ export class HomeBdoComponent implements OnInit {
   constructor(private httpService: HttpService, private dialog: MatDialog, private sanitizer: DomSanitizer, private router: Router) {
   }
 
+  displayedColumns: string[] = ['Nombre', 'Clase', 'Inventario', 'Chenga', 'armaPrincipal', 'armaSecundaria', 'armaDespertar'];
+
   ngOnInit(): void {
     this.getVistaPreviaPjs();
   }
@@ -31,11 +34,9 @@ export class HomeBdoComponent implements OnInit {
         this.listaPjsVistaPrevia.forEach((personaje: any) => {
           personaje.foto = this.getImagenSrc(personaje.foto);
         });
-        console.log(this.listaPjsVistaPrevia);
       }
     });
 }
-
 
 public crearPersonaje(){
   this.dialog.open(ModalCargarPjComponent, {

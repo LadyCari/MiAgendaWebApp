@@ -23,6 +23,7 @@ h2{
     font-family: 'Single Day', cursive;
     display: flex;
     align-items: center;
+    margin-top: 2rem;
 }
 
 .mostrarLink{

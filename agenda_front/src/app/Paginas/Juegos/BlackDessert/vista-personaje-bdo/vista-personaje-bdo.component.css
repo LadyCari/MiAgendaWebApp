@@ -1,75 +1,132 @@
-section{
+/* titulo*/
+h2 {
+    font-size: 4rem;
+    font-family: var(--estilo-titulos);
+}
+
+.titulo {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/*parte 1*/
+.sector1 {
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+.imgDelPj {
+    display: flex;
+    margin-bottom: 2rem;
     justify-content: space-evenly;
     align-items: center;
-    background-color: rgba(54, 54, 54, 0.699);
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    padding: 2rem;
 }
 
-.textopj h2{
-    font-size: 5rem;
-    margin-bottom: 5rem;
-    font-family: 'Single Day', cursive;
+.imgpj {
+    height: 600px;
+    border-radius: 20px;
 }
 
-body{
-    padding-top: 3rem;
-    font-family: 'Single Day', cursive;
-    font-size: 1.5rem;
-}
-
-.imgpj{
+.imgInv {
     height: 500px;
+    border-radius: 20px;
 }
 
-.imgpj img{
-    height: 100%;
-    border-radius: 10px;
+.textopj div {
+    font-size: 2rem;
 }
 
-h3{
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    font-family: 'Single Day', cursive;
-}
-
-.textopj p{
-    margin-bottom: 2rem;
-}
-
-.textopj{
-    width: 50%;
-    background-color: rgba(136, 0, 0, 0.61);
+.textopj {
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
     text-align: center;
     border-radius: 20px;
     padding: 3rem;
+    margin-bottom: 2rem;
+}
+
+/*sector 2*/
+
+.sector2 {
+    display: flex;
+    width: 100%;
+}
+
+.misiones {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.tuvala {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+}
+
+.titulos {
+    display: flex;
+    background-color: var(--color-amarillo);
+    padding: 0.5rem;
+    align-items: center;
+}
+
+#tituloMision {
+    width: 30%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#tituloTuvla {
+    width: 70%;
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 .cruz:before {
-    content: "\2715"; /* Código Unicode para la cruz */
-    color: red; /* Color de la cruz */
+    content: "\2715";
+    /* Código Unicode para la cruz */
+    color: red;
+    /* Color de la cruz */
 }
 
 /* Estilos específicos para la tilde */
 .tilde:before {
-    content: "\2713"; /* Código Unicode para la tilde */
-    color: green; /* Color de la tilde */
+    content: "\2713";
+    /* Código Unicode para la tilde */
+    color: green;
+    /* Color de la tilde */
 }
 
-.cat1{
+.sector2 {
+    background-color: var(--color-naranja);
+    padding: 0.3rem;
+}
+
+.informacion {
+    box-shadow: var(--sombra-generica);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+
+.cat1 {
     display: flex;
     flex-direction: column;
     padding-bottom: 1rem;
+    justify-content: center;
 }
 
-.cat1 div{
+.cat1 div {
     display: flex;
+    text-align: center;
 }
 
-button{
+button {
     font-size: 3rem;
     border-radius: 20px;
     border: none;
@@ -77,10 +134,20 @@ button{
     box-shadow: 2px 2px 2px black;
 }
 
-.edit{
-    background-color: rgba(230, 230, 0, 0.801);
+.edit {
+    background-color: var(--color-amarillo);
 }
 
-.borrar{
-    background-color: rgba(230, 8, 0, 0.801);
+.borrar {
+    background-color: var(--color-rojo);
+}
+
+.botones{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+p{
+    font-family: Roboto, "Helvetica Neue", sans-serif !important;
 }

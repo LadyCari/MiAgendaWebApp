@@ -1,106 +1,124 @@
-<body class="cuerpo">
+<body class="cuerpo-pagina">
+
+    <section class="titulo">
+        <h2>{{personaje.nombre}}</h2>
+    </section>
 
     <section class="sector1">
 
-        <div class="imgpj">
-            <img [src]="personaje.foto" alt="foto pj">
-            <img src="" alt="">
+        <div class="imgDelPj">
+            <img [src]="personaje.foto" class="imgpj" alt="foto pj">
+            <img [src]="personaje.fotoSet" class="imgInv" alt="foto inventario">
         </div>
 
         <div class="textopj">
-            <h2>{{personaje.nombre}}</h2>
-            <h3>Clase:</h3>
-            <p>{{personaje.clase}}</p>
-            <h3>Objetivo:</h3>
-            <p>{{personaje.objetivo}}</p>
+            <div>
+                <h3>Clase:</h3>
+                <p>{{personaje.clase}}</p>
+            </div>
+
+            <div>
+                <h3>Objetivo:</h3>
+                <p>{{personaje.objetivo}}</p>
+            </div>
         </div>
+        
     </section>
 
-    <section class="sector2">
-        <div class="imagenset">
-            <img [src]="personaje.fotoSet" alt="foto set">
-        </div>
-        <div class="cat1">
-            <h3>Misiones completadas:</h3>
-            <div>
-                <p>Inventario</p>
-                <p [class.cruz]="!personaje.inventario" [class.tilde]="personaje.inventario"></p>
+    <div class="informacion">
+
+        <section class="titulos">
+            <h3 id="tituloMision">Misiones completadas:</h3>
+            <h3 id="tituloTuvla">Partes tuvala V:</h3>
+        </section>
+    
+        <section class="sector2">
+
+            <div class="misiones">
+                
+                <div class="cat1">
+                
+                    <div>
+                        <p>Inventario</p>
+                        <p [class.cruz]="!personaje.inventario" [class.tilde]="personaje.inventario"></p>
+                    </div>
+                    <div>
+                        <p>Chenga</p>
+                        <p [class.cruz]="!personaje.chenga" [class.tilde]="personaje.chenga"></p>
+                    </div>
+                </div>
+
             </div>
-            <div>
-                <p>Chenga</p>
-            <p [class.cruz]="!personaje.chenga" [class.tilde]="personaje.chenga"></p>
+    
+            <div class="tuvala">
+    
+                <div class="cat1">
+                    <div>
+                        <p>Arma principal</p>
+                        <p [class.cruz]="!personaje.armaPrincipal" [class.tilde]="personaje.armaPrincipal"></p>
+                    </div>
+                    <div>
+                        <p>Arma secundaria</p>
+                        <p [class.cruz]="!personaje.armaSecundaria" [class.tilde]="personaje.armaSecundaria"></p>
+                    </div>
+                    <div>
+                        <p>Arma despertar</p>
+                        <p [class.cruz]="!personaje.armaDespertar" [class.tilde]="personaje.armaDespertar"></p>
+                    </div>
+                </div>
+    
+                <div class="cat1">
+                    <div>
+                        <p>Casco</p>
+                        <p [class.cruz]="!personaje.casco" [class.tilde]="personaje.casco"></p>
+                    </div>
+                    <div>
+                        <p>Guante</p>
+                        <p [class.cruz]="!personaje.guante" [class.tilde]="personaje.guante"></p>
+                    </div>
+                    <div>
+                        <p>Zapato</p>
+                        <p [class.cruz]="!personaje.zapato" [class.tilde]="personaje.zapato"></p>
+                    </div>
+                    <div>
+                        <p>Pechera</p>
+                        <p [class.cruz]="!personaje.pechera" [class.tilde]="personaje.pechera"></p>
+                    </div>
+                </div>
+    
+                <div class="cat1">
+                    <div>
+                        <p>Anillo 1</p>
+                        <p [class.cruz]="!personaje.anillo1" [class.tilde]="personaje.anillo1"></p>
+                    </div>
+                    <div>
+                        <p>Anillo 2</p>
+                        <p [class.cruz]="!personaje.anillo2" [class.tilde]="personaje.anillo2"></p>
+                    </div>
+                    <div>
+                        <p>Arete 1</p>
+                        <p [class.cruz]="!personaje.arete1" [class.tilde]="personaje.arete1"></p>
+                    </div>
+                    <div>
+                        <p>Arete 2</p>
+                        <p [class.cruz]="!personaje.arete2" [class.tilde]="personaje.arete2"></p>
+                    </div>
+                    <div>
+                        <p>Collar</p>
+                        <p [class.cruz]="!personaje.collar" [class.tilde]="personaje.collar"></p>
+                    </div>
+                    <div>
+                        <p>Cinturon</p>
+                        <p [class.cruz]="!personaje.cinturon" [class.tilde]="personaje.cinturon"></p>
+                    </div>
+                </div>
+    
             </div>
-        </div>
+        </section>
 
-        <div class="tuvala">
+    </div>
 
-            <h3>Partes tuvala V:</h3>
-
-            <div class="cat1">
-                <div>
-                    <p>Arma principal</p>
-                    <p [class.cruz]="!personaje.armaPrincipal" [class.tilde]="personaje.armaPrincipal"></p>
-                </div>
-                <div>
-                    <p>Arma secundaria</p>
-                    <p [class.cruz]="!personaje.armaSecundaria" [class.tilde]="personaje.armaSecundaria"></p>
-                </div>
-                <div>
-                    <p>Arma despertar</p>
-                    <p [class.cruz]="!personaje.armaDespertar" [class.tilde]="personaje.armaDespertar"></p>
-                </div>
-            </div>
-
-            <div class="cat1">
-                <div>
-                    <p>Casco</p>
-                    <p [class.cruz]="!personaje.casco" [class.tilde]="personaje.casco"></p>
-                </div>
-                <div>
-                    <p>Guante</p>
-                    <p [class.cruz]="!personaje.guante" [class.tilde]="personaje.guante"></p>
-                </div>
-                <div>
-                    <p>Zapato</p>
-                    <p [class.cruz]="!personaje.zapato" [class.tilde]="personaje.zapato"></p>
-                </div>
-                <div>
-                    <p>Pechera</p>
-                    <p [class.cruz]="!personaje.pechera" [class.tilde]="personaje.pechera"></p>
-                </div>
-            </div>
-
-            <div class="cat1">
-                <div>
-                    <p>Anillo 1</p>
-                    <p [class.cruz]="!personaje.anillo1" [class.tilde]="personaje.anillo1"></p>
-                </div>
-                <div>
-                    <p>Anillo 2</p>
-                    <p [class.cruz]="!personaje.anillo2" [class.tilde]="personaje.anillo2"></p>
-                </div>
-                <div>
-                    <p>Arete 1</p>
-                    <p [class.cruz]="!personaje.arete1" [class.tilde]="personaje.arete1"></p>
-                </div>
-                <div>
-                    <p>Arete 2</p>
-                    <p [class.cruz]="!personaje.arete2" [class.tilde]="personaje.arete2"></p>
-                </div>
-                <div>
-                    <p>Collar</p>
-                    <p [class.cruz]="!personaje.collar" [class.tilde]="personaje.collar"></p>
-                </div>
-                <div>
-                    <p>Cinturon</p>
-                    <p [class.cruz]="!personaje.cinturon" [class.tilde]="personaje.cinturon"></p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section>
+    <section class="botones">
         <button class="edit" (click)="editarPj()">Modificar</button>
         <button class="borrar" (click)="deletepj(personaje)">Borrar</button>
     </section>

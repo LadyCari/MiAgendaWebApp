@@ -34,7 +34,9 @@
   padding-left: 10rem;
   padding-right: 10rem;
   overflow: auto;
-  font-family: 'Single Day', cursive;
+  font-family: var(--estilo-letra-generico);
+  position: relative;
+  flex-direction: column;
 }
 
 /*------------------------------------------------------------------*/
