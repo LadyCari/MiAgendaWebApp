@@ -65,4 +65,11 @@ export class ManhwasComponent implements OnInit{
       })
     }
 
+    truncarTexto(texto: string, longitud: number): string {
+      if (texto.length > longitud) {
+        return texto.substring(0, longitud) + '...';
+      }
+      return texto;
+    }
+
 }

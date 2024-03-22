@@ -5,7 +5,9 @@
   --color-naranja: #ffce8e;
   --color-verde: #c1ff8e;
   --color-celeste: #8ebbffb9;
+  --color-celeste-transparente:#8ebbff7a;
   --color-amarillo: rgb(255, 248, 157);
+  --color-amarillo-transparente: rgba(255, 248, 157, 0.534);
   --color-rojo: rgba(252, 107, 107, 0.767);
 
   /* personalizacion generica*/
@@ -22,6 +24,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 .cuerpo-pagina {

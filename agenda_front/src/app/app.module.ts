@@ -35,6 +35,7 @@ import { ModalLinkComponent } from './Modales/modal-link/modal-link.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { LinksOtrosComponent } from './Paginas/Links-utiles/links-otros/links-otros.component';
 import { LinksUtilesEstudiosGeneralesComponent } from './Paginas/Links-utiles/links-utiles-estudios-generales/links-utiles-estudios-generales.component';
+import { LinksUtilesGeneralComponent } from './Paginas/Links-utiles/links-utiles-general/links-utiles-general.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { LinksUtilesEstudiosGeneralesComponent } from './Paginas/Links-utiles/li
     LinksUtilesIdiomasComponent,
     ModalLinkComponent,
     LinksOtrosComponent,
-    LinksUtilesEstudiosGeneralesComponent],
+    LinksUtilesEstudiosGeneralesComponent,
+    LinksUtilesGeneralComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

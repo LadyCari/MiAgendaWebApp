@@ -10,45 +10,146 @@
 
   <section id="primerSector">
 
-    <div id="notas">
+    <div id="conteinerPendientes">
 
-      <div class="tituloCuadros">
-
-        <h2>Pendientes</h2>
-        <img src="https://cdn-icons-png.freepik.com/512/4436/4436002.png" alt="notas" />
-
+      <div id="huskNotas">
+        <img
+          src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5736f144-0ca5-4050-bd4d-3717c83771b5/ddcumso-d5613733-ba7f-41ee-9713-cafacad4f113.png/v1/fill/w_600,h_1014/husk___hazbin_hotel_by_kingdomrian_ddcumso-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAxNCIsInBhdGgiOiJcL2ZcLzU3MzZmMTQ0LTBjYTUtNDA1MC1iZDRkLTM3MTdjODM3NzFiNVwvZGRjdW1zby1kNTYxMzczMy1iYTdmLTQxZWUtOTcxMy1jYWZhY2FkNGYxMTMucG5nIiwid2lkdGgiOiI8PTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.G7jcl6X94adO6H-6RwXdlOfQt2sbs4f35Wtx5PsE4Ck"
+          alt="">
       </div>
 
-      <ul id="listaPendientes">
-        <li *ngFor="let pendiente of listaPendientes">
-          <p>[{{pendiente.tipo}}]</p>
-          <p>{{pendiente.descripcion}}</p>
-          <button (click)="eliminarPendiente(pendiente)"><i class="fa-solid fa-trash"></i></button>
-        </li>
-      </ul>
+      <div id="notas">
 
-      <form>
+        <div class="tituloCuadros">
 
-        <input type="text" id="tipoTarea" name="tipoTarea" [(ngModel)]="nuevoPendiente.tipo" placeholder="Tipo tarea" />
-        <input type="text" id="descripcionTarea" name="tarea" [(ngModel)]="nuevoPendiente.descripcion"
-          placeholder="Descripcion tarea" />
-        <button (click)="postPendientes()" type="button" class="botonEstilo botonNotas">Nuevo pendiente</button>
+          <h2>Pendientes</h2>
+          <img src="https://cdn-icons-png.freepik.com/512/4436/4436002.png" alt="notas" />
 
-      </form>
+        </div>
+
+        <ul id="listaPendientes">
+          <li *ngFor="let pendiente of listaPendientes">
+            <p>[{{pendiente.tipo}}]</p>
+            <p>{{pendiente.descripcion}}</p>
+            <button (click)="eliminarPendiente(pendiente)"><i class="fa-solid fa-trash"></i></button>
+          </li>
+        </ul>
+
+        <form>
+
+          <input type="text" id="tipoTarea" name="tipoTarea" [(ngModel)]="nuevoPendiente.tipo"
+            placeholder="Tipo tarea" />
+          <input type="text" id="descripcionTarea" name="tarea" [(ngModel)]="nuevoPendiente.descripcion"
+            placeholder="Descripcion tarea" />
+          <button (click)="postPendientes()" type="button" class="botonEstilo botonNotas">Nuevo pendiente</button>
+
+        </form>
+
+      </div>
 
     </div>
 
+    <div id="conteinerCalendario">
 
-    <div id="horarios">
-
-      <div class="tituloCuadros">
-        <h2>Horarios</h2>
-        <img src="https://i0.wp.com/www.iesc.edu.pa/sites/default/files/images/homepage/calendario.png" alt="" />
+      <div id="husk">
+        <img src="https://i.pinimg.com/originals/98/a6/3b/98a63bdb38d183ec79df3e6b523e7d59.png" alt="">
       </div>
 
-      <table>
+      <div id="horarios">
+
+        <div class="tituloCuadros" id="tituloHorario">
+          <h2>Horarios</h2>
+          <img src="https://i0.wp.com/www.iesc.edu.pa/sites/default/files/images/homepage/calendario.png" alt="" />
+        </div>
+
+        <table>
+          <tr>
+            <th>Horario/Dia</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miercoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+            <th>Sabado</th>
+            <th>Domingo</th>
+          </tr>
+
+          <tr>
+            <td>8:00</td>
+            <td>Gym</td>
+            <td>Gym</td>
+            <td>Gym</td>
+            <td>Gym</td>
+            <td>Gym</td>
+            <td>Nada</td>
+            <td>Nada</td>
+          </tr>
+
+          <tr>
+            <td>14:30</td>
+            <td>Codo a codo</td>
+            <td>Nada</td>
+            <td>Codo a codo</td>
+            <td>Nada</td>
+            <td>Nada</td>
+            <td>Nada</td>
+            <td>Nada</td>
+          </tr>
+
+          <tr>
+            <td>15:00</td>
+            <td>Codo a codo</td>
+            <td>Nada</td>
+            <td>Codo a codo</td>
+            <td>Nada</td>
+            <td>Nada</td>
+            <td>Nada</td>
+            <td>Nada</td>
+          </tr>
+        </table>
+
+        <div class="botonCentro"><button class="botonEstilo botonHorarios">Agregar</button></div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <div class="containerCalendario">
+
+    <div id="catCalendar">
+      <img
+        src="https://images.vexels.com/media/users/3/321862/isolated/preview/d9cff9e55f1fb0512996a91068e34c79-gatito-con-un-calendario.png"
+        alt="">
+    </div>
+
+    <section id="segundoSector">
+
+      <div class="tituloCuadros">
+
+        <h2>★゜・。。・゜☆゜・。。・゜★ Calendario ★゜・。。・゜☆゜・。。・゜★</h2>
+
+      </div>
+
+      <ul id="listaColoresCalendario">
+        <li>
+          <p id="ListaColoresExamen">Examen / TP Final</p>
+        </li>
+        <li id="ListaColoresTarea">
+          <p>Tarea</p>
+        </li>
+        <li id="ListaColoresEvento">
+          <p>Evento</p>
+        </li>
+        <li id="ListaColoresMedico">
+          <p>Medico</p>
+        </li>
+      </ul>
+
+      <h3>Diciembre</h3>
+      <table class="tablaMes">
         <tr>
-          <th>Horario/Dia</th>
           <th>Lunes</th>
           <th>Martes</th>
           <th>Miercoles</th>
@@ -57,134 +158,58 @@
           <th>Sabado</th>
           <th>Domingo</th>
         </tr>
-
         <tr>
-          <td>8:00</td>
-          <td>Gym</td>
-          <td>Gym</td>
-          <td>Gym</td>
-          <td>Gym</td>
-          <td>Gym</td>
-          <td>Nada</td>
-          <td>Nada</td>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
         </tr>
-
         <tr>
-          <td>14:30</td>
-          <td>Codo a codo</td>
-          <td>Nada</td>
-          <td>Codo a codo</td>
-          <td>Nada</td>
-          <td>Nada</td>
-          <td>Nada</td>
-          <td>Nada</td>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>7</th>
+          <th>8</th>
+          <th>9</th>
+          <th>10</th>
         </tr>
-
         <tr>
-          <td>15:00</td>
-          <td>Codo a codo</td>
-          <td>Nada</td>
-          <td>Codo a codo</td>
-          <td>Nada</td>
-          <td>Nada</td>
-          <td>Nada</td>
-          <td>Nada</td>
+          <th>11</th>
+          <th>12</th>
+          <th>13</th>
+          <th>14</th>
+          <th>15</th>
+          <th>16</th>
+          <th>17</th>
+        </tr>
+        <tr>
+          <th>18</th>
+          <th>19</th>
+          <th class="tarea" title="Viaje a mexico">20</th>
+          <th>21</th>
+          <th>22</th>
+          <th>23</th>
+          <th>24</th>
+        </tr>
+        <tr>
+          <th class="tarea" title="Navidad">25</th>
+          <th>26</th>
+          <th>27</th>
+          <th>28</th>
+          <th>29</th>
+          <th>30</th>
+          <th>31</th>
         </tr>
       </table>
 
-      <div class="botonCentro"><button class="botonEstilo botonHorarios">Agregar</button></div>
+      <div class="botonCentro"><button class="botonEstilo botonCalendario">Agregar</button></div>
 
-    </div>
+    </section>
 
-  </section>
+  </div>
 
-
-  <section id="segundoSector">
-
-    <div class="tituloCuadros">
-
-      <h2>Calendario</h2>
-      <img
-        src="https://images.vexels.com/media/users/3/321862/isolated/preview/d9cff9e55f1fb0512996a91068e34c79-gatito-con-un-calendario.png"
-        alt="">
-
-    </div>
-
-    <ul id="listaColoresCalendario">
-      <li>
-        <p id="ListaColoresExamen">Examen / TP Final</p>
-      </li>
-      <li id="ListaColoresTarea">
-        <p>Tarea</p>
-      </li>
-      <li id="ListaColoresEvento">
-        <p>Evento</p>
-      </li>
-      <li id="ListaColoresMedico">
-        <p>Medico</p>
-      </li>
-    </ul>
-
-    <h3>Diciembre</h3>
-    <table class="tablaMes">
-      <tr>
-        <th>Lunes</th>
-        <th>Martes</th>
-        <th>Miercoles</th>
-        <th>Jueves</th>
-        <th>Viernes</th>
-        <th>Sabado</th>
-        <th>Domingo</th>
-      </tr>
-      <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th>1</th>
-        <th>2</th>
-        <th>3</th>
-      </tr>
-      <tr>
-        <th>4</th>
-        <th>5</th>
-        <th>6</th>
-        <th>7</th>
-        <th>8</th>
-        <th>9</th>
-        <th>10</th>
-      </tr>
-      <tr>
-        <th>11</th>
-        <th>12</th>
-        <th>13</th>
-        <th>14</th>
-        <th>15</th>
-        <th>16</th>
-        <th>17</th>
-      </tr>
-      <tr>
-        <th>18</th>
-        <th>19</th>
-        <th class="tarea" title="Viaje a mexico">20</th>
-        <th>21</th>
-        <th>22</th>
-        <th>23</th>
-        <th>24</th>
-      </tr>
-      <tr>
-        <th class="tarea" title="Navidad">25</th>
-        <th>26</th>
-        <th>27</th>
-        <th>28</th>
-        <th>29</th>
-        <th>30</th>
-        <th>31</th>
-      </tr>
-    </table>
-
-    <div class="botonCentro"><button class="botonEstilo botonCalendario">Agregar</button></div>
-
-  </section>
 
 </body>

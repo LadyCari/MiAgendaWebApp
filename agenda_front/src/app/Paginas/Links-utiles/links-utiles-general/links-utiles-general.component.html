@@ -1,15 +1,9 @@
 <body>
-
-    <section>
-        <div class="logo">
-            <h2>︵‿︵‿୨ Mangas y manhwas ୧‿︵‿︵</h2>
-        </div>
-    </section>
-
+    
     <section class="contenedor">
 
         <div class="tarjeta linksCargados" *ngFor="let link of listaLinks">
-
+    
             <button mat-icon-button [matMenuTriggerFor]="menu" id="menu">
                 <i class="fa-solid fa-ellipsis"></i>
             </button>
@@ -22,19 +16,13 @@
                 </button>
             </mat-menu>
             <img src="{{link.imagen}}" alt="">
-            <a href="{{link.url}}" target="_blank">{{truncarTexto(link.nombre,20)}} - {{link.capitulo}}</a>
+            <a href="{{link.url}}">{{link.nombre}}</a>
         </div>
-
+    
         <div class="tarjeta agregar">
             <button mat-mini-fab (click)="postLink()"><i class="fa-solid fa-plus"></i></button>
         </div>
-
+    
     </section>
-
-    <mat-paginator [length]="10"
-    [pageSize]="10"
-    [pageSizeOptions]="[5, 10, 25, 100]"
-    aria-label="Select page">
-</mat-paginator>
-
+    
 </body>

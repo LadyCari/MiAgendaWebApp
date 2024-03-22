@@ -1,59 +1,78 @@
 <div class="cuerpo-pagina">
 
+  <section>
+
+    <div class="pendientes">
+      <h2>Pendientes</h2>
+
+      <div class="materiales">
+        <div class="titulo">
+          <h3>Materiales</h3>
+        </div>
+      </div>
+  
+      <div class="misiones">
+        <div class="titulo">
+          <h3>Misiones</h3>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <table mat-table [dataSource]="listaPjsVistaPrevia" class="mat-elevation-z8">
 
     <ng-container matColumnDef="Nombre">
       <th mat-header-cell *matHeaderCellDef> Nombre </th>
       <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
     </ng-container>
-  
+
     <!-- Name Column -->
     <ng-container matColumnDef="Clase">
       <th mat-header-cell *matHeaderCellDef> Clase </th>
       <td mat-cell *matCellDef="let element"> {{element.clase}} </td>
     </ng-container>
-  
+
     <!-- Weight Column -->
     <ng-container matColumnDef="Inventario">
       <th mat-header-cell *matHeaderCellDef> Inventario </th>
       <td mat-cell *matCellDef="let element"> {{element.inventario}} </td>
     </ng-container>
-  
+
     <!-- Symbol Column -->
     <ng-container matColumnDef="Chenga">
       <th mat-header-cell *matHeaderCellDef> Chenga </th>
       <td mat-cell *matCellDef="let element"> {{element.chenga}} </td>
     </ng-container>
 
-        <ng-container matColumnDef="armaPrincipal">
-          <th mat-header-cell *matHeaderCellDef> Arma P </th>
-          <td mat-cell *matCellDef="let element"> {{element.armaPrincipal}} </td>
-        </ng-container>
-      
-        <ng-container matColumnDef="armaSecundaria">
-          <th mat-header-cell *matHeaderCellDef> Arma S </th>
-          <td mat-cell *matCellDef="let element"> {{element.armaSecundaria}} </td>
-        </ng-container>
-      
-        <ng-container matColumnDef="armaDespertar">
-          <th mat-header-cell *matHeaderCellDef> Arma D </th>
-          <td mat-cell *matCellDef="let element"> {{element.armaDespertar}} </td>
-        </ng-container>
-  
+    <ng-container matColumnDef="armaPrincipal">
+      <th mat-header-cell *matHeaderCellDef> Arma P </th>
+      <td mat-cell *matCellDef="let element"> {{element.armaPrincipal}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="armaSecundaria">
+      <th mat-header-cell *matHeaderCellDef> Arma S </th>
+      <td mat-cell *matCellDef="let element"> {{element.armaSecundaria}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="armaDespertar">
+      <th mat-header-cell *matHeaderCellDef> Arma D </th>
+      <td mat-cell *matCellDef="let element"> {{element.armaDespertar}} </td>
+    </ng-container>
+
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 
   <div class="listaPj">
-      <div class="tarjetaPJ" *ngFor="let personaje of listaPjsVistaPrevia">
-        <img [src]="personaje.foto" alt="foto pj" (click)="detallePjBdo(personaje.idPersonaje)">
-        <div class="texto">
-          <p>{{personaje.nombre}}</p>
-        </div>
-      </div>
-      <div class="tarjetaPJ">
-        <button mat-mini-fab (click)="crearPersonaje()"><i class="fa-solid fa-plus"></i></button>
-      </div>
+    <div class="tarjetaPJ" *ngFor="let personaje of listaPjsVistaPrevia">
+      <img [src]="personaje.foto" alt="foto pj">
+      <p class="nombrePj" (click)="detallePjBdo(personaje.idPersonaje)">{{personaje.nombre}}</p>
+    </div>
+    <div class="tarjetaPJ">
+      <button mat-mini-fab (click)="crearPersonaje()"><i class="fa-solid fa-plus"></i></button>
+      <p class="nombrePj">Nuevo personaje</p>
+    </div>
 
   </div>
 </div>

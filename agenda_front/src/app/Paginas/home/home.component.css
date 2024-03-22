@@ -62,15 +62,14 @@ th {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  padding-top: 3rem;
+  padding-top: 9rem;
 }
 
 #notas {
-  width: 30%;
-  height: 70%;
   border-radius: 20px;
   background-color: var(--color-rosa);
   box-shadow: var(--sombra-generica);
+  padding: 1rem;
 }
 
 #notas ul li {
@@ -108,7 +107,6 @@ th {
 
 form {
   text-align: center;
-  margin-bottom: 1rem;
 }
 
 input {
@@ -141,10 +139,48 @@ input {
   border-radius: 20px;
   box-shadow: var(--sombra-generica);
   padding: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .botonHorarios{
   background-color: rgba(255, 99, 99, 0.706);
+}
+
+#conteinerCalendario{
+  position: relative;
+}
+
+#husk img{
+  width: 300px;
+}
+
+#husk{
+  position: absolute;
+  left: 0;
+  top: -76px;
+  z-index: 2;
+}
+
+#tituloHorario{
+width: 85%;
+justify-content: right;
+}
+
+#conteinerPendientes{
+  position: relative;
+  width: 30%;
+}
+
+#huskNotas{
+  position: absolute;
+  left: -50px;
+  top: -150px;
+  z-index: 2;
+}
+
+#huskNotas img{
+  width: 150px;
 }
 
 /*-------------------------------------------------------*/
@@ -155,7 +191,7 @@ input {
 /*--------------------cuerpo pagina sector 2--------------------*/
 
 #segundoSector {
-  margin-top: 3rem;
+  margin-top: 5rem;
   margin-bottom: 3rem;
   width: 100%;
   justify-content: center;
@@ -166,6 +202,28 @@ input {
   display: flex;
   flex-direction: column;
   padding-bottom: 1rem;
+  position: relative;
+}
+
+#segundoSector h2{
+margin-top: 1rem;
+margin-bottom: 1rem;
+}
+
+#catCalendar{
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  z-index: 3;
+}
+
+#catCalendar img{
+  width: 150px;
+}
+
+.containerCalendario{
+  position: relative;
+  z-index: 1;
 }
 
 .examen {
@@ -234,3 +292,4 @@ input {
   display: flex;
   justify-content: center;
 }
+

@@ -2,24 +2,17 @@ section{
     display: flex;
     text-align: center;
     justify-content: center;
-    padding: 1rem;
     align-items: center;
-    margin-bottom: 2rem;
 }
 
 .logo{
     display: flex;
-    margin-top: 2rem;
-}
-
-.logo img{
-    width: 90px;
-    margin-right: 2rem;
-    margin-left: 2rem;
+    margin-top: 6rem;
+    margin-bottom: 0.5rem;
 }
 
 h2{
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: 'Single Day', cursive;
     display: flex;
     align-items: center;
@@ -31,13 +24,8 @@ h2{
     overflow: hidden;
     width: 15rem;
     height: 15rem;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    margin: 2rem;
 }
 
 .mostrarLink a{
@@ -48,6 +36,7 @@ color: white;
 text-decoration: none;
 transition: 1s;
 width: 100%;
+font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 .mostrarLink a:hover{
