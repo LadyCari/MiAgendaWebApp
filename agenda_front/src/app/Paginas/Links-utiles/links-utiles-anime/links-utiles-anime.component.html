@@ -22,7 +22,7 @@
                 </button>
             </mat-menu>
             <img src="{{link.imagen}}" title="{{link.descripcion}}">
-            <a href="{{link.url}}" target="_blank">{{link.nombre}} - {{link.capitulo}}</a>
+            <a href="{{link.url}}" target="_blank">{{truncarTexto(link.nombre,20)}} - {{link.capitulo}}</a>
         </div>
 
         <div class="tarjeta agregar">

@@ -9,7 +9,7 @@ import { Url } from 'src/app/url';
   templateUrl: './links-utiles-general.component.html',
   styleUrls: ['./links-utiles-general.component.css']
 })
-export class LinksUtilesGeneralComponent implements OnInit{
+export class LinksUtilesGeneralComponent implements OnInit {
 
   constructor(private httpService: HttpService, private dialog: MatDialog) {
   }
@@ -64,6 +64,13 @@ export class LinksUtilesGeneralComponent implements OnInit{
         }
       }
     })
+  }
+
+  truncarTexto(texto: string, longitud: number): string {
+    if (texto.length > longitud) {
+      return texto.substring(0, longitud) + '...';
+    }
+    return texto;
   }
 
 }
