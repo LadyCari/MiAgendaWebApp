@@ -106,3 +106,18 @@
 }
 
 /*------------------------------------------------------------*/
+
+/* Paginacion */
+.pagination {
+  margin: 0;
+}
+
+.page-link {
+  color: var(--black-text);
+}
+
+.page-item a:focus {
+  box-shadow: none;
+  background-color: var(--color-primary);
+  color: white;
+}

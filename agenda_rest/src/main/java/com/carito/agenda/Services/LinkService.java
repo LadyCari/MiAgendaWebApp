@@ -1,8 +1,11 @@
 package com.carito.agenda.Services;
 
+import com.carito.agenda.DTOs.LinkDTO;
 import com.carito.agenda.Entitys.Link;
 import com.carito.agenda.Repositorys.LinkRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,8 +21,10 @@ public class LinkService {
         return linkRepository.save(nuevoLink);
     }
 
-    public List<Link> getLinksByCategoria(String categoria) {
-        return linkRepository.findAllByCategoria(categoria);
+    public LinkDTO getLinksByCategoria(String categoria, Integer pagina, Integer cantidad) {
+        Pageable pageable = PageRequest.of(pagina - 1, cantidad);
+        List<Link> links = linkRepository.findAllByCategoria(categoria, pageable);
+        return new LinkDTO(links, linkRepository.countAllByCategoria(categoria));
     }
 
     public void modificarLinkUtil(Link nuevoLink) {
