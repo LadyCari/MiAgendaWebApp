@@ -1,62 +1,17 @@
-<div id="conteiner">
-    <div id="horariosClase">
-      <h2>Calendario clases</h2>
-      <div id="horario">
-        <table>
-          <tr>
-            <th>Horario/Dia</th>
-            <th>Lunes</th>
-            <th>Martes</th>
-            <th>Miercoles</th>
-            <th>Jueves</th>
-            <th>Viernes</th>
-            <th>Sabado</th>
-            <th>Domingo</th>
-          </tr>
-  
-          <tr>
-            <td>14:30 a 16:00</td>
-            <td>
-              <a href="meet.google.com/qpp-etyd-iws" target="_blank"
-                >Codo a codo</a
-              >
-            </td>
-            <td>Nada</td>
-            <td>
-              <a href="meet.google.com/qpp-etyd-iws" target="_blank"
-                >Codo a codo</a
-              >
-            </td>
-            <td>Nada</td>
-            <td>Nada</td>
-            <td>Nada</td>
-            <td>Nada</td>
-          </tr>
-  
-        </table>
-      </div>
+<body class="cuerpo-pagina">
+
+  <section class="botones">
+
+    <div class="clasesSincronicas">
+      <h2 class="tituloTipoClase1" routerLink="cursos-cursando-home">Cursando</h2>
     </div>
-  
-    <div id="cajaCursos">
-      <section class="clasesSincronicas">
-        <h2 class="tituloTipoClase1">Cursando</h2>
 
-        <a href="/curso-testing&QA-cac">
-          <h3>Codo a codo -> testing</h3>
-        </a>
-
-      </section>
-      <section class="clasesAsincronicas">
-        <h2 class="tituloTipoClase2">Terminados</h2>
-  
-
-        <a href="/curso-fullStackJava-cac">
-          <h3>Codo a codo -> Full stack Java</h3>
-        </a>
-
-      </section>
+    <div class="clasesAsincronicas">
+      <h2 class="tituloTipoClase2" routerLink="cursos-finalizados-home">Terminados</h2>
     </div>
-  </div>
-  
-  <a href="/testing-cac"></a>
-<a href="/full-stack-java-cac"></a>
+
+  </section>
+
+  <router-outlet></router-outlet>
+
+</body>

@@ -26,7 +26,7 @@ export class HomeLinksUtilesComponent implements OnInit {
 
 
   private obtenerLista() {
-    this.httpService.realizarGet(this.url.getLinks + 'General').subscribe((data: any) => {
+    this.httpService.realizarGet(`${this.url.getLinks}General&pagina=1&cantidad=10`).subscribe((data: any) => {
       if (data.state == 'OK') {
         this.listaLinks = data.data;
       }

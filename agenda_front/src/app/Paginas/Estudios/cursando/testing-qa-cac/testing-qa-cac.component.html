@@ -1,17 +1,5 @@
 <body>
 
-    <nav>
-        <ol>
-            <li (click)="moverse('logoCurso')">Cosas importantes</li>
-            <li (click)="moverse('tituloClases')">Clase 0</li>
-            <li (click)="moverse('clase0')">Clase 1</li>
-            <li (click)="moverse('clase1')">Clase 2</li>
-            <li (click)="moverse('clase2')">Clase 3</li>
-
-        </ol>
-    </nav>
-
-    <div>
         <section id="logoCurso">
             <img src="../../../../../assets/img/codoAcodo.png" alt="logoCodoACodo" />
         </section>
@@ -53,6 +41,17 @@
             </ul>
 
         </section>
+
+        <nav class="clases">
+            <ul>
+                <li (click)="moverse('logoCurso')">Cosas importantes</li>
+                <li (click)="moverse('tituloClases')">Clase 0</li>
+                <li (click)="moverse('clase0')">Clase 1</li>
+                <li (click)="moverse('clase1')">Clase 2</li>
+                <li (click)="moverse('clase2')">Clase 3</li>
+    
+            </ul>
+        </nav>
 
         <h2 id="tituloClases">Videos de las clases</h2>
 
@@ -125,6 +124,5 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
         </section>
-    </div>
 
 </body>

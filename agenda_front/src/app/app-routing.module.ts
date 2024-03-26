@@ -34,7 +34,7 @@ export const routes: Routes = [
   /*links*/
   {
     path: 'home-links-utiles', component: HomeLinksUtilesComponent, children: [
-      { path: '', component: LinksUtilesGeneralComponent},
+      { path: '', component: LinksUtilesGeneralComponent },
       { path: 'cosas-utiles-programacion', component: LinksUtilesProgramacionComponent },
       { path: 'cosas-utiles-anime', component: LinksUtilesAnimeComponent },
       { path: 'cosas-utiles-idioma', component: LinksUtilesIdiomasComponent },
@@ -44,13 +44,21 @@ export const routes: Routes = [
       { path: 'cosas-utiles-estudiosGenerales', component: LinksUtilesEstudiosGeneralesComponent }
     ]
   },
-
   /*estudios*/
-  { path: 'home-estudios', component: HomeEstudiosComponent },
-  { path: 'cursos-cursando-home', component: HomeEstudioCursandoComponent },
-  { path: 'cursos-finalizados-home', component: HomeEstudioFinalizadoComponent },
-  { path: 'curso-testing&QA-cac', component: TestingQACacComponent },
-  { path: 'curso-fullStackJava-cac', component: FullStackJavaCacComponent }
+  {
+    path: 'home-estudios', component: HomeEstudiosComponent, children: [
+      {
+        path: 'cursos-cursando-home', component: HomeEstudioCursandoComponent, children: [
+          { path: 'curso-testing&QA-cac', component: TestingQACacComponent },
+        ]
+      },
+      {
+        path: 'cursos-finalizados-home', component: HomeEstudioFinalizadoComponent, children: [
+          { path: 'curso-fullStackJava-cac', component: FullStackJavaCacComponent }
+        ]
+      },
+    ]
+  }
 ];
 
 

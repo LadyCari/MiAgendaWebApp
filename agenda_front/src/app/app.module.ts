@@ -13,13 +13,13 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { HomePaliaComponent } from './Paginas/Juegos/Palia/home-palia/home-palia.component';
 import { MatSortModule } from '@angular/material/sort';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 import { LoadingComponent } from './Paginas/loading/loading.component';
 import { HomeBdoComponent } from './Paginas/Juegos/BlackDessert/home-bdo/home-bdo.component';
 import { ModalCargarPjComponent } from './Modales/modal-cargar-pj/modal-cargar-pj.component';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatButtonModule} from '@angular/material/button';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { VistaPersonajeBdoComponent } from './Paginas/Juegos/BlackDessert/vista-personaje-bdo/vista-personaje-bdo.component';
 import { HomeJuegosComponent } from './Paginas/Juegos/home-juegos/home-juegos.component';
 import { HomeLinksUtilesComponent } from './Paginas/Links-utiles/home-links-utiles/home-links-utiles.component';
@@ -36,22 +36,25 @@ import { MatMenuModule } from '@angular/material/menu';
 import { LinksOtrosComponent } from './Paginas/Links-utiles/links-otros/links-otros.component';
 import { LinksUtilesEstudiosGeneralesComponent } from './Paginas/Links-utiles/links-utiles-estudios-generales/links-utiles-estudios-generales.component';
 import { LinksUtilesGeneralComponent } from './Paginas/Links-utiles/links-utiles-general/links-utiles-general.component';
+import { HomeEstudiosComponent } from './Paginas/Estudios/home-estudios/home-estudios.component';
+import { HomeEstudioCursandoComponent } from './Paginas/Estudios/cursando/home-estudio-cursando/home-estudio-cursando.component';
+import { HomeEstudioFinalizadoComponent } from './Paginas/Estudios/finalizado/home-estudio-finalizado/home-estudio-finalizado.component';
 
 @NgModule({
   declarations: [
-    AppComponent, 
-    SocialComponent, 
-    NavBarComponent, 
-    HomePaliaComponent, 
-    LoadingComponent, 
-    HomeBdoComponent, 
-    ModalCargarPjComponent, 
-    VistaPersonajeBdoComponent, 
-    HomeJuegosComponent, 
-    HomeLinksUtilesComponent, 
-    LinksUtilesProgramacionComponent, 
-    LinksUtilesJuegosComponent, 
-    FullStackJavaCacComponent, 
+    AppComponent,
+    SocialComponent,
+    NavBarComponent,
+    HomePaliaComponent,
+    LoadingComponent,
+    HomeBdoComponent,
+    ModalCargarPjComponent,
+    VistaPersonajeBdoComponent,
+    HomeJuegosComponent,
+    HomeLinksUtilesComponent,
+    LinksUtilesProgramacionComponent,
+    LinksUtilesJuegosComponent,
+    FullStackJavaCacComponent,
     HomeComponent,
     TestingQACacComponent,
     LinksUtilesAnimeComponent,
@@ -60,7 +63,11 @@ import { LinksUtilesGeneralComponent } from './Paginas/Links-utiles/links-utiles
     ModalLinkComponent,
     LinksOtrosComponent,
     LinksUtilesEstudiosGeneralesComponent,
-    LinksUtilesGeneralComponent],
+    LinksUtilesGeneralComponent,
+    HomeEstudiosComponent,
+    HomeEstudioCursandoComponent,
+    HomeEstudioFinalizadoComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -76,15 +83,15 @@ import { LinksUtilesGeneralComponent } from './Paginas/Links-utiles/links-utiles
     MatButtonModule,
     MatSlideToggleModule,
     ReactiveFormsModule,
-    MatButtonModule, 
-    MatMenuModule, 
+    MatButtonModule,
+    MatMenuModule,
     MatInputModule
   ],
-  exports:[
+  exports: [
     MatPaginatorModule,
     MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

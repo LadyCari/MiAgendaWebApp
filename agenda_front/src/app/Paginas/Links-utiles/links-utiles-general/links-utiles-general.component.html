@@ -25,4 +25,30 @@
 
     </section>
 
+    <div class="d-flex justify-content-center w-100" *ngIf="totalLinks != 0">
+      <nav aria-label="Page navigation" class="mt-3">
+        <ul class="pagination">
+          <li class="page-item" [class.disabled]="paginaActual === 1">
+            <a class="page-link" (click)="cambiarPagina(paginaActual - 1)" aria-label="Previous">
+              <span aria-hidden="true"><i class="fa-solid fa-carrot fa-rotate-by" style="color: #ffc054; --fa-rotate-angle: 40deg;"></i></span>
+              
+            </a>
+          </li>
+    
+          <li class="page-item" *ngFor="let numPagina of paginas()">
+              <a class="page-link" (click)="cambiarPagina(numPagina)" [class.disabled]="esPaginaActual(numPagina)">
+                {{ numPagina }}
+              </a>
+            </li>
+            
+    
+          <li class="page-item" [class.disabled]="paginaActual === totalPaginas()">
+            <a class="page-link" (click)="cambiarPagina(paginaActual + 1)" aria-label="Next">
+              <span aria-hidden="true"><i class="fa-solid fa-carrot fa-rotate-by" style="color: #ffc054; --fa-rotate-angle: 220deg;"></i></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
 </body>

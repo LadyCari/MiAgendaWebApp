@@ -17,7 +17,7 @@
 
   /*letras*/
   --estilo-titulos: "Gluten", cursive;
-  --estilo-letra-generico: Roboto, "Helvetica Neue", sans-serif;
+  --estilo-letra-generico: "Handlee", cursive;
 }
 
 /*---------------------------body paginas---------------------------*/
@@ -25,6 +25,11 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  cursor: url(../src/assets/img/cursorFrog.png), auto;
+}
+
+a{
+  cursor: url(../src/assets/img/punteroFrog.png), auto;
 }
 
 .cuerpo-pagina {
@@ -106,3 +111,18 @@
 }
 
 /*------------------------------------------------------------*/
+
+/* Paginacion */
+.pagination {
+  margin: 0;
+}
+
+.page-link {
+  color: var(--black-text);
+}
+
+.page-item a:focus {
+  box-shadow: none;
+  background-color: var(--color-primary);
+  color: white;
+}

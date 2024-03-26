@@ -47,3 +47,30 @@ section{
     justify-content: space-evenly;
     flex-wrap: wrap;
   }
+
+/* paginator*/
+
+.mt-3 {
+  margin-top: 1.5rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+.w-100 {
+  width: 100%;
+}
+
+ul{
+  list-style: none;
+  display: flex;
+}
+
+li{
+  font-size: 2rem;
+  margin: 1rem;
+}

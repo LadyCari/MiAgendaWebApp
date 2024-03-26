@@ -10,12 +10,15 @@ import { Url } from 'src/app/url';
   styleUrls: ['./links-utiles-programacion.component.css']
 })
 export class LinksUtilesProgramacionComponent implements OnInit {
+  paginaActual: number = 1;
+  elementosPorPagina: number = 9;
+  totalLinks: number = 0;
 
   constructor(private httpService: HttpService, private dialog: MatDialog) {
   }
 
   ngOnInit(): void {
-    this.obtenerLista();
+    this.obtenerLista(this.paginaActual, this.elementosPorPagina);
   }
 
   readonly url = Url;
@@ -23,12 +26,43 @@ export class LinksUtilesProgramacionComponent implements OnInit {
   nuevoLink: any;
 
 
-  private obtenerLista() {
-    this.httpService.realizarGet(this.url.getLinks + 'Programación').subscribe((data: any) => {
+  private obtenerLista(paginaActual: number, elementosPorPagina: number) {
+    this.httpService.realizarGet(`${this.url.getLinks}Programación&pagina=${paginaActual}&cantidad=${elementosPorPagina}`).subscribe((data: any) => {
       if (data.state == 'OK') {
-        this.listaLinks = data.data;
+        this.listaLinks = data.data.links;
+        this.totalLinks = data.data.registros;
       }
     });
+  }
+
+
+  truncarTexto(texto: string, longitud: number): string {
+    if (texto.length > longitud) {
+      return texto.substring(0, longitud) + '...';
+    }
+    return texto;
+  }
+
+  totalPaginas(): number {
+    return Math.ceil(this.totalLinks / this.elementosPorPagina);
+  }
+
+  cambiarPagina(pagina: number) {
+    if (pagina != this.paginaActual && pagina >= 1 && pagina <= this.totalPaginas()) {
+      this.paginaActual = pagina;
+      this.obtenerLista(this.paginaActual, this.elementosPorPagina);
+    }
+  }
+
+  paginas(): number[] {
+    const paginas: number[] = [];
+    for (let i = 1; i <= this.totalPaginas(); i++) {
+      paginas.push(i);
+    }
+    return paginas;
+  }
+  esPaginaActual(numPagina: number): boolean {
+    return numPagina === this.paginaActual;
   }
 
   public postLink() {
@@ -64,13 +98,6 @@ export class LinksUtilesProgramacionComponent implements OnInit {
         }
       }
     })
-  }
-
-  truncarTexto(texto: string, longitud: number): string {
-    if (texto.length > longitud) {
-      return texto.substring(0, longitud) + '...';
-    }
-    return texto;
   }
 
 }

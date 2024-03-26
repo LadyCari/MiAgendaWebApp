@@ -1,5 +1,6 @@
 package com.carito.agenda.Controllers;
 
+import com.carito.agenda.DTOs.LinkDTO;
 import com.carito.agenda.Entitys.Link;
 import com.carito.agenda.Excepcion.CustomException;
 import com.carito.agenda.Services.LinkService;
@@ -24,9 +25,11 @@ public class LinksController {
     }
 
     @RequestMapping(value = "/get-links", produces = { "application/json" }, method = RequestMethod.GET)
-    public AjaxResponseObject getLinksUtils(@RequestParam("categoria") String categoria) {
-        List<Link> linkList = linkService.getLinksByCategoria(categoria);
-        return AjaxResponseGenerator.createSimpleResponseOK(linkList);
+    public AjaxResponseObject getLinksUtils(@RequestParam("categoria") String categoria,
+                                            @RequestParam("pagina") Integer pagina,
+                                            @RequestParam("cantidad") Integer cantidad) {
+        LinkDTO linkDTO = linkService.getLinksByCategoria(categoria, pagina, cantidad);
+        return AjaxResponseGenerator.createSimpleResponseOK(linkDTO);
     }
 
     @RequestMapping(value = "/modificar-link", produces = { "application/json" }, method = RequestMethod.PUT)
