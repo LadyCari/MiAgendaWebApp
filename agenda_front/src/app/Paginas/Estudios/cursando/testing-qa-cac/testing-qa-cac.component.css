@@ -70,7 +70,6 @@ ul{
 }
 
 li{
-  cursor: pointer;
   margin-bottom: 0.5rem;
 }
 
@@ -85,6 +84,7 @@ li{
   justify-content: space-evenly;
   list-style: none;
   margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 .clases ul li{
@@ -95,6 +95,8 @@ li{
   align-items: center;
   border-radius: 10px;
   box-shadow: var(--sombra-generica);
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 body{
