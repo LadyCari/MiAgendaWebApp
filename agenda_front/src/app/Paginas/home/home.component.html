@@ -147,65 +147,39 @@
         </li>
       </ul>
 
-      <h3>Diciembre</h3>
+      <div class="nombreMes">
+
+        <h3> <i class="fa-solid fa-frog fa-flip-horizontal" (click)="cambiarMes(-1)"></i> {{mesSeleccionado.nombre}}  <i class="fa-solid fa-frog" (click)="cambiarMes(1)"></i></h3>
+       
+      </div>
+
       <table class="tablaMes">
-        <tr>
-          <th>Lunes</th>
-          <th>Martes</th>
-          <th>Miercoles</th>
-          <th>Jueves</th>
-          <th>Viernes</th>
-          <th>Sabado</th>
-          <th>Domingo</th>
-        </tr>
-        <tr>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th>1</th>
-          <th>2</th>
-          <th>3</th>
-        </tr>
-        <tr>
-          <th>4</th>
-          <th>5</th>
-          <th>6</th>
-          <th>7</th>
-          <th>8</th>
-          <th>9</th>
-          <th>10</th>
-        </tr>
-        <tr>
-          <th>11</th>
-          <th>12</th>
-          <th>13</th>
-          <th>14</th>
-          <th>15</th>
-          <th>16</th>
-          <th>17</th>
-        </tr>
-        <tr>
-          <th>18</th>
-          <th>19</th>
-          <th class="tarea" title="Viaje a mexico">20</th>
-          <th>21</th>
-          <th>22</th>
-          <th>23</th>
-          <th>24</th>
-        </tr>
-        <tr>
-          <th class="tarea" title="Navidad">25</th>
-          <th>26</th>
-          <th>27</th>
-          <th>28</th>
-          <th>29</th>
-          <th>30</th>
-          <th>31</th>
-        </tr>
+
+        <thead>
+          <tr>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miercoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+            <th>Sabado</th>
+            <th>Domingo</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let semana of numeroSemanas; let i = index">
+            <td *ngFor="let dia of [0,1,2,3,4,5,6]">
+              <ng-container *ngIf="i === 0 && dia < diaInicio - 1; else elseBlock"></ng-container>
+              <ng-template #elseBlock>
+                {{ ((i * 7) + dia + 1 - diaInicio + 1 <= diaMes.length) ? ((i * 7) + dia + 1 - diaInicio + 1) : '' }}
+                  </ng-template>
+            </td>
+          </tr>
+        </tbody>
       </table>
 
-      <div class="botonCentro"><button class="botonEstilo botonCalendario">Agregar</button></div>
+      <div class="botonCentro"><button class="botonEstilo botonCalendario" (click)="postEvento()">Agregar</button></div>
 
     </section>
 

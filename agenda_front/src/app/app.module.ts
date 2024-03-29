@@ -39,6 +39,10 @@ import { LinksUtilesGeneralComponent } from './Paginas/Links-utiles/links-utiles
 import { HomeEstudiosComponent } from './Paginas/Estudios/home-estudios/home-estudios.component';
 import { HomeEstudioCursandoComponent } from './Paginas/Estudios/cursando/home-estudio-cursando/home-estudio-cursando.component';
 import { HomeEstudioFinalizadoComponent } from './Paginas/Estudios/finalizado/home-estudio-finalizado/home-estudio-finalizado.component';
+import { AgregarEventoCalendarioComponent } from './Modales/agregar-evento-calendario/agregar-evento-calendario.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {JsonPipe} from '@angular/common';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -66,7 +70,8 @@ import { HomeEstudioFinalizadoComponent } from './Paginas/Estudios/finalizado/ho
     LinksUtilesGeneralComponent,
     HomeEstudiosComponent,
     HomeEstudioCursandoComponent,
-    HomeEstudioFinalizadoComponent
+    HomeEstudioFinalizadoComponent,
+    AgregarEventoCalendarioComponent
   ],
   imports: [
     BrowserModule,
@@ -85,7 +90,10 @@ import { HomeEstudioFinalizadoComponent } from './Paginas/Estudios/finalizado/ho
     ReactiveFormsModule,
     MatButtonModule,
     MatMenuModule,
-    MatInputModule
+    MatInputModule,
+    MatDatepickerModule,
+    JsonPipe,
+    MatNativeDateModule
   ],
   exports: [
     MatPaginatorModule,
