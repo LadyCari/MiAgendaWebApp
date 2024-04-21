@@ -17,4 +17,8 @@ export class Url{
     public static editLinks = "http://localhost:8089/link-utiles/modificar-link"
     public static addLinks = "http://localhost:8089/link-utiles/add-link"
     public static deleteLinks = "http://localhost:8089/link-utiles/delete-link?linkId="
+    /*actividades semanales*/
+    public static getActividad = "http://localhost:8089/actividades-semanales/get"
+    public static addActividad = "http://localhost:8089/actividades-semanales/crear"
+    public static deleteActividad = "http://localhost:8089/actividades-semanales/delete?id="
 }

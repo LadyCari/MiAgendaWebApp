@@ -62,51 +62,53 @@
           <img src="https://i0.wp.com/www.iesc.edu.pa/sites/default/files/images/homepage/calendario.png" alt="" />
         </div>
 
-        <table>
-          <tr>
-            <th>Horario/Dia</th>
-            <th>Lunes</th>
-            <th>Martes</th>
-            <th>Miercoles</th>
-            <th>Jueves</th>
-            <th>Viernes</th>
-            <th>Sabado</th>
-            <th>Domingo</th>
-          </tr>
-
-          <tr>
-            <td>8:00</td>
-            <td>Gym</td>
-            <td>Gym</td>
-            <td>Gym</td>
-            <td>Gym</td>
-            <td>Gym</td>
-            <td>Nada</td>
-            <td>Nada</td>
-          </tr>
-
-          <tr>
-            <td>14:30</td>
-            <td>Codo a codo</td>
-            <td>Nada</td>
-            <td>Codo a codo</td>
-            <td>Nada</td>
-            <td>Nada</td>
-            <td>Nada</td>
-            <td>Nada</td>
-          </tr>
-
-          <tr>
-            <td>15:00</td>
-            <td>Codo a codo</td>
-            <td>Nada</td>
-            <td>Codo a codo</td>
-            <td>Nada</td>
-            <td>Nada</td>
-            <td>Nada</td>
-            <td>Nada</td>
-          </tr>
-        </table>
+        <div class="tabla">
+          <table>
+            <tr>
+              <th>Horario/Dia</th>
+              <th>Lunes</th>
+              <th>Martes</th>
+              <th>Miercoles</th>
+              <th>Jueves</th>
+              <th>Viernes</th>
+              <th>Sabado</th>
+              <th>Domingo</th>
+            </tr>
+  
+            <tr>
+              <td>8:00</td>
+              <td>Gym</td>
+              <td>Gym</td>
+              <td>Gym</td>
+              <td>Gym</td>
+              <td>Gym</td>
+              <td>Nada</td>
+              <td>Nada</td>
+            </tr>
+  
+            <tr>
+              <td>14:30</td>
+              <td>Codo a codo</td>
+              <td>Nada</td>
+              <td>Codo a codo</td>
+              <td>Nada</td>
+              <td>Nada</td>
+              <td>Nada</td>
+              <td>Nada</td>
+            </tr>
+  
+            <tr>
+              <td>15:00</td>
+              <td>Codo a codo</td>
+              <td>Nada</td>
+              <td>Codo a codo</td>
+              <td>Nada</td>
+              <td>Nada</td>
+              <td>Nada</td>
+              <td>Nada</td>
+            </tr>
+          </table>
+        </div>
 
         <div class="botonCentro"><button class="botonEstilo botonHorarios">Agregar</button></div>
 
@@ -116,7 +118,7 @@
 
   </section>
 
-  <div class="containerCalendario">
+  <section class="containerCalendario">
 
     <div id="catCalendar">
       <img
@@ -124,14 +126,13 @@
         alt="">
     </div>
 
-    <section id="segundoSector">
+    <div class="tituloCuadros">
 
-      <div class="tituloCuadros">
+      <h2>★゜・。。・゜☆゜・。。・゜★ Calendario ★゜・。。・゜☆゜・。。・゜★</h2>
 
-        <h2>★゜・。。・゜☆゜・。。・゜★ Calendario ★゜・。。・゜☆゜・。。・゜★</h2>
+    </div>
 
-      </div>
-
+    <div>
       <ul id="listaColoresCalendario">
         <li>
           <p id="ListaColoresExamen">Examen / TP Final</p>
@@ -146,44 +147,58 @@
           <p>Medico</p>
         </li>
       </ul>
+    </div>
 
+    <div class="calendario">
       <div class="nombreMes">
 
-        <h3> <i class="fa-solid fa-frog fa-flip-horizontal" (click)="cambiarMes(-1)"></i> {{mesSeleccionado.nombre}}  <i class="fa-solid fa-frog" (click)="cambiarMes(1)"></i></h3>
-       
+        <h3> <i class="fa-solid fa-frog fa-flip-horizontal" (click)="cambiarMes(-1)"></i> {{mesSeleccionado.nombre}}
+          <i class="fa-solid fa-frog" (click)="cambiarMes(1)"></i>
+        </h3>
+
       </div>
 
-      <table class="tablaMes">
+      <div class="tabla-mas-lista">
 
-        <thead>
-          <tr>
-            <th>Lunes</th>
-            <th>Martes</th>
-            <th>Miercoles</th>
-            <th>Jueves</th>
-            <th>Viernes</th>
-            <th>Sabado</th>
-            <th>Domingo</th>
-          </tr>
-        </thead>
+        <table class="tablaMes">
 
-        <tbody>
-          <tr *ngFor="let semana of numeroSemanas; let i = index">
-            <td *ngFor="let dia of [0,1,2,3,4,5,6]">
-              <ng-container *ngIf="i === 0 && dia < diaInicio - 1; else elseBlock"></ng-container>
-              <ng-template #elseBlock>
-                {{ ((i * 7) + dia + 1 - diaInicio + 1 <= diaMes.length) ? ((i * 7) + dia + 1 - diaInicio + 1) : '' }}
-                  </ng-template>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+          <thead>
+            <tr>
+              <th>Lunes</th>
+              <th>Martes</th>
+              <th>Miercoles</th>
+              <th>Jueves</th>
+              <th>Viernes</th>
+              <th>Sabado</th>
+              <th>Domingo</th>
+            </tr>
+          </thead>
 
-      <div class="botonCentro"><button class="botonEstilo botonCalendario" (click)="postEvento()">Agregar</button></div>
+          <tbody>
+            <tr *ngFor="let semana of numeroSemanas; let i = index">
+              <td *ngFor="let dia of [0,1,2,3,4,5,6]">
+                <ng-container *ngIf="i === 0 && dia < diaInicio - 1; else elseBlock"></ng-container>
+                <ng-template #elseBlock>
+                  {{ ((i * 7) + dia + 1 - diaInicio + 1 <= diaMes.length) ? ((i * 7) + dia + 1 - diaInicio + 1) : '' }}
+                    </ng-template>
+                    <div class="anotaciones">
+                      
+                    </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
-    </section>
+        <div class="muetraEventos">
+          <h3>Lista de eventos</h3>
+        </div>
 
-  </div>
+      </div>
 
+      <div class="botonCentro"><button class="botonEstilo botonCalendario" (click)="postEvento()">Agregar</button>
+      </div>
+    </div>
+
+  </section>
 
 </body>

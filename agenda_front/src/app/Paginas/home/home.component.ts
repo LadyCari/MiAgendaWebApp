@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { lastValueFrom } from 'rxjs';
 import { AgregarEventoCalendarioComponent } from 'src/app/Modales/agregar-evento-calendario/agregar-evento-calendario.component';
-import { ModalLinkComponent } from 'src/app/Modales/modal-link/modal-link.component';
 import { HttpService } from 'src/app/Servicios/http.service';
 import { Url } from 'src/app/url';
 
@@ -43,6 +41,10 @@ export class HomeComponent implements OnInit {
     { nombre: 'Diciembre', numero: 11 }];
   diaInicio: number = 0;
 
+
+
+  /*-------------------------------------calendario---------------------------------*/
+
   mesSeleccionado: any = { nombre: this.obtenerNombreMes(new Date().getMonth()), numero: new Date().getMonth() };
 
   public postEvento() {
@@ -51,18 +53,18 @@ export class HomeComponent implements OnInit {
       width: 'auto',
     });
   }
-  
-  cambiarMes(mes:number){
-    if(mes == -1){
+
+  cambiarMes(mes: number) {
+    if (mes == -1) {
       this.mesSeleccionado.numero = (this.mesSeleccionado.numero + mes == -1) ? 11 : this.mesSeleccionado.numero + mes;
-    } else{
+    } else {
       this.mesSeleccionado.numero = (this.mesSeleccionado.numero + mes > 11) ? 11 : this.mesSeleccionado.numero + mes;
     }
     this.mesSeleccionado.nombre = this.obtenerNombreMes(this.mesSeleccionado.numero);
     this.cambiarFechas();
   }
 
-  cambiarFechas(){
+  cambiarFechas() {
     this.generarDiasDelMes();
     this.generarNumeroSemanas();
     this.diaInicio = this.obtenerDiaInicio(this.mesSeleccionado.numero, this.ano);
@@ -70,10 +72,10 @@ export class HomeComponent implements OnInit {
 
   obtenerDiaInicio(mes: number, ano: number): number {
     const primerDia = new Date(ano, mes, 1).getDay();
-    return primerDia === 0 ? 7 : primerDia; // Ajuste para que el domingo sea el último día (7)
+    return primerDia === 0 ? 7 : primerDia;
   }
 
-  obtenerNombreMes(mesParam:number) {
+  obtenerNombreMes(mesParam: number) {
     for (let mes of this.listaMeses) {
       if (mes.numero == mesParam) {
         return mes.nombre;
@@ -99,6 +101,7 @@ export class HomeComponent implements OnInit {
     console.log(this.numeroSemanas);
   }
 
+  /* ------------------------------------to do-------------------------------------------*/
   private vistaPendientes() {
 
     this.httpService.realizarGet(this.url.getPendiente).subscribe((data: any) => {

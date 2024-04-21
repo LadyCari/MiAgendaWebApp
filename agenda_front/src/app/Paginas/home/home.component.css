@@ -61,7 +61,7 @@ th {
 #primerSector {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding-top: 9rem;
 }
 
@@ -110,8 +110,8 @@ form {
 }
 
 input {
-  padding: 0.2rem;
-  border-radius: 10px;
+  padding: 0.3rem;
+  border-radius: 5px;
   margin: 0.3rem;
   border: 0px;
   padding-left: 10px;
@@ -119,11 +119,11 @@ input {
 }
 
 #tipoTarea {
-  width: 20%;
+  width: 25%;
 }
 
 #descripcionTarea {
-  width: 50%;
+  width: 60%;
 }
 
 .botonNotas{
@@ -149,6 +149,7 @@ input {
 
 #conteinerCalendario{
   position: relative;
+  width: 50%;
 }
 
 #husk img{
@@ -163,13 +164,14 @@ input {
 }
 
 #tituloHorario{
-width: 85%;
-justify-content: right;
+width: 100%;
+justify-content: center;
+margin-left: 1rem;
 }
 
 #conteinerPendientes{
   position: relative;
-  width: 30%;
+  width: 35%;
 }
 
 #huskNotas{
@@ -183,6 +185,11 @@ justify-content: right;
   width: 150px;
 }
 
+.tabla{
+  display: flex;
+justify-content: center;
+}
+
 /*-------------------------------------------------------*/
 
 /*-------------------------------------------------------*/
@@ -190,11 +197,11 @@ justify-content: right;
 
 /*--------------------cuerpo pagina sector 2--------------------*/
 
-#segundoSector {
+.containerCalendario {
   margin-top: 5rem;
   margin-bottom: 3rem;
   width: 100%;
-  justify-content: center;
+  display: flex;
   background-color: var(--color-amarillo);
   overflow: auto;
   border-radius: 20px;
@@ -203,9 +210,12 @@ justify-content: right;
   flex-direction: column;
   padding-bottom: 1rem;
   position: relative;
+  overflow:visible;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-#segundoSector h2{
+.containerCalendario h2{
 margin-top: 1rem;
 margin-bottom: 1rem;
 }
@@ -242,13 +252,13 @@ margin-bottom: 1rem;
   background-color: var(--color-verde);
 }
 
-#segundoSector ul {
+.containerCalendario ul {
   list-style: none;
   display: flex;
   justify-content: space-evenly;
 }
 
-#segundoSector ul li {
+.containerCalendario ul li {
   font-size: 2rem;
   -webkit-text-stroke: 0.2px #000;
 }
@@ -278,6 +288,27 @@ margin-bottom: 1rem;
   background-color: rgba(220, 220, 0, 0.819);
 }
 
+table{
+  width: 70%;
+}
+
+.muetraEventos{
+  background: var(--color-celeste);
+  height: auto;
+  width: 20%;
+}
+
+.tabla-mas-lista{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.muetraEventos{
+  border-radius: 20px;
+  box-shadow: var(--sombra-generica);
+  padding: 1rem;
+}
+
 /*-------------------------------------------------------*/
 
 .botonEstilo {
@@ -291,6 +322,17 @@ margin-bottom: 1rem;
 .botonCentro{
   display: flex;
   justify-content: center;
+}
+
+.tablaMes {
+  border-collapse: collapse;
+  width: 100%;
+}
+.tablaMes th,
+.tablaMes td {
+  border: 1px solid black;
+  padding: 10px;
+  position: relative;
 }
 
 
