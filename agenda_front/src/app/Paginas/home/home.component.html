@@ -179,11 +179,14 @@
               <td *ngFor="let dia of [0,1,2,3,4,5,6]">
                 <ng-container *ngIf="i === 0 && dia < diaInicio - 1; else elseBlock"></ng-container>
                 <ng-template #elseBlock>
-                  {{ ((i * 7) + dia + 1 - diaInicio + 1 <= diaMes.length) ? ((i * 7) + dia + 1 - diaInicio + 1) : '' }}
-                    </ng-template>
-                    <div class="anotaciones">
-                      
-                    </div>
+                  <div
+                    class="dia"
+                    [class.dia-con-evento]="hayEventoEnFecha(getDiaFecha(i, dia))"
+                  >
+                    {{ ((i * 7) + dia + 1 - diaInicio + 1 <= diaMes.length) ? ((i * 7) + dia + 1 - diaInicio + 1) : '' }}
+                  </div>
+                  <div class="anotaciones"></div>
+                </ng-template>
               </td>
             </tr>
           </tbody>
@@ -191,6 +194,9 @@
 
         <div class="muetraEventos">
           <h3>Lista de eventos</h3>
+          <ul>
+            <li *ngFor="let evento of eventosCalendario">{{ evento.fechaInicio | date:'dd/MM/yyyy' }} {{ evento.tipoEvento }} {{ evento.fechaInicio | date:'hh:mm' }}</li>
+          </ul>
         </div>
 
       </div>

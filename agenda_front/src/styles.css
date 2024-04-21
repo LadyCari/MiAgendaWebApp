@@ -21,7 +21,7 @@
 }
 
 /*---------------------------body paginas---------------------------*/
-* {
+/* * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -30,7 +30,7 @@
 
 a{
   cursor: url(../src/assets/img/punteroFrog.png), auto;
-}
+} */
 
 .cuerpo-pagina {
   background-image: url("https://img.freepik.com/free-vector/gradient-pastel-sky-background_23-2148917404.jpg?w=2000");

@@ -21,4 +21,9 @@ export class Url{
     public static getActividad = "http://localhost:8089/actividades-semanales/get"
     public static addActividad = "http://localhost:8089/actividades-semanales/crear"
     public static deleteActividad = "http://localhost:8089/actividades-semanales/delete?id="
+    // evento calendario
+    public static getEvento = "http://localhost:8089/evento/get-eventos"
+    public static addEvento = "http://localhost:8089/evento/crear"
+    public static deleteEvento = "http://localhost:8089/evento/delete"
+
 }
