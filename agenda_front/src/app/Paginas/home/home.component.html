@@ -74,43 +74,22 @@
               <th>Sabado</th>
               <th>Domingo</th>
             </tr>
-  
-            <tr>
-              <td>8:00</td>
-              <td>Gym</td>
-              <td>Gym</td>
-              <td>Gym</td>
-              <td>Gym</td>
-              <td>Gym</td>
-              <td>Nada</td>
-              <td>Nada</td>
+  <!--
+            <tr *ngFor="let horario of horarios">
+              <td>{{ horario.hora }}</td>
+              <td>{{ horario.actividades.lunes }}</td>
+              <td>{{ horario.actividades.martes }}</td>
+              <td>{{ horario.actividades.miercoles }}</td>
+              <td>{{ horario.actividades.jueves }}</td>
+              <td>{{ horario.actividades.viernes }}</td>
+              <td>{{ horario.actividades.sabado }}</td>
+              <td>{{ horario.actividades.domingo }}</td>
             </tr>
-  
-            <tr>
-              <td>14:30</td>
-              <td>Codo a codo</td>
-              <td>Nada</td>
-              <td>Codo a codo</td>
-              <td>Nada</td>
-              <td>Nada</td>
-              <td>Nada</td>
-              <td>Nada</td>
-            </tr>
-  
-            <tr>
-              <td>15:00</td>
-              <td>Codo a codo</td>
-              <td>Nada</td>
-              <td>Codo a codo</td>
-              <td>Nada</td>
-              <td>Nada</td>
-              <td>Nada</td>
-              <td>Nada</td>
-            </tr>
+            -->
           </table>
         </div>
 
-        <div class="botonCentro"><button class="botonEstilo botonHorarios">Agregar</button></div>
+        <div class="botonCentro"><button class="botonEstilo botonHorarios" (click)="putRutina()">Agregar</button></div>
 
       </div>
 

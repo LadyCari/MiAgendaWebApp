@@ -23,7 +23,7 @@ public class LinkService {
 
     public LinkDTO getLinksByCategoria(String categoria, Integer pagina, Integer cantidad) {
         Pageable pageable = PageRequest.of(pagina - 1, cantidad);
-        List<Link> links = linkRepository.findAllByCategoria(categoria, pageable);
+        List<Link> links = linkRepository.findAllByCategoriaOrderByFavoritoDesc(categoria, pageable);
         return new LinkDTO(links, linkRepository.countAllByCategoria(categoria));
     }
 

@@ -6,13 +6,15 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { ConstantesPalia, ItemPalia } from 'src/app/Entidades/model-interface';
 import { MatSort } from '@angular/material/sort';
+import { HttpParams } from '@angular/common/http';
 
 @Component({
   selector: 'app-home-palia',
   templateUrl: './home-palia.component.html',
   styleUrls: ['./home-palia.component.css'],
 })
-export class HomePaliaComponent implements AfterViewInit {
+export class HomePaliaComponent implements OnInit {
+
   displayedColumns: string[] = [
     'img',
     'nombre',
@@ -24,38 +26,43 @@ export class HomePaliaComponent implements AfterViewInit {
     'speedyGro',
     'harversBoost',
   ];
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
-  @ViewChild(MatSort) sort!: MatSort;
+
   dataSource = new MatTableDataSource<any>([]);
-  items: ItemPalia[] = [];
-  constantes: ConstantesPalia[] = [];
-  resultsLength = 0;
-  loading = true;
+  listaItems: any[] = [];
+  readonly url = Url;
+  cantidadItems = 0;
+  pagina = 0;
+  cantidad = 10;
 
-  constructor(private httpService: HttpService) {}
-
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
-  }
+  constructor(private httpService: HttpService) { }
 
   ngOnInit(): void {
     this.cargarDatosItems();
-    this.dataSource.paginator = this.paginator;
-    this.cargarDatosConstantes();
   }
 
-  private async cargarDatosItems() {
-    try {
-      let respuesta = this.httpService.realizarGet(Url.urlItems);
-      this.items = await lastValueFrom(respuesta);
+  private cargarDatosItems() {
+    const param = new HttpParams()
+    .append('pagina', this.pagina)
+    .append('cantidad', this.cantidad);
 
-      this.dataSource.data = this.items;
-    } catch (error) {
-      console.log('error', error);
-    }
+    this.httpService.realizarGet(this.url.getAllItems, false, param).subscribe((data: any) => {
+      if (data.state == 'OK') {
+        this.listaItems = data.items;
+        this.cantidadItems = data.registros;
+      }
+    })
+
   }
+/*
+  private nuevoItem(){
+    this.httpService.realizarPost(this.url.addItem).subscribe((data:any) =>{
+      if (data.state == 'OK'){
 
+      }
+    })
+  }
+*/
+  /*
   private async cargarDatosConstantes() {
     try {
       let respuesta = this.httpService.realizarGet(Url.urlConstantes);
@@ -106,4 +113,5 @@ export class HomePaliaComponent implements AfterViewInit {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
+    */
 }

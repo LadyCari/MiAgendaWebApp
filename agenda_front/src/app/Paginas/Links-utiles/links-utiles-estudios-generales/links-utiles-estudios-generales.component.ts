@@ -25,6 +25,7 @@ export class LinksUtilesEstudiosGeneralesComponent {
   readonly url = Url;
   listaLinks: any;
   nuevoLink: any;
+  categoriaSeleccionada: string = '';
 
   private obtenerLista(paginaActual: number, elementosPorPagina: number) {
     this.httpService.realizarGet(`${this.url.getLinks}EstudioGeneral&pagina=${paginaActual}&cantidad=${elementosPorPagina}`).subscribe((data: any) => {
@@ -35,8 +36,10 @@ export class LinksUtilesEstudiosGeneralesComponent {
     });
   }
 
-  public postLink() {
+  public postLink(categoria:string) {
+    this.categoriaSeleccionada = categoria;
     this.dialog.open(ModalLinkComponent, {
+      data:{categoria: this.categoriaSeleccionada},
       height: 'auto',
       width: 'auto',
     });

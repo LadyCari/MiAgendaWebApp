@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface LinkRepository extends JpaRepository<Link, Long> {
 
-    List<Link> findAllByCategoria(String categoria, Pageable pageable);
+    List<Link> findAllByCategoriaOrderByFavoritoDesc(String categoria, Pageable pageable);
 
     Integer countAllByCategoria(String categoria);
 }

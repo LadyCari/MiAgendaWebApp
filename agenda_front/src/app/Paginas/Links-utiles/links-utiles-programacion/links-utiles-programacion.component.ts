@@ -24,6 +24,7 @@ export class LinksUtilesProgramacionComponent implements OnInit {
   readonly url = Url;
   listaLinks: any;
   nuevoLink: any;
+  categoriaSeleccionada: string = '';
 
 
   private obtenerLista(paginaActual: number, elementosPorPagina: number) {
@@ -65,8 +66,10 @@ export class LinksUtilesProgramacionComponent implements OnInit {
     return numPagina === this.paginaActual;
   }
 
-  public postLink() {
+  public postLink(categoria:string) {
+    this.categoriaSeleccionada = categoria;
     this.dialog.open(ModalLinkComponent, {
+      data:{categoria: this.categoriaSeleccionada},
       height: 'auto',
       width: 'auto',
     });

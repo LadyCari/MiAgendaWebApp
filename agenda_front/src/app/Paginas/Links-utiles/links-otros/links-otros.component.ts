@@ -15,6 +15,7 @@ export class LinksOtrosComponent implements OnInit {
   paginaActual: number = 1;
   elementosPorPagina: number = 9;
   totalLinks: number = 0;
+  categoriaSeleccionada: string = '';
 
   constructor(private httpService: HttpService, private dialog: MatDialog) {
   }
@@ -36,8 +37,10 @@ export class LinksOtrosComponent implements OnInit {
     });
   }
 
-  public postLink() {
+  public postLink(categoria:string) {
+    this.categoriaSeleccionada = categoria;
     this.dialog.open(ModalLinkComponent, {
+      data:{categoria: this.categoriaSeleccionada},
       height: 'auto',
       width: 'auto',
     });

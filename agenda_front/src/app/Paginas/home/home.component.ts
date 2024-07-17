@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AgregarEventoCalendarioComponent } from 'src/app/Modales/agregar-evento-calendario/agregar-evento-calendario.component';
+import { AgregarRutinaSemanalComponent } from 'src/app/Modales/agregar-rutina-semanal/agregar-rutina-semanal.component';
 import { HttpService } from 'src/app/Servicios/http.service';
 import { Url } from 'src/app/url';
 
@@ -41,6 +42,8 @@ export class HomeComponent implements OnInit {
     { nombre: 'Diciembre', numero: 11 }];
   diaInicio: number = 0;
 
+  /*---------------------------------------Rutina--------------------------------------*/
+
 
 
   /*-------------------------------------calendario---------------------------------*/
@@ -49,6 +52,13 @@ export class HomeComponent implements OnInit {
 
   public postEvento() {
     this.dialog.open(AgregarEventoCalendarioComponent, {
+      height: 'auto',
+      width: 'auto',
+    });
+  }
+
+  public putRutina() {
+    this.dialog.open(AgregarRutinaSemanalComponent, {
       height: 'auto',
       width: 'auto',
     });

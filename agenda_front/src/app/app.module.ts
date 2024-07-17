@@ -43,6 +43,7 @@ import { AgregarEventoCalendarioComponent } from './Modales/agregar-evento-calen
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {JsonPipe} from '@angular/common';
 import { MatNativeDateModule } from '@angular/material/core';
+import { AgregarRutinaSemanalComponent } from './Modales/agregar-rutina-semanal/agregar-rutina-semanal.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     HomeEstudiosComponent,
     HomeEstudioCursandoComponent,
     HomeEstudioFinalizadoComponent,
-    AgregarEventoCalendarioComponent
+    AgregarEventoCalendarioComponent,
+    AgregarRutinaSemanalComponent
   ],
   imports: [
     BrowserModule,

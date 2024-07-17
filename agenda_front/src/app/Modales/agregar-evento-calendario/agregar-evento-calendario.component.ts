@@ -1,8 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { HttpService } from 'src/app/Servicios/http.service';
-import { ModalLinkComponent } from '../modal-link/modal-link.component';
 
 @Component({
   selector: 'app-agregar-evento-calendario',
@@ -17,7 +15,7 @@ export class AgregarEventoCalendarioComponent implements OnInit{
   });
   nuevoEvento: FormGroup = this.formBuilder.group({});
   
-  constructor(private httpService: HttpService, private formBuilder: FormBuilder, public dialogRef: MatDialogRef<ModalLinkComponent>,
+  constructor(private formBuilder: FormBuilder, public dialogRef: MatDialogRef<AgregarEventoCalendarioComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) {
   }
 

@@ -36,4 +36,7 @@ public class Link {
 
     @Column(name = "categoria")
     private String categoria;
+
+    @Column(name = "favorito")
+    private boolean favorito;
 }

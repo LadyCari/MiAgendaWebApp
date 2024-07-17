@@ -1,0 +1,36 @@
+<form [formGroup]="rutinaSemana">
+<h2>Rutina para la semana</h2>
+<div>
+    <p>Nombre</p>
+    <input type="text" formControlName="nombre" placeholder="Nombre de la rutina">
+</div>
+<div>
+    <p>Dias de la rutina</p>
+    <div id="listDays">
+        <input type="checkbox" name="lunes" value="lunes">
+        <p class="dia">Lunes</p>
+        <input type="checkbox" name="martes" value="martes">
+        <p class="dia">Martes</p>
+        <input type="checkbox" name="miercoles" value="miercoles">
+        <p class="dia">Miercoles</p>
+        <input type="checkbox" name="jueves" value="jueves">
+        <p class="dia">Jueves</p>
+        <input type="checkbox" name="viernes" value="viernes">
+        <p class="dia">Viernes</p>
+        <input type="checkbox" name="sabado" value="sabado">
+        <p class="dia">Sabado</p>
+        <input type="checkbox" name="domingo" value="domingo">
+        <p class="dia">Domingo</p>
+    </div>
+</div>
+<div>
+    <p>Horario Inicio</p>
+    <input type="time">
+    <p>Horario Fin</p>
+    <input type="time">
+</div>
+<div class="botones">
+    <button class="cancelar" type="button" (click)="cancelar()"><p>Cancelar</p></button>
+    <button class="confirmar"><p>Terminar</p></button>
+</div>
+</form>

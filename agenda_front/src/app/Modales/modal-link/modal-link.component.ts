@@ -15,19 +15,22 @@ export class ModalLinkComponent implements OnInit {
   nuevoLink: FormGroup = this.formBuilder.group({});
   esEdicion = false;
 
-  constructor(private httpService: HttpService, private formBuilder: FormBuilder, public dialogRef: MatDialogRef<ModalLinkComponent>,
+  constructor(
+    private httpService: HttpService, 
+    private formBuilder: FormBuilder, 
+    public dialogRef: MatDialogRef<ModalLinkComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) {
   }
 
   ngOnInit(): void {
-    this.iniciarForm();
+    this.iniciarForm(this.data);
     this.dataToLink();
   }
 
-  private iniciarForm() {
+  private iniciarForm(data: any) {
     this.nuevoLink = this.formBuilder.group({
       nombre: ['', Validators.required],
-      categoria: ['', Validators.required],
+      categoria: [data.categoria || 'General', Validators.required],
       descripcion: [''],
       imagen: ['', Validators.required],
       capitulo: [''],

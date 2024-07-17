@@ -14,6 +14,7 @@ export class ManhwasComponent implements OnInit {
   paginaActual: number = 1;
   elementosPorPagina: number = 9;
   totalLinks: number = 0;
+  categoriaSeleccionada: string = '';
 
   constructor(private httpService: HttpService, private dialog: MatDialog) {
   }
@@ -36,8 +37,19 @@ export class ManhwasComponent implements OnInit {
     });
   }
 
-  public postLink() {
+  public favorito(link: any) {
+
+    link.favorito = !link.favorito;
+    this.httpService.realizarPut(this.url.editLinks, link).subscribe((data: any) => {
+      if (data.state == 'OK') {
+      }
+    });
+  }
+
+  public postLink(categoria:string) {
+    this.categoriaSeleccionada = categoria;
     this.dialog.open(ModalLinkComponent, {
+      data:{categoria: this.categoriaSeleccionada},
       height: 'auto',
       width: 'auto',
     });
@@ -51,13 +63,6 @@ export class ManhwasComponent implements OnInit {
     });
   }
 
-  public modificarLink(linkEdit: any) {
-    this.httpService.realizarPut(this.url.editLinks).subscribe((data: any) => {
-      if (data.state == "OK") {
-
-      }
-    });
-  }
 
   public deleteLink(link: any) {
     console.log(link)

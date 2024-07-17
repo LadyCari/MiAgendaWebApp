@@ -14,11 +14,15 @@
                 <i class="fa-solid fa-ellipsis"></i>
             </button>
             <mat-menu #menu="matMenu" class="menu-personalizado">
-                <button mat-menu-item>
-                    <i class="fa-solid fa-pen-to-square edit" (click)="putsLink(link)"></i>
+              <button mat-menu-item (click)="favorito(link)">
+                <i class="fa-regular fa-star" *ngIf="!link.favorito"></i>
+                <i class="fa-solid fa-star" *ngIf="link.favorito"></i>
+            </button>
+                <button mat-menu-item (click)="putsLink(link)">
+                    <i class="fa-solid fa-pen-to-square edit"></i>
                 </button>
-                <button mat-menu-item>
-                    <li><i class="fa-solid fa-trash" (click)="deleteLink(link)"></i></li>
+                <button mat-menu-item (click)="deleteLink(link)">
+                    <li><i class="fa-solid fa-trash"></i></li>
                 </button>
             </mat-menu>
             <img src="{{link.imagen}}" alt="">
@@ -26,7 +30,7 @@
         </div>
 
         <div class="tarjeta agregar">
-            <button mat-mini-fab (click)="postLink()"><i class="fa-solid fa-plus"></i></button>
+            <button mat-mini-fab (click)="postLink('Manga/Manhwa')"><i class="fa-solid fa-plus"></i></button>
         </div>
 
     </section>

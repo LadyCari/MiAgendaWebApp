@@ -21,4 +21,9 @@ export class Url{
     public static getActividad = "http://localhost:8089/actividades-semanales/get"
     public static addActividad = "http://localhost:8089/actividades-semanales/crear"
     public static deleteActividad = "http://localhost:8089/actividades-semanales/delete?id="
-}
+    /*palia*/
+     public static getAllItems = "http://localhost:8089/palia/get-items"
+     public static addItem = "http://localhost:8089/palia/add-item"
+     public static modificarItem = "http://localhost:8089/palia/modificar-item"
+     public static borrarItem = "http://localhost:8089/palia/delete-item"
+    }
