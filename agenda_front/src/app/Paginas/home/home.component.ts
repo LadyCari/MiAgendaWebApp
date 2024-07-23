@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.vistaPendientes();
     this.cambiarFechas();
+    this.getRutinas();
   }
 
   readonly url = Url;
@@ -41,24 +42,72 @@ export class HomeComponent implements OnInit {
     { nombre: 'Noviembre', numero: 10 },
     { nombre: 'Diciembre', numero: 11 }];
   diaInicio: number = 0;
+  diasSemana: string[] = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo'];
 
   /*---------------------------------------Rutina--------------------------------------*/
+  listaRutinas: any[] = [];
+  listaHorarios: any[] = [];
+
+  public eliminarActividad(actividad: any) {
+    this.httpService.realizarDelete(this.url.deleteActividad + actividad.actividadId).subscribe((data: any) => {
+      if (data.state == 'OK') {
+        const index = this.listaRutinas.findIndex((pendiente: any) => pendiente === actividad);
+        if (index !== -1) {
+          this.listaRutinas.splice(index, 1);
+        }
+      }
+    });
+  }
+
+  public putRutina() {
+    this.dialog.open(AgregarRutinaSemanalComponent, {
+      height: 'auto',
+      width: 'auto',
+    });
+  }
+
+  private getRutinas() {
+    this.httpService.realizarGet(this.url.getActividad).subscribe((data: any) => {
+      if (data.state == 'OK') {
+        this.listaRutinas = data.data;
+        this.listaHoras();
+      }
+    });
+  }
+
+  public listaHoras() {
+    this.listaRutinas.forEach(rutina => {
+      let horaI = rutina.horarioInicio;
+      let horaF = rutina.horarioFin;
+      let existe = this.listaHorarios.find(horario => horario == horaI);
+      let existe2 = this.listaHorarios.find(horario => horario == horaF);
+        if (existe == undefined) {
+          this.listaHorarios.push(horaI);
+        }
+        if (existe2 == undefined) {
+          this.listaHorarios.push(horaF);
+        }
+    });
+    this.listaHorarios.sort((a, b) => a.localeCompare(b));
+  }
 
 
+  existe(dia: string, listaDias: any[]) {
+    for (let cosa of listaDias) {
+      if (cosa == dia) {
+        return true;
+      }
 
+    }
+    return false;
+  }
+  
   /*-------------------------------------calendario---------------------------------*/
 
   mesSeleccionado: any = { nombre: this.obtenerNombreMes(new Date().getMonth()), numero: new Date().getMonth() };
 
   public postEvento() {
     this.dialog.open(AgregarEventoCalendarioComponent, {
-      height: 'auto',
-      width: 'auto',
-    });
-  }
-
-  public putRutina() {
-    this.dialog.open(AgregarRutinaSemanalComponent, {
       height: 'auto',
       width: 'auto',
     });

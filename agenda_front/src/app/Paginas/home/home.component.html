@@ -14,7 +14,7 @@
 
       <div id="huskNotas">
         <img
-          src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5736f144-0ca5-4050-bd4d-3717c83771b5/ddcumso-d5613733-ba7f-41ee-9713-cafacad4f113.png/v1/fill/w_600,h_1014/husk___hazbin_hotel_by_kingdomrian_ddcumso-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAxNCIsInBhdGgiOiJcL2ZcLzU3MzZmMTQ0LTBjYTUtNDA1MC1iZDRkLTM3MTdjODM3NzFiNVwvZGRjdW1zby1kNTYxMzczMy1iYTdmLTQxZWUtOTcxMy1jYWZhY2FkNGYxMTMucG5nIiwid2lkdGgiOiI8PTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.G7jcl6X94adO6H-6RwXdlOfQt2sbs4f35Wtx5PsE4Ck"
+          src="../../../assets/img/bunny.gif"
           alt="">
       </div>
 
@@ -64,28 +64,25 @@
 
         <div class="tabla">
           <table>
-            <tr>
-              <th>Horario/Dia</th>
-              <th>Lunes</th>
-              <th>Martes</th>
-              <th>Miercoles</th>
-              <th>Jueves</th>
-              <th>Viernes</th>
-              <th>Sabado</th>
-              <th>Domingo</th>
-            </tr>
-  <!--
-            <tr *ngFor="let horario of horarios">
-              <td>{{ horario.hora }}</td>
-              <td>{{ horario.actividades.lunes }}</td>
-              <td>{{ horario.actividades.martes }}</td>
-              <td>{{ horario.actividades.miercoles }}</td>
-              <td>{{ horario.actividades.jueves }}</td>
-              <td>{{ horario.actividades.viernes }}</td>
-              <td>{{ horario.actividades.sabado }}</td>
-              <td>{{ horario.actividades.domingo }}</td>
-            </tr>
-            -->
+            <thead>
+              <tr>
+                <th>Horario/Día</th>
+                <th *ngFor="let dia of diasSemana">{{ dia }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let horario of listaHorarios">
+                <td>{{ horario }}</td>
+                <td *ngFor="let dia of diasSemana">
+                  <div *ngFor="let rutina of listaRutinas">
+                    <div *ngIf="(rutina.dia.includes(dia) && (rutina.horarioInicio <= horario && rutina.horarioFin >= horario))">
+                      {{ rutina.nombre }} 
+                      <button (click)="eliminarActividad(rutina)"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
 
@@ -101,7 +98,7 @@
 
     <div id="catCalendar">
       <img
-        src="https://images.vexels.com/media/users/3/321862/isolated/preview/d9cff9e55f1fb0512996a91068e34c79-gatito-con-un-calendario.png"
+        src="../../../assets/img/tumblr_mrw6rgd77u1rfjowdo1_500.gif"
         alt="">
     </div>
 
@@ -161,7 +158,7 @@
                   {{ ((i * 7) + dia + 1 - diaInicio + 1 <= diaMes.length) ? ((i * 7) + dia + 1 - diaInicio + 1) : '' }}
                     </ng-template>
                     <div class="anotaciones">
-                      
+
                     </div>
               </td>
             </tr>

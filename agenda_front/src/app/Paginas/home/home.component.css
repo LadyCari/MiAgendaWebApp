@@ -176,8 +176,8 @@ margin-left: 1rem;
 
 #huskNotas{
   position: absolute;
-  left: -50px;
-  top: -150px;
+  
+  top: -130px;
   z-index: 2;
 }
 
@@ -190,6 +190,16 @@ margin-left: 1rem;
 justify-content: center;
 }
 
+.tabla th{
+  padding: 0.5rem 1.2rem 0.5rem 1.2rem;
+}
+
+.tabla button {
+  background-color: #4caf4f00;
+  border: 0px;
+  cursor: pointer;
+
+}
 /*-------------------------------------------------------*/
 
 /*-------------------------------------------------------*/

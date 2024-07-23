@@ -1,4 +1,5 @@
 package com.carito.agenda.Entitys;
+import com.carito.agenda.Enumerables.DiasSemanas;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -24,17 +25,16 @@ public class ActividadesSemanales {
     private String nombre;
 
     @Column(name = "hora_inicio")
-    private Double horaInicio;
+    private String horarioInicio;
 
     @Column(name = "hora_fin")
-    private Double horaFin;
+    private String horarioFin;
 
-    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinTable(
-            name = "dias_actividades_semanales",
-            joinColumns = @JoinColumn(name = "actividad_id"),
-            inverseJoinColumns = @JoinColumn(name = "name"))
-    private List<Dia> dia;
+    @ElementCollection(targetClass = DiasSemanas.class)
+    @JoinTable(name = "actividades_semanales_dia", joinColumns = @JoinColumn(name = "id"))
+    @Column(name = "dia", nullable = false)
+    @Enumerated(EnumType.STRING)
+    private List<DiasSemanas> dia;
 
 }
 

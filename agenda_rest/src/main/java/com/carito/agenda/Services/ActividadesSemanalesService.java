@@ -15,7 +15,7 @@ public class ActividadesSemanalesService {
     private ActividadesSemanalesRepository actividadesSemanalesRepository;
 
     public List<ActividadesSemanales> obtenerActividadesSemanales (){
-        return actividadesSemanalesRepository.findAll();
+        return actividadesSemanalesRepository.findAllByActividadIdNotNullOrderByHorarioInicioAscHorarioFinAsc();
     }
 
     public ActividadesSemanales guardarActividadSemanal(ActividadesSemanales ActividadesSemanales){

@@ -13,8 +13,14 @@ export class AgregarRutinaSemanalComponent implements OnInit {
 
   rutinaSemana: FormGroup = this.formBuilder.group({});
   readonly url = Url;
-
-  constructor(private formBuilder: FormBuilder, public dialogRef: MatDialogRef<AgregarRutinaSemanalComponent>, @Inject(MAT_DIALOG_DATA) public data: any, private httpService: HttpService) {
+  diasSemana: string[] = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo'];
+  diasSeleccionados: any[] = [];
+  
+  constructor(
+    private formBuilder: FormBuilder,
+    public dialogRef: MatDialogRef<AgregarRutinaSemanalComponent>, @Inject(MAT_DIALOG_DATA)
+    public data: any,
+    private httpService: HttpService) {
   }
 
   ngOnInit(): void {
@@ -24,9 +30,31 @@ export class AgregarRutinaSemanalComponent implements OnInit {
   private iniciarForm() {
     this.rutinaSemana = this.formBuilder.group({
       nombre: ['', Validators.required],
-      dia: [[], Validators.required],
-      horario: ['', Validators.required]
+      horarioInicio: ['', Validators.required],
+      horarioFin: ['', Validators.required],
+      dia: [[], Validators.required]
     })
+  }
+
+  public checkBox(dia: string) {
+    if (!this.existe(dia)) {
+      this.diasSeleccionados.push(dia);
+    } else {
+      const index = this.diasSeleccionados.findIndex((control: { value: string; }) => control.value === dia);
+      if (index !== -1) {
+        this.diasSeleccionados.splice(index, 1);
+      }
+    }
+  }
+
+  private existe(dia: string) {
+    for (let cosa of this.diasSeleccionados) {
+      if (cosa == dia) {
+        return true;
+      }
+
+    }
+    return false;
   }
 
   public cancelar() {
@@ -35,10 +63,34 @@ export class AgregarRutinaSemanalComponent implements OnInit {
 
   public putsRutina() {
     let nuevarutina = this.rutinaSemana.value;
+    nuevarutina.dia = this.diasSeleccionados;
     this.httpService.realizarPost(this.url.addActividad, nuevarutina).subscribe((data: any) => {
       if (data.state == 'OK') {
         this.dialogRef.close();
       }
     });
   }
+  /*
+    public dataToLink(): void {
+      const rutina = this.data ? this.data.rutina : null;
+      if (rutina) {
+        this.rutinaSemana.setValue({
+          nombre: rutina.nombre,
+          horarioInicio: rutina.horarioInicio,
+          horarioFin: rutina.horarioFin,
+          lunes: rutina.dia.includes('lunes'),
+          martes: rutina.dia.includes('martes'),
+          miercoles: rutina.dia.includes('miercoles'),
+          jueves: rutina.dia.includes('jueves'),
+          viernes: rutina.dia.includes('viernes'),
+          sabado: rutina.dia.includes('sabado'),
+          domingo: rutina.dia.includes('domingo'),
+        });
+      } else {
+        console.warn('No se encontraron datos de rutina para cargar.');
+      }
+    }
+      */
+
 }
+
