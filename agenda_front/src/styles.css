@@ -1,13 +1,13 @@
 :root {
 
   /*colores*/
-  --color-rosa: #ffa9ff;
-  --color-naranja: #ffce8e;
+  --color-rosa: #ffc6ff;
+  --color-naranja: #ffdcad;
   --color-verde: #c1ff8e;
-  --color-celeste: #8ebbffb9;
+  --color-celeste: #a3c8ffb9;
   --color-celeste-transparente:#8ebbff7a;
-  --color-amarillo: rgb(255, 248, 157);
-  --color-amarillo-transparente: rgba(255, 248, 157, 0.534);
+  --color-amarillo: rgb(255, 250, 176);
+  --color-amarillo-transparente: rgba(254, 255, 170, 0.699);
   --color-rojo: rgba(252, 107, 107, 0.767);
 
   /* personalizacion generica*/

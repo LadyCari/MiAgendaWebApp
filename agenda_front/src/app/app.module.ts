@@ -9,7 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 import { HomePaliaComponent } from './Paginas/Juegos/Palia/home-palia/home-palia.component';
 import { MatSortModule } from '@angular/material/sort';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -27,7 +27,7 @@ import { LinksUtilesProgramacionComponent } from './Paginas/Links-utiles/links-u
 import { LinksUtilesJuegosComponent } from './Paginas/Links-utiles/links-utiles-juegos/links-utiles-juegos.component';
 import { FullStackJavaCacComponent } from './Paginas/Estudios/finalizado/full-stack-java-cac/full-stack-java-cac.component';
 import { TestingQACacComponent } from './Paginas/Estudios/cursando/testing-qa-cac/testing-qa-cac.component';
-import { HomeComponent } from './Paginas/Home/home.component';
+import { HomeComponent } from './Paginas/home/home.component';
 import { LinksUtilesAnimeComponent } from './Paginas/Links-utiles/links-utiles-anime/links-utiles-anime.component';
 import { ManhwasComponent } from './Paginas/Links-utiles/links-utiles-mangas/manhwas/manhwas.component';
 import { LinksUtilesIdiomasComponent } from './Paginas/Links-utiles/links-utiles-idiomas/links-utiles-idiomas.component';
@@ -44,6 +44,18 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {JsonPipe} from '@angular/common';
 import { MatNativeDateModule } from '@angular/material/core';
 import { AgregarRutinaSemanalComponent } from './Modales/agregar-rutina-semanal/agregar-rutina-semanal.component';
+import { OtroHomeComponent } from './Paginas/otro/otro-home/otro-home.component';
+import { OtroRecetasComponent } from './Paginas/otro/otro-recetas/otro-recetas.component';
+import { MapaMundoComponent } from './Paginas/Juegos/Juego-rpg/mapa-mundo/mapa-mundo.component';
+import { MapaLagoComponent } from './Paginas/Juegos/Juego-rpg/mapas-dentro-juego/mapa-lago/mapa-lago.component';
+import { MapaBosqueComponent } from './Paginas/Juegos/Juego-rpg/mapas-dentro-juego/mapa-bosque/mapa-bosque.component';
+import { MapaMinaComponent } from './Paginas/Juegos/Juego-rpg/mapas-dentro-juego/mapa-mina/mapa-mina.component';
+import { MapaCasaComponent } from './Paginas/Juegos/Juego-rpg/mapas-dentro-juego/mapa-pueblo/mapa-casa/mapa-casa.component';
+import { MapaPuebloComponent } from './Paginas/Juegos/Juego-rpg/mapas-dentro-juego/mapa-pueblo/mapa-pueblo/mapa-pueblo.component';
+import { MapaPatioComponent } from './Paginas/Juegos/Juego-rpg/mapas-dentro-juego/mapa-pueblo/mapa-patio/mapa-patio.component';
+import { ModalLifeRecoleccionComponent } from './Paginas/Juegos/Juego-rpg/modales/modal-life-recoleccion/modal-life-recoleccion.component';
+import { HomeJuegoRpgComponent } from './Paginas/Juegos/Juego-rpg/home-juego-rpg/home-juego-rpg.component';
+
 
 @NgModule({
   declarations: [
@@ -73,7 +85,19 @@ import { AgregarRutinaSemanalComponent } from './Modales/agregar-rutina-semanal/
     HomeEstudioCursandoComponent,
     HomeEstudioFinalizadoComponent,
     AgregarEventoCalendarioComponent,
-    AgregarRutinaSemanalComponent
+    AgregarRutinaSemanalComponent,
+    OtroHomeComponent,
+    OtroRecetasComponent,
+    MapaMundoComponent,
+    MapaLagoComponent,
+    MapaBosqueComponent,
+    MapaMinaComponent,
+    MapaCasaComponent,
+    MapaPuebloComponent,
+    MapaPatioComponent,
+    ModalLifeRecoleccionComponent,
+    HomeJuegoRpgComponent
+
   ],
   imports: [
     BrowserModule,

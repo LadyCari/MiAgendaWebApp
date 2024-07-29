@@ -34,7 +34,8 @@ export class ModalLinkComponent implements OnInit {
       descripcion: [''],
       imagen: ['', Validators.required],
       capitulo: [''],
-      url: ['', Validators.required]
+      url: ['', Validators.required],
+      favorito: [false]
     })
   }
 
@@ -65,7 +66,8 @@ export class ModalLinkComponent implements OnInit {
       imagen: link.imagen,
       url: link.url,
       capitulo: link.capitulo,
-      categoria: link.categoria
+      categoria: link.categoria,
+      favorito: link.favorito,
     });
     this.esEdicion = true;
   }

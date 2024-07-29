@@ -17,8 +17,10 @@ h2 {
     font-family: var(--estilo-titulos);
 }
 
-.section {
+section {
     text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 p {
@@ -58,7 +60,7 @@ input:focus {
     background: none;
     border: none;
     padding: 0.3rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
     cursor: pointer;
     font-family: var(--estilo-letra-generico);

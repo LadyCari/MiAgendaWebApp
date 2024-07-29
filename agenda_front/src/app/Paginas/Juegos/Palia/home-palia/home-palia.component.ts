@@ -1,11 +1,7 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { lastValueFrom } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/Servicios/http.service';
 import { Url } from 'src/app/url';
-import { MatTableDataSource, MatTableModule } from '@angular/material/table';
-import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
-import { ConstantesPalia, ItemPalia } from 'src/app/Entidades/model-interface';
-import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { HttpParams } from '@angular/common/http';
 
 @Component({
@@ -42,8 +38,8 @@ export class HomePaliaComponent implements OnInit {
 
   private cargarDatosItems() {
     const param = new HttpParams()
-    .append('pagina', this.pagina)
-    .append('cantidad', this.cantidad);
+      .append('pagina', this.pagina)
+      .append('cantidad', this.cantidad);
 
     this.httpService.realizarGet(this.url.getAllItems, false, param).subscribe((data: any) => {
       if (data.state == 'OK') {
@@ -51,17 +47,17 @@ export class HomePaliaComponent implements OnInit {
         this.cantidadItems = data.registros;
       }
     })
-
   }
-/*
-  private nuevoItem(){
-    this.httpService.realizarPost(this.url.addItem).subscribe((data:any) =>{
-      if (data.state == 'OK'){
-
-      }
-    })
-  }
-*/
+  
+  /*
+    private nuevoItem(){
+      this.httpService.realizarPost(this.url.addItem).subscribe((data:any) =>{
+        if (data.state == 'OK'){
+  
+        }
+      })
+    }
+  */
   /*
   private async cargarDatosConstantes() {
     try {

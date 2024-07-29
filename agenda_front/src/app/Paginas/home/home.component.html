@@ -9,17 +9,14 @@
 
 
   <section id="primerSector">
-
     <div id="conteinerPendientes">
-
       <div id="huskNotas">
-        <img
-          src="../../../assets/img/bunny.gif"
-          alt="">
+
+        <img src="../../../assets/img/bunny.gif" alt="">
+
       </div>
 
       <div id="notas">
-
         <div class="tituloCuadros">
 
           <h2>Pendientes</h2>
@@ -37,16 +34,12 @@
 
         <form>
 
-          <input type="text" id="tipoTarea" name="tipoTarea" [(ngModel)]="nuevoPendiente.tipo"
-            placeholder="Tipo tarea" />
-          <input type="text" id="descripcionTarea" name="tarea" [(ngModel)]="nuevoPendiente.descripcion"
-            placeholder="Descripcion tarea" />
+          <input type="text" id="tipoTarea" name="tipoTarea" [(ngModel)]="nuevoPendiente.tipo" placeholder="Tipo tarea" />
+          <input type="text" id="descripcionTarea" name="tarea" [(ngModel)]="nuevoPendiente.descripcion" placeholder="Descripcion tarea" />
           <button (click)="postPendientes()" type="button" class="botonEstilo botonNotas">Nuevo pendiente</button>
 
         </form>
-
       </div>
-
     </div>
 
     <div id="conteinerCalendario">
@@ -56,52 +49,59 @@
       </div>
 
       <div id="horarios">
-
         <div class="tituloCuadros" id="tituloHorario">
+
           <h2>Horarios</h2>
           <img src="https://i0.wp.com/www.iesc.edu.pa/sites/default/files/images/homepage/calendario.png" alt="" />
+
         </div>
 
         <div class="tabla">
           <table>
             <thead>
               <tr>
+
                 <th>Horario/Día</th>
                 <th *ngFor="let dia of diasSemana">{{ dia }}</th>
+
               </tr>
             </thead>
             <tbody>
+
               <tr *ngFor="let horario of listaHorarios">
                 <td>{{ horario }}</td>
                 <td *ngFor="let dia of diasSemana">
                   <div *ngFor="let rutina of listaRutinas">
-                    <div *ngIf="(rutina.dia.includes(dia) && (rutina.horarioInicio <= horario && rutina.horarioFin >= horario))">
-                      {{ rutina.nombre }} 
-                      <button (click)="eliminarActividad(rutina)"><i class="fa-solid fa-trash"></i></button>
+                    <div
+                      *ngIf="(rutina.dia.includes(dia) && (rutina.horarioInicio <= horario && rutina.horarioFin >= horario))">
+                      {{ rutina.nombre }}
                     </div>
                   </div>
                 </td>
               </tr>
             </tbody>
           </table>
+          <div id="listaRutinas">
+            <ul *ngFor="let rutina of listaRutinas">
+              <li><button (click)="eliminarActividad(rutina)"><i
+                class="fa-solid fa-trash"></i></button> {{ rutina.nombre}}</li>
+            </ul>
+          </div>
+
         </div>
 
         <div class="botonCentro"><button class="botonEstilo botonHorarios" (click)="putRutina()">Agregar</button></div>
 
       </div>
-
     </div>
-
   </section>
 
   <section class="containerCalendario">
-
     <div id="catCalendar">
-      <img
-        src="../../../assets/img/tumblr_mrw6rgd77u1rfjowdo1_500.gif"
-        alt="">
-    </div>
 
+      <img src="../../../assets/img/tumblr_mrw6rgd77u1rfjowdo1_500.gif" alt="">
+
+    </div>
     <div class="tituloCuadros">
 
       <h2>★゜・。。・゜☆゜・。。・゜★ Calendario ★゜・。。・゜☆゜・。。・゜★</h2>

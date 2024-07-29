@@ -126,8 +126,8 @@ input {
   width: 60%;
 }
 
-.botonNotas{
-  background-color: rgba(255, 93, 244, 0.706);
+.botonNotas {
+  background-color: rgba(255, 142, 247, 0.706);
 }
 
 /*-------------------------------------------------------*/
@@ -143,54 +143,55 @@ input {
   z-index: 1;
 }
 
-.botonHorarios{
+.botonHorarios {
   background-color: rgba(255, 99, 99, 0.706);
 }
 
-#conteinerCalendario{
+#conteinerCalendario {
   position: relative;
   width: 50%;
 }
 
-#husk img{
+#husk img {
   width: 300px;
 }
 
-#husk{
+#husk {
   position: absolute;
   left: 0;
   top: -76px;
   z-index: 2;
 }
 
-#tituloHorario{
-width: 100%;
-justify-content: center;
-margin-left: 1rem;
+#tituloHorario {
+  width: 100%;
+  justify-content: center;
+  margin-left: 1rem;
 }
 
-#conteinerPendientes{
+#conteinerPendientes {
   position: relative;
   width: 35%;
 }
 
-#huskNotas{
+#huskNotas {
   position: absolute;
-  
   top: -130px;
   z-index: 2;
 }
 
-#huskNotas img{
+#huskNotas img {
   width: 150px;
 }
 
-.tabla{
+.tabla {
   display: flex;
-justify-content: center;
+  justify-content: center;
+  flex-direction: column;
+
 }
 
-.tabla th{
+.tabla th {
   padding: 0.5rem 1.2rem 0.5rem 1.2rem;
 }
 
@@ -200,6 +201,19 @@ justify-content: center;
   cursor: pointer;
 
 }
+
+#listaRutinas {
+  margin-top: 1rem;
+}
+
+#listaRutinas ul {
+  list-style: none;
+}
+
+#listaRutinas li {
+  margin: 0rem;
+}
+
 /*-------------------------------------------------------*/
 
 /*-------------------------------------------------------*/
@@ -220,28 +234,28 @@ justify-content: center;
   flex-direction: column;
   padding-bottom: 1rem;
   position: relative;
-  overflow:visible;
+  overflow: visible;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.containerCalendario h2{
-margin-top: 1rem;
-margin-bottom: 1rem;
+.containerCalendario h2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-#catCalendar{
+#catCalendar {
   position: absolute;
   top: -50px;
   right: -50px;
   z-index: 3;
 }
 
-#catCalendar img{
+#catCalendar img {
   width: 150px;
 }
 
-.containerCalendario{
+.containerCalendario {
   position: relative;
   z-index: 1;
 }
@@ -298,22 +312,22 @@ margin-bottom: 1rem;
   background-color: rgba(220, 220, 0, 0.819);
 }
 
-table{
+.calendario table {
   width: 70%;
 }
 
-.muetraEventos{
+.muetraEventos {
   background: var(--color-celeste);
   height: auto;
   width: 20%;
 }
 
-.tabla-mas-lista{
+.tabla-mas-lista {
   display: flex;
   justify-content: space-evenly;
 }
 
-.muetraEventos{
+.muetraEventos {
   border-radius: 20px;
   box-shadow: var(--sombra-generica);
   padding: 1rem;
@@ -329,7 +343,7 @@ table{
   padding: 0.5rem;
 }
 
-.botonCentro{
+.botonCentro {
   display: flex;
   justify-content: center;
 }
@@ -338,12 +352,10 @@ table{
   border-collapse: collapse;
   width: 100%;
 }
+
 .tablaMes th,
 .tablaMes td {
   border: 1px solid black;
   padding: 10px;
   position: relative;
 }
-
-
-

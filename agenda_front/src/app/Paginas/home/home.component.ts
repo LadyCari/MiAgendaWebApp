@@ -44,6 +44,10 @@ export class HomeComponent implements OnInit {
   diaInicio: number = 0;
   diasSemana: string[] = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo'];
 
+  /*--------------------------------------Loading--------------------------------------*/
+
+
+  
   /*---------------------------------------Rutina--------------------------------------*/
   listaRutinas: any[] = [];
   listaHorarios: any[] = [];
