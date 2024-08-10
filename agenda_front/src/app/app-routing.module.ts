@@ -7,17 +7,10 @@ import { VistaPersonajeBdoComponent } from './Paginas/Juegos/BlackDessert/vista-
 import { HomeComponent } from './Paginas/home/home.component';
 import { HomeEstudiosComponent } from './Paginas/Estudios/home-estudios/home-estudios.component';
 import { HomeLinksUtilesComponent } from './Paginas/Links-utiles/home-links-utiles/home-links-utiles.component';
-import { LinksUtilesProgramacionComponent } from './Paginas/Links-utiles/links-utiles-programacion/links-utiles-programacion.component';
 import { HomeEstudioCursandoComponent } from './Paginas/Estudios/cursando/home-estudio-cursando/home-estudio-cursando.component';
 import { HomeEstudioFinalizadoComponent } from './Paginas/Estudios/finalizado/home-estudio-finalizado/home-estudio-finalizado.component';
 import { TestingQACacComponent } from './Paginas/Estudios/cursando/testing-qa-cac/testing-qa-cac.component';
 import { FullStackJavaCacComponent } from './Paginas/Estudios/finalizado/full-stack-java-cac/full-stack-java-cac.component';
-import { LinksUtilesAnimeComponent } from './Paginas/Links-utiles/links-utiles-anime/links-utiles-anime.component';
-import { LinksUtilesIdiomasComponent } from './Paginas/Links-utiles/links-utiles-idiomas/links-utiles-idiomas.component';
-import { LinksUtilesJuegosComponent } from './Paginas/Links-utiles/links-utiles-juegos/links-utiles-juegos.component';
-import { ManhwasComponent } from './Paginas/Links-utiles/links-utiles-mangas/manhwas/manhwas.component';
-import { LinksOtrosComponent } from './Paginas/Links-utiles/links-otros/links-otros.component';
-import { LinksUtilesEstudiosGeneralesComponent } from './Paginas/Links-utiles/links-utiles-estudios-generales/links-utiles-estudios-generales.component';
 import { LinksUtilesGeneralComponent } from './Paginas/Links-utiles/links-utiles-general/links-utiles-general.component';
 import { OtroHomeComponent } from './Paginas/otro/otro-home/otro-home.component';
 import { OtroRecetasComponent } from './Paginas/otro/otro-recetas/otro-recetas.component';
@@ -55,14 +48,14 @@ export const routes: Routes = [
   /*links*/
   {
     path: 'home-links-utiles', component: HomeLinksUtilesComponent, children: [
-      { path: '', component: LinksUtilesGeneralComponent },
-      { path: 'cosas-utiles-programacion', component: LinksUtilesProgramacionComponent },
-      { path: 'cosas-utiles-anime', component: LinksUtilesAnimeComponent },
-      { path: 'cosas-utiles-idioma', component: LinksUtilesIdiomasComponent },
-      { path: 'cosas-utiles-juegos', component: LinksUtilesJuegosComponent },
-      { path: 'cosas-utiles-mangas/manhwas', component: ManhwasComponent },
-      { path: 'cosas-otros', component: LinksOtrosComponent },
-      { path: 'cosas-utiles-estudiosGenerales', component: LinksUtilesEstudiosGeneralesComponent }
+      { path: 'General', component: LinksUtilesGeneralComponent },
+      { path: 'programacion', component: LinksUtilesGeneralComponent },
+      { path: 'anime', component: LinksUtilesGeneralComponent },
+      { path: 'idioma', component: LinksUtilesGeneralComponent },
+      { path: 'juego', component: LinksUtilesGeneralComponent },
+      { path: 'manga-manhwa', component: LinksUtilesGeneralComponent },
+      { path: 'otro', component: LinksUtilesGeneralComponent },
+      { path: 'estudioGeneral', component: LinksUtilesGeneralComponent }
     ]
   },
   /*estudios*/

@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface LinkRepository extends JpaRepository<Link, Long> {
 
-    List<Link> findAllByCategoriaOrderByFavoritoDesc(String categoria, Pageable pageable);
+    List<Link> findAllByCategoriaAndNombreIsContainingIgnoreCaseOrderByFavoritoDesc(String categoria, String nombre, Pageable pageable);
 
-    Integer countAllByCategoria(String categoria);
+    Integer countAllByCategoriaAndNombreIsContainingIgnoreCase(String categoria, String nombre);
 }

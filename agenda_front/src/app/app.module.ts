@@ -23,18 +23,11 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { VistaPersonajeBdoComponent } from './Paginas/Juegos/BlackDessert/vista-personaje-bdo/vista-personaje-bdo.component';
 import { HomeJuegosComponent } from './Paginas/Juegos/home-juegos/home-juegos.component';
 import { HomeLinksUtilesComponent } from './Paginas/Links-utiles/home-links-utiles/home-links-utiles.component';
-import { LinksUtilesProgramacionComponent } from './Paginas/Links-utiles/links-utiles-programacion/links-utiles-programacion.component';
-import { LinksUtilesJuegosComponent } from './Paginas/Links-utiles/links-utiles-juegos/links-utiles-juegos.component';
 import { FullStackJavaCacComponent } from './Paginas/Estudios/finalizado/full-stack-java-cac/full-stack-java-cac.component';
 import { TestingQACacComponent } from './Paginas/Estudios/cursando/testing-qa-cac/testing-qa-cac.component';
 import { HomeComponent } from './Paginas/home/home.component';
-import { LinksUtilesAnimeComponent } from './Paginas/Links-utiles/links-utiles-anime/links-utiles-anime.component';
-import { ManhwasComponent } from './Paginas/Links-utiles/links-utiles-mangas/manhwas/manhwas.component';
-import { LinksUtilesIdiomasComponent } from './Paginas/Links-utiles/links-utiles-idiomas/links-utiles-idiomas.component';
 import { ModalLinkComponent } from './Modales/modal-link/modal-link.component';
 import { MatMenuModule } from '@angular/material/menu';
-import { LinksOtrosComponent } from './Paginas/Links-utiles/links-otros/links-otros.component';
-import { LinksUtilesEstudiosGeneralesComponent } from './Paginas/Links-utiles/links-utiles-estudios-generales/links-utiles-estudios-generales.component';
 import { LinksUtilesGeneralComponent } from './Paginas/Links-utiles/links-utiles-general/links-utiles-general.component';
 import { HomeEstudiosComponent } from './Paginas/Estudios/home-estudios/home-estudios.component';
 import { HomeEstudioCursandoComponent } from './Paginas/Estudios/cursando/home-estudio-cursando/home-estudio-cursando.component';
@@ -69,17 +62,10 @@ import { HomeJuegoRpgComponent } from './Paginas/Juegos/Juego-rpg/home-juego-rpg
     VistaPersonajeBdoComponent,
     HomeJuegosComponent,
     HomeLinksUtilesComponent,
-    LinksUtilesProgramacionComponent,
-    LinksUtilesJuegosComponent,
     FullStackJavaCacComponent,
     HomeComponent,
     TestingQACacComponent,
-    LinksUtilesAnimeComponent,
-    ManhwasComponent,
-    LinksUtilesIdiomasComponent,
     ModalLinkComponent,
-    LinksOtrosComponent,
-    LinksUtilesEstudiosGeneralesComponent,
     LinksUtilesGeneralComponent,
     HomeEstudiosComponent,
     HomeEstudioCursandoComponent,

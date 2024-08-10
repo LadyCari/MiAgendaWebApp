@@ -26,4 +26,8 @@ export class Url{
      public static addItem = "http://localhost:8089/palia/add-item"
      public static modificarItem = "http://localhost:8089/palia/modificar-item"
      public static borrarItem = "http://localhost:8089/palia/delete-item"
+     /*calendario*/
+     public static getEventoCalendario = "http://localhost:8089/evento-calentario/get-eventos"
+     public static postEventoCalendario = "http://localhost:8089/evento-calentario/crear"
+     public static deleteEventoCalendario = "http://localhost:8089/evento-calentario/delete?id="
     }

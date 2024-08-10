@@ -70,27 +70,6 @@ export class AgregarRutinaSemanalComponent implements OnInit {
       }
     });
   }
-  /*
-    public dataToLink(): void {
-      const rutina = this.data ? this.data.rutina : null;
-      if (rutina) {
-        this.rutinaSemana.setValue({
-          nombre: rutina.nombre,
-          horarioInicio: rutina.horarioInicio,
-          horarioFin: rutina.horarioFin,
-          lunes: rutina.dia.includes('lunes'),
-          martes: rutina.dia.includes('martes'),
-          miercoles: rutina.dia.includes('miercoles'),
-          jueves: rutina.dia.includes('jueves'),
-          viernes: rutina.dia.includes('viernes'),
-          sabado: rutina.dia.includes('sabado'),
-          domingo: rutina.dia.includes('domingo'),
-        });
-      } else {
-        console.warn('No se encontraron datos de rutina para cargar.');
-      }
-    }
-      */
 
 }
 

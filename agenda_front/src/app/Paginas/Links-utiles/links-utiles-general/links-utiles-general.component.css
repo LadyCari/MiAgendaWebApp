@@ -1,34 +1,34 @@
-section{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .logo{
-    display: flex;
-    margin-top: 6rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  h2{
-    font-size: 3rem;
-    font-family: 'Single Day', cursive;
-    display: flex;
-    align-items: center;
-  }
-  
-  .mostrarLink{
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    overflow: hidden;
-    width: 15rem;
-    height: 15rem;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .mostrarLink a{
+section {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  margin-top: 6rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+  font-family: 'Single Day', cursive;
+  display: flex;
+  align-items: center;
+}
+
+.mostrarLink {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  overflow: hidden;
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+}
+
+.mostrarLink a {
   padding: 1rem;
   font-size: 1.5rem;
   background-color: rgba(5, 5, 5, 0.733);
@@ -36,18 +36,18 @@ section{
   text-decoration: none;
   transition: 1s;
   width: 100%;
-  }
-  
-  .mostrarLink a:hover{
-    padding: 2rem;
-  }
-  
-  .contenedor{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-top: 11rem;
-  }
+}
+
+.mostrarLink a:hover {
+  padding: 2rem;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
 
 /* paginator*/
 
@@ -62,16 +62,44 @@ section{
 .justify-content-center {
   justify-content: center;
 }
+
 .w-100 {
   width: 100%;
 }
 
-ul{
+.cursor {
+  cursor: pointer !important;
+}
+
+ul {
   list-style: none;
   display: flex;
 }
 
-li{
+li {
   font-size: 2rem;
   margin: 1rem;
+}
+
+.page-item{
+  display: flex;
+  align-items: center;
+}
+
+.buscador input{
+  background-color: rgba(103, 220, 255, 0.308);
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-left: 5rem;
+  width: 50%;
+  border: 0;
+  border-radius: 10px;
+  font-family: 'Single Day', cursive;
+  font-size: 1rem;
+  outline: none;
+}
+
+.buscador{
+  display: flex;
+  justify-content: flex-start;
 }

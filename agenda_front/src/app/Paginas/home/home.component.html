@@ -34,8 +34,10 @@
 
         <form>
 
-          <input type="text" id="tipoTarea" name="tipoTarea" [(ngModel)]="nuevoPendiente.tipo" placeholder="Tipo tarea" />
-          <input type="text" id="descripcionTarea" name="tarea" [(ngModel)]="nuevoPendiente.descripcion" placeholder="Descripcion tarea" />
+          <input type="text" id="tipoTarea" name="tipoTarea" [(ngModel)]="nuevoPendiente.tipo"
+            placeholder="Tipo tarea" />
+          <input type="text" id="descripcionTarea" name="tarea" [(ngModel)]="nuevoPendiente.descripcion"
+            placeholder="Descripcion tarea" />
           <button (click)="postPendientes()" type="button" class="botonEstilo botonNotas">Nuevo pendiente</button>
 
         </form>
@@ -83,8 +85,8 @@
           </table>
           <div id="listaRutinas">
             <ul *ngFor="let rutina of listaRutinas">
-              <li><button (click)="eliminarActividad(rutina)"><i
-                class="fa-solid fa-trash"></i></button> {{ rutina.nombre}}</li>
+              <li><button (click)="eliminarActividad(rutina)"><i class="fa-solid fa-trash"></i></button> {{
+                rutina.nombre}}</li>
             </ul>
           </div>
 
@@ -167,6 +169,11 @@
 
         <div class="muetraEventos">
           <h3>Lista de eventos</h3>
+          <div>
+            <ul *ngFor="let evento of listaEventos">
+              <li><button (click)="eliminarEvento(evento)"><i class="fa-solid fa-trash"></i></button> [{{evento.tipoEvento}}] - {{evento.descripcionEvento}} : {{evento.horaEvento}}</li>
+            </ul>
+          </div>
         </div>
 
       </div>

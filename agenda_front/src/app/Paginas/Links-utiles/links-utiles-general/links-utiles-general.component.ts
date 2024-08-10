@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { ModalLinkComponent } from 'src/app/Modales/modal-link/modal-link.component';
 import { HttpService } from 'src/app/Servicios/http.service';
 import { Url } from 'src/app/url';
@@ -15,20 +16,27 @@ export class LinksUtilesGeneralComponent implements OnInit {
   elementosPorPagina: number = 9;
   totalLinks: number = 0;
   categoriaSeleccionada: string = '';
+  categoria: string = '';
+  titulo: string = '';
+  buscar: string = '';
 
-  constructor(private httpService: HttpService, private dialog: MatDialog) {
+  constructor(private httpService: HttpService, private dialog: MatDialog, private router: Router) {
   }
 
   ngOnInit(): void {
-    this.obtenerLista(this.paginaActual, this.elementosPorPagina);
+    const url = this.router.url;
+    const segments = url.split('/');
+    this.categoria = segments[segments.length - 1];
+    this.tituloComponente();
+    this.obtenerLista(this.paginaActual, this.elementosPorPagina, this.categoria, '');
   }
 
   readonly url = Url;
   listaLinks: any[] = [];
   nuevoLink: any;
 
-  private obtenerLista(paginaActual: number, elementosPorPagina: number) {
-    this.httpService.realizarGet(`${this.url.getLinks}General&pagina=${paginaActual}&cantidad=${elementosPorPagina}`).subscribe((data: any) => {
+  private obtenerLista(paginaActual: number, elementosPorPagina: number, categoria: string, buscar: string) {
+    this.httpService.realizarGet(`${this.url.getLinks}${categoria}&pagina=${paginaActual}&cantidad=${elementosPorPagina}&buscar=${buscar}`).subscribe((data: any) => {
       if (data.state == 'OK') {
         this.listaLinks = data.data.links;
         this.totalLinks = data.data.registros;
@@ -36,10 +44,10 @@ export class LinksUtilesGeneralComponent implements OnInit {
     });
   }
 
-  public postLink(categoria:string) {
+  public postLink(categoria: string) {
     this.categoriaSeleccionada = categoria;
     this.dialog.open(ModalLinkComponent, {
-      data:{categoria: this.categoriaSeleccionada},
+      data: { categoria: this.categoriaSeleccionada },
       height: 'auto',
       width: 'auto',
     });
@@ -87,7 +95,7 @@ export class LinksUtilesGeneralComponent implements OnInit {
   cambiarPagina(pagina: number) {
     if (pagina != this.paginaActual && pagina >= 1 && pagina <= this.totalPaginas()) {
       this.paginaActual = pagina;
-      this.obtenerLista(this.paginaActual, this.elementosPorPagina);
+      this.obtenerLista(this.paginaActual, this.elementosPorPagina, this.categoria, this.buscar);
     }
   }
 
@@ -102,4 +110,46 @@ export class LinksUtilesGeneralComponent implements OnInit {
     return numPagina === this.paginaActual;
   }
 
+  private tituloComponente() {
+
+    switch (this.categoria) {
+      case 'programacion':
+        this.titulo = '✯*¨*•✿•*¨*•.¸✯ Links utiles Programacion ✯¸.•*¨*•✿•*¨*✯'
+        break;
+      case 'manga-manhwa':
+        this.titulo = '︵‿︵‿୨ Mangas y manhwas ୧‿︵‿︵'
+        break;
+      case 'estudioGeneral':
+        this.titulo = '✩₊˚.⋆☾⋆⁺✧.⋆⁺₊✧ Links para estudios generales ✩₊˚.⋆☾⋆✩₊.⋆☾⋆₊'
+        break;
+      case 'idioma':
+        this.titulo = '｡ ﾟ* ꒰ঌ ✦໒꒱ .ﾟ Paginas de idiomas ｡ ﾟ ꒰ঌ ✦໒꒱ ༘*.ﾟ'
+        break;
+      case 'anime':
+        this.titulo = '˚ ‿︵‿︵‿︵୨୧ Links y capítulos de anime ୨୧‿︵‿︵‿︵ ˚'
+        break;
+      case 'juego':
+        this.titulo = '──૮₍´｡ᵔ ꈊ ᵔ｡`₎ა── Paginas de juegos ──૮₍˶ •. • ⑅₎ა ♡──'
+        break;
+      case 'otro':
+        this.titulo = '──── ꩜ 🫧˙✧˖° 🫧 ⋆｡ Otras cosas ✧˖° 🫧 ⋆｡˚꩜ 🫧 ⋆｡ ───'
+        break;
+    }
+
+  }
+
+  manejarBusqueda(event: Event) {
+    this.buscar = (event.target as HTMLInputElement).value;
+
+    this.obtenerLista(this.paginaActual, this.elementosPorPagina, this.categoria, this.buscar);
+  }
+
+  public favorito(link: any) {
+
+    link.favorito = !link.favorito;
+    this.httpService.realizarPut(this.url.editLinks, link).subscribe((data: any) => {
+      if (data.state == 'OK') {
+      }
+    });
+  }
 }

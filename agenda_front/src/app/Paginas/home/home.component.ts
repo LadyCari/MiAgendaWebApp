@@ -1,3 +1,4 @@
+import { HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AgregarEventoCalendarioComponent } from 'src/app/Modales/agregar-evento-calendario/agregar-evento-calendario.component';
@@ -19,6 +20,7 @@ export class HomeComponent implements OnInit {
     this.vistaPendientes();
     this.cambiarFechas();
     this.getRutinas();
+    this.getEventos();
   }
 
   readonly url = Url;
@@ -47,7 +49,7 @@ export class HomeComponent implements OnInit {
   /*--------------------------------------Loading--------------------------------------*/
 
 
-  
+
   /*---------------------------------------Rutina--------------------------------------*/
   listaRutinas: any[] = [];
   listaHorarios: any[] = [];
@@ -85,12 +87,12 @@ export class HomeComponent implements OnInit {
       let horaF = rutina.horarioFin;
       let existe = this.listaHorarios.find(horario => horario == horaI);
       let existe2 = this.listaHorarios.find(horario => horario == horaF);
-        if (existe == undefined) {
-          this.listaHorarios.push(horaI);
-        }
-        if (existe2 == undefined) {
-          this.listaHorarios.push(horaF);
-        }
+      if (existe == undefined) {
+        this.listaHorarios.push(horaI);
+      }
+      if (existe2 == undefined) {
+        this.listaHorarios.push(horaF);
+      }
     });
     this.listaHorarios.sort((a, b) => a.localeCompare(b));
   }
@@ -105,15 +107,48 @@ export class HomeComponent implements OnInit {
     }
     return false;
   }
-  
+
   /*-------------------------------------calendario---------------------------------*/
 
-  mesSeleccionado: any = { nombre: this.obtenerNombreMes(new Date().getMonth()), numero: new Date().getMonth() };
+  mesSeleccionado: any = {
+    nombre: this.obtenerNombreMes(new Date().getMonth()),
+    numero: new Date().getMonth() + 1
+  };
+  anoActual: number = new Date().getFullYear();
+  listaEventos: any[] = [];
+
+  public eliminarEvento(evento: any) {
+    this.httpService.realizarDelete(this.url.deleteEventoCalendario + evento.idEvento).subscribe((data: any) => {
+      if (data.state == 'OK') {
+        const index = this.listaEventos.findIndex((eventoList: any) => eventoList === evento);
+        if (index !== -1) {
+          this.listaEventos.splice(index, 1);
+        }
+      }
+    });
+  }
+
+  private getEventos() {
+    const params = new HttpParams()
+    .append('mes', this.mesSeleccionado.numero)
+    .append('ano', this.ano);
+
+    this.httpService.realizarGet(this.url.getEventoCalendario, false, {params}).subscribe((data: any) => {
+      if (data.state === 'OK') {
+        this.listaEventos = data.data;
+      }
+    });
+  }
 
   public postEvento() {
-    this.dialog.open(AgregarEventoCalendarioComponent, {
+    const dialogRef = this.dialog.open(AgregarEventoCalendarioComponent, {
       height: 'auto',
       width: 'auto',
+    });
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        this.listaEventos.push(result); // Agregar el objeto resultante a la lista
+      }
     });
   }
 

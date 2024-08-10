@@ -27,8 +27,9 @@ public class LinksController {
     @RequestMapping(value = "/get-links", produces = { "application/json" }, method = RequestMethod.GET)
     public AjaxResponseObject getLinksUtils(@RequestParam("categoria") String categoria,
                                             @RequestParam("pagina") Integer pagina,
-                                            @RequestParam("cantidad") Integer cantidad) {
-        LinkDTO linkDTO = linkService.getLinksByCategoria(categoria, pagina, cantidad);
+                                            @RequestParam("cantidad") Integer cantidad,
+                                            @RequestParam("buscar") String buscar) {
+        LinkDTO linkDTO = linkService.getLinksByCategoria(categoria, pagina, cantidad, buscar);
         return AjaxResponseGenerator.createSimpleResponseOK(linkDTO);
     }
 

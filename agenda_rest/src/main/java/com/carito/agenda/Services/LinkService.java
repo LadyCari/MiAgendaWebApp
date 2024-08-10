@@ -21,10 +21,10 @@ public class LinkService {
         return linkRepository.save(nuevoLink);
     }
 
-    public LinkDTO getLinksByCategoria(String categoria, Integer pagina, Integer cantidad) {
+    public LinkDTO getLinksByCategoria(String categoria, Integer pagina, Integer cantidad, String buscar) {
         Pageable pageable = PageRequest.of(pagina - 1, cantidad);
-        List<Link> links = linkRepository.findAllByCategoriaOrderByFavoritoDesc(categoria, pageable);
-        return new LinkDTO(links, linkRepository.countAllByCategoria(categoria));
+        List<Link> links = linkRepository.findAllByCategoriaAndNombreIsContainingIgnoreCaseOrderByFavoritoDesc(categoria,buscar, pageable);
+        return new LinkDTO(links, linkRepository.countAllByCategoriaAndNombreIsContainingIgnoreCase(categoria, buscar));
     }
 
     public void modificarLinkUtil(Link nuevoLink) {
