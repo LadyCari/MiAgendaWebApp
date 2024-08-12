@@ -1,22 +1,24 @@
-<body class="cuerpo-pagina">
+<body class="cuerpo-pagina" [class.noche]="noche">
 
   <section>
 
-    <img id="keigo" src="../../../assets/img/keigo.png" alt="keigo" />
-    <img id="alastor" src="../../../assets/img/alastor.png" alt="Alastor sentado" />
+    <img id="keigo" src="../../../assets/img/keigo.png" alt="keigo" *ngIf="!noche"/>
+    <img id="keigo" src="../../../assets/img/kakashi.png" alt="keigo" *ngIf="noche"/>
+    <img id="alastor" src="../../../assets/img/alastor.png" alt="Alastor sentado" *ngIf="!noche"/>
+    <img id="alastor" src="../../../assets/img/neuvi.png" alt="Alastor sentado" *ngIf="noche"/>
 
   </section>
 
 
   <section id="primerSector">
     <div id="conteinerPendientes">
-      <div id="huskNotas">
+      <div id="imgPendiente">
 
         <img src="../../../assets/img/bunny.gif" alt="">
 
       </div>
 
-      <div id="notas">
+      <div class="notas" [class.notasNoche]="noche">
         <div class="tituloCuadros">
 
           <h2>Pendientes</h2>
@@ -50,7 +52,7 @@
         <img src="https://i.pinimg.com/originals/98/a6/3b/98a63bdb38d183ec79df3e6b523e7d59.png" alt="">
       </div>
 
-      <div id="horarios">
+      <div class="horarios" [class.horariosNoche]="noche">
         <div class="tituloCuadros" id="tituloHorario">
 
           <h2>Horarios</h2>
@@ -98,7 +100,7 @@
     </div>
   </section>
 
-  <section class="containerCalendario">
+  <section class="containerCalendario" [class.containerCalendarioNoche]="noche">
     <div id="catCalendar">
 
       <img src="../../../assets/img/tumblr_mrw6rgd77u1rfjowdo1_500.gif" alt="">
@@ -154,14 +156,14 @@
 
           <tbody>
             <tr *ngFor="let semana of numeroSemanas; let i = index">
-              <td *ngFor="let dia of [0,1,2,3,4,5,6]">
+              <td *ngFor="let dia of [0,1,2,3,4,5,6]" [ngClass]="obtenerClaseEvento(((i * 7) + dia + 1 - diaInicio + 1), mesSeleccionado.numero, anoActual)">
                 <ng-container *ngIf="i === 0 && dia < diaInicio - 1; else elseBlock"></ng-container>
                 <ng-template #elseBlock>
                   {{ ((i * 7) + dia + 1 - diaInicio + 1 <= diaMes.length) ? ((i * 7) + dia + 1 - diaInicio + 1) : '' }}
-                    </ng-template>
-                    <div class="anotaciones">
-
-                    </div>
+                </ng-template>
+                <div class="anotaciones">
+                  <!-- Aquí puedes agregar el contenido de la anotación -->
+                </div>
               </td>
             </tr>
           </tbody>

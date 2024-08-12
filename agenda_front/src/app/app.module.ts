@@ -48,7 +48,11 @@ import { MapaPuebloComponent } from './Paginas/Juegos/Juego-rpg/mapas-dentro-jue
 import { MapaPatioComponent } from './Paginas/Juegos/Juego-rpg/mapas-dentro-juego/mapa-pueblo/mapa-patio/mapa-patio.component';
 import { ModalLifeRecoleccionComponent } from './Paginas/Juegos/Juego-rpg/modales/modal-life-recoleccion/modal-life-recoleccion.component';
 import { HomeJuegoRpgComponent } from './Paginas/Juegos/Juego-rpg/home-juego-rpg/home-juego-rpg.component';
-
+import { HomeParteIzquierdaComponent } from './Paginas/Juegos/Juego-rpg/shared/home-parte-izquierda/home-parte-izquierda.component';
+import { HomeParteDerechaComponent } from './Paginas/Juegos/Juego-rpg/shared/home-parte-derecha/home-parte-derecha.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { DetallesPjComponent } from './Paginas/Juegos/Juego-rpg/modales/General/detalles-pj/detalles-pj.component';
+import { InventarioComponent } from './Paginas/Juegos/Juego-rpg/modales/General/inventario/inventario.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +86,11 @@ import { HomeJuegoRpgComponent } from './Paginas/Juegos/Juego-rpg/home-juego-rpg
     MapaPuebloComponent,
     MapaPatioComponent,
     ModalLifeRecoleccionComponent,
-    HomeJuegoRpgComponent
+    HomeJuegoRpgComponent,
+    HomeParteIzquierdaComponent,
+    HomeParteDerechaComponent,
+    DetallesPjComponent,
+    InventarioComponent
 
   ],
   imports: [
@@ -105,7 +113,8 @@ import { HomeJuegoRpgComponent } from './Paginas/Juegos/Juego-rpg/home-juego-rpg
     MatInputModule,
     MatDatepickerModule,
     JsonPipe,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatProgressBarModule
   ],
   exports: [
     MatPaginatorModule,

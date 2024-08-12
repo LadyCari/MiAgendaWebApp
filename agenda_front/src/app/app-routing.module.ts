@@ -22,6 +22,8 @@ import { MapaCasaComponent } from './Paginas/Juegos/Juego-rpg/mapas-dentro-juego
 import { MapaPuebloComponent } from './Paginas/Juegos/Juego-rpg/mapas-dentro-juego/mapa-pueblo/mapa-pueblo/mapa-pueblo.component';
 import { MapaPatioComponent } from './Paginas/Juegos/Juego-rpg/mapas-dentro-juego/mapa-pueblo/mapa-patio/mapa-patio.component';
 import { HomeJuegoRpgComponent } from './Paginas/Juegos/Juego-rpg/home-juego-rpg/home-juego-rpg.component';
+import { HomeParteIzquierdaComponent } from './Paginas/Juegos/Juego-rpg/shared/home-parte-izquierda/home-parte-izquierda.component';
+import { HomeParteDerechaComponent } from './Paginas/Juegos/Juego-rpg/shared/home-parte-derecha/home-parte-derecha.component';
 
 export const routes: Routes = [
   /*general*/
@@ -34,14 +36,17 @@ export const routes: Routes = [
   /*juego-rpg*/
   {
     path: 'home-juego-rpg', component: HomeJuegoRpgComponent, children: [
+      { path: '', component: MapaMundoComponent },
       { path: 'mapa-mundo', component: MapaMundoComponent },
       { path: 'mapa-bosque', component: MapaBosqueComponent },
       { path: 'mapa-mina', component: MapaMinaComponent },
       { path: 'mapa-lago', component: MapaLagoComponent },
       { path: 'mapa-casa', component: MapaCasaComponent },
       { path: 'mapa-pueblo', component: MapaPuebloComponent },
-      { path: 'mapa-patio', component: MapaPatioComponent }]
+      { path: 'mapa-patio', component: MapaPatioComponent }],
   },
+  {path: 'izquierda-home', component: HomeParteIzquierdaComponent},
+  {path: 'derecha-home', component: HomeParteDerechaComponent},
   /*bdo*/
   { path: 'home-bdo', component: HomeBdoComponent },
   { path: 'vista-personaje-bdo/:id', component: VistaPersonajeBdoComponent },

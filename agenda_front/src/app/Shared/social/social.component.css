@@ -2,6 +2,7 @@
     position: fixed;
     right: 0;
     top: 220px;
+    z-index: 20;
   }
   
   #social ul {
@@ -18,5 +19,9 @@
   
   #social ul li a{
     text-decoration: none;
+  }
+
+  .modoNoche{
+    margin-top: 2rem;
   }
   

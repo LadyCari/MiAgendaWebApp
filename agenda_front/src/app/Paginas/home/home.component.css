@@ -4,7 +4,7 @@
   position: fixed;
   left: 0;
   top: 15%;
-  width: 7%;
+  width: 9%;
 }
 
 #alastor {
@@ -17,7 +17,7 @@
 
 /*-------------------------------------------------------*/
 
-/*--------------------cuerpo pagina---------------------*/
+/*-----------------cuerpo pagina general-----------------*/
 
 h2 {
   text-align: center;
@@ -28,55 +28,23 @@ h2 {
   margin-right: 1rem;
 }
 
-table {
-  border-collapse: collapse;
-  border: 1px solid black;
-  padding: 1rem;
-  text-align: center;
-}
-
-table td,
-th {
-  border: 1px solid black;
-  padding: 0.3rem;
+.botonEstilo {
+  width: 200px;
+  margin-top: 1rem;
+  border-radius: 10px;
+  border: 0px;
+  padding: 0.5rem;
+  font-family: "Gluten", cursive;
+  font-size: 1rem;
 }
 
 /*--------------------cuerpo pagina sector 1--------------------*/
-
-/*--------------------nota--------------------*/
 
 #primerSector {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   padding-top: 9rem;
-}
-
-#notas {
-  border-radius: 20px;
-  background-color: var(--color-rosa);
-  box-shadow: var(--sombra-generica);
-  padding: 1rem;
-}
-
-#notas ul li {
-  list-style: none;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  padding-left: 3rem;
-  padding-bottom: 0.5rem;
-}
-
-#notas ul li p {
-  margin: 0px;
-  margin-right: 0.5rem;
-}
-
-#notas ul li button {
-  background-color: #4caf4f00;
-  border: 0px;
-  cursor: pointer;
 }
 
 .tituloCuadros {
@@ -90,6 +58,40 @@ th {
 .tituloCuadros img {
   height: 10%;
   width: 10%;
+}
+
+/*--------------------nota--------------------*/
+
+.notas {
+  border-radius: 10px;
+  background-color: var(--color-rosa);
+  box-shadow: var(--sombra-generica);
+  padding: 1rem;
+}
+
+.notasNoche{
+  background-color: rgba(255, 65, 255, 0.692);
+  box-shadow: 3px 3px 5px rgb(247, 24, 255);
+}
+
+.notas ul li {
+  list-style: none;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  padding-left: 3rem;
+  padding-bottom: 0.5rem;
+}
+
+.notas ul li p {
+  margin: 0px;
+  margin-right: 0.5rem;
+}
+
+.notas ul li button {
+  background-color: #4caf4f00;
+  border: 0px;
+  cursor: pointer;
 }
 
 form {
@@ -117,21 +119,52 @@ input {
   background-color: rgba(255, 142, 247, 0.706);
 }
 
-/*-------------------------------------------------------*/
+#imgPendiente {
+  position: absolute;
+  top: -130px;
+  z-index: 2;
+}
+
+#imgPendiente img {
+  width: 150px;
+}
+
+#conteinerPendientes {
+  position: relative;
+  width: 35%;
+}
 
 /*------------------------horario------------------------*/
 
-#horarios {
-  background-color: var(--color-naranja);
-  border-radius: 20px;
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+  padding: 1rem;
+  text-align: center;
+}
+
+table td,
+th {
+  border: 1px solid black;
+  padding: 0.3rem;
+}
+
+.horarios {
+  background-color: var(--color-celeste);
+  border-radius: 10px;
   box-shadow: var(--sombra-generica);
   padding: 1rem;
   position: relative;
   z-index: 1;
 }
 
+.horariosNoche{
+  background-color: rgba(65, 201, 255, 0.706);
+  box-shadow: 3px 3px 5px rgb(24, 247, 255);
+}
+
 .botonHorarios {
-  background-color: rgba(255, 99, 99, 0.706);
+  background-color: rgba(81, 184, 253, 0.822);
 }
 
 #conteinerCalendario {
@@ -156,21 +189,6 @@ input {
   margin-left: 1rem;
 }
 
-#conteinerPendientes {
-  position: relative;
-  width: 35%;
-}
-
-#huskNotas {
-  position: absolute;
-  top: -130px;
-  z-index: 2;
-}
-
-#huskNotas img {
-  width: 150px;
-}
-
 .tabla {
   display: flex;
   justify-content: center;
@@ -186,7 +204,6 @@ input {
   background-color: #4caf4f00;
   border: 0px;
   cursor: pointer;
-
 }
 
 #listaRutinas {
@@ -207,6 +224,7 @@ input {
 
 
 /*--------------------cuerpo pagina sector 2--------------------*/
+
 .containerCalendario {
   margin-top: 5rem;
   margin-bottom: 3rem;
@@ -214,7 +232,7 @@ input {
   display: flex;
   background-color: var(--color-amarillo);
   overflow: auto;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: var(--sombra-generica);
   display: flex;
   flex-direction: column;
@@ -225,6 +243,11 @@ input {
   padding-right: 1rem;
 }
 
+.containerCalendarioNoche{
+  background-color: rgba(255, 252, 65, 0.706);
+  box-shadow: 3px 3px 5px rgb(255, 232, 24);
+}
+
 h3 {
   margin: 0;
   padding: 0;
@@ -233,9 +256,8 @@ h3 {
   font-family: "Gluten", cursive;
   margin: 1rem;
   box-shadow: 4px 3px 5px #000000;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 1rem;
-  background-color: rgba(99, 255, 255, 0.588);
 }
 
 .containerCalendario h2 {
@@ -308,7 +330,7 @@ h3 {
 }
 
 .botonCalendario {
-  background-color: rgba(220, 220, 0, 0.819);
+  background-color: rgba(232, 236, 0, 0.819);
 }
 
 .calendario table {
@@ -344,16 +366,8 @@ h3 {
   position: relative;
 }
 
-.muetraEventos ul li{
-font-size: 1.4rem;
-}
-
-.botonEstilo {
-  width: 200px;
-  margin-top: 1rem;
-  border-radius: 20px;
-  border: 0px;
-  padding: 0.5rem;
+.muetraEventos ul li {
+  font-size: 1.4rem;
 }
 
 .botonCentro {
@@ -361,8 +375,8 @@ font-size: 1.4rem;
   justify-content: center;
 }
 
-.muetraEventos ul li{
-margin: 0.5rem;
+.muetraEventos ul li {
+  margin: 0.5rem;
 }
 
 .muetraEventos ul li button {
@@ -371,3 +385,18 @@ margin: 0.5rem;
   border: 0;
 }
 
+.evento-medico {
+  background-color: var(--color-verde);
+}
+
+.evento-examen {
+  background-color: var(--color-rojo);
+}
+
+.evento-tarea {
+  background-color: var(--color-celeste);
+}
+
+.evento-evento {
+  background-color: var(--color-violeta);
+}

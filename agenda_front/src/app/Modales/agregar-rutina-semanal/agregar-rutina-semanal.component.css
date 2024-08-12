@@ -1,6 +1,6 @@
 form {
     height: auto;
-    width: auto;
+    width: 35rem;
     background-color: var(--color-rosa);
 }
 
@@ -26,7 +26,7 @@ section {
 p {
     font-family: 'Single Day', cursive;
     font-size: 2rem;
-    color: var(--color-celeste);
+    color: var(--color-amarillo);
     padding-top: 1rem;
     -webkit-text-stroke: 1px black;
 }
@@ -36,18 +36,20 @@ input {
     border-radius: 20px;
     border: none;
     width: 60%;
-    background-color: var(--color-amarillo);
+    background-color: var(--color-celeste);
     color: black;
     border: 1px solid rgba(0, 0, 0, 0);
+    width: 40%;
+text-align: center;
 }
 
 input:hover {
-    border: 1px solid var(--color-celeste);
+    border: 1px solid var(--color-amarillo);
     outline: none;
 }
 
 input:focus {
-    border: 1px solid #000000;
+    border: 1px solid var(--color-amarillo);
     outline: none;
 }
 
@@ -64,6 +66,7 @@ input:focus {
     margin-bottom: 1rem;
     cursor: pointer;
     font-family: var(--estilo-letra-generico);
+    width: 25%;
 }
 
 .botones button p{
@@ -85,11 +88,22 @@ input:focus {
 
 #listDays{
     display: flex;
-    padding: 0.5rem;
     align-items: center;
+    font-family: 'Single Day', cursive;
+    font-size: 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: space-evenly;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .dia{
-padding-left: 0.5rem;
-padding-right: 0.5rem;
+margin: 1rem;
+}
+
+.check{
+    margin: 0;
+    padding: 0;
+    width: auto;
 }

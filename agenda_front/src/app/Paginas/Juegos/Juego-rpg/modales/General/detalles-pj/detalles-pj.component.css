@@ -1,0 +1,56 @@
+body {
+    background-image: url("../../../../../../../assets/img/Juego/fondoDetallePj.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    padding: 1rem 3rem 1rem 3rem;
+    background-size: cover;
+    color: white;
+}
+
+#izquierda {
+    width: 50%;
+}
+
+#derecha {
+    width: 50%;
+}
+
+h3 {
+    font-size: 2rem;
+    font-family: 'Single Day', cursive;
+}
+
+/*------------- nombre, dinero, retrato---------*/
+
+#datosGeneralesPj {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#marcoPj {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin-right: 1rem;
+}
+
+#marcoPj img {
+    height: 300px;
+    object-fit: cover;
+}
+
+#datosGeneralesPj div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*----------- stats ---------*/
+
+#stats{
+    margin-top: 2rem;
+}

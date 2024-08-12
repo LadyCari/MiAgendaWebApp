@@ -1,0 +1,39 @@
+#titulo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#titulo img {
+    width: 200px;
+}
+
+#titulo h3 {
+    text-align: center;
+    position: absolute;
+    bottom: 25px;
+}
+
+#avatar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+#avatar img {
+    height: 400px;
+}
+
+#inventario {
+    display: flex;
+    justify-content: center;
+}
+
+#inventario img {
+    width: 100px;
+}
+
+button{
+    background-color: rgba(250, 235, 215, 0);
+    border: 0;
+}

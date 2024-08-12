@@ -1,0 +1,27 @@
+.cuerpo {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - 100px);
+}
+
+app-home-parte-izquierda {
+    width: 20%;
+}
+
+.app {
+    width: 60%;
+}
+
+app-home-parte-derecha {
+    width: 20%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-image: url("https://img.freepik.com/free-vector/gradient-pastel-sky-background_23-2148917404.jpg?w=2000");
+}

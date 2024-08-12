@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { AgregarEventoCalendarioComponent } from 'src/app/Modales/agregar-evento-calendario/agregar-evento-calendario.component';
 import { AgregarRutinaSemanalComponent } from 'src/app/Modales/agregar-rutina-semanal/agregar-rutina-semanal.component';
 import { HttpService } from 'src/app/Servicios/http.service';
+import { ModoOscuroService } from 'src/app/Servicios/modoOscuro/modo-oscuro.service';
 import { Url } from 'src/app/url';
 
 @Component({
@@ -13,7 +14,7 @@ import { Url } from 'src/app/url';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private httpService: HttpService, private dialog: MatDialog) {
+  constructor(private httpService: HttpService, private dialog: MatDialog, private modoNoche: ModoOscuroService) {
   }
 
   ngOnInit() {
@@ -21,6 +22,9 @@ export class HomeComponent implements OnInit {
     this.cambiarFechas();
     this.getRutinas();
     this.getEventos();
+    this.modoNoche.modoNoche$.subscribe(value => {
+      this.noche = value;
+    });
   }
 
   readonly url = Url;
@@ -31,20 +35,21 @@ export class HomeComponent implements OnInit {
   diaMes: number[] = [];
   numeroSemanas: number[] = [];
   listaMeses: { nombre: string, numero: number }[] =
-    [{ nombre: 'Enero', numero: 0 },
-    { nombre: 'Febrero', numero: 1 },
-    { nombre: 'Marzo', numero: 2 },
-    { nombre: 'Abril', numero: 3 },
-    { nombre: 'Mayo', numero: 4 },
-    { nombre: 'Junio', numero: 5 },
-    { nombre: 'Julio', numero: 6 },
-    { nombre: 'Agosto', numero: 7 },
-    { nombre: 'Septiembre', numero: 8 },
-    { nombre: 'Octubre', numero: 9 },
-    { nombre: 'Noviembre', numero: 10 },
-    { nombre: 'Diciembre', numero: 11 }];
+    [{ nombre: 'Enero', numero: 1 },
+    { nombre: 'Febrero', numero: 2 },
+    { nombre: 'Marzo', numero: 3 },
+    { nombre: 'Abril', numero: 4 },
+    { nombre: 'Mayo', numero: 5 },
+    { nombre: 'Junio', numero: 6 },
+    { nombre: 'Julio', numero: 7 },
+    { nombre: 'Agosto', numero: 8 },
+    { nombre: 'Septiembre', numero: 9 },
+    { nombre: 'Octubre', numero: 10 },
+    { nombre: 'Noviembre', numero: 11 },
+    { nombre: 'Diciembre', numero: 12 }];
   diaInicio: number = 0;
   diasSemana: string[] = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo'];
+  noche: boolean = false;
 
   /*--------------------------------------Loading--------------------------------------*/
 
@@ -111,7 +116,7 @@ export class HomeComponent implements OnInit {
   /*-------------------------------------calendario---------------------------------*/
 
   mesSeleccionado: any = {
-    nombre: this.obtenerNombreMes(new Date().getMonth()),
+    nombre: this.obtenerNombreMes(new Date().getMonth() + 1),
     numero: new Date().getMonth() + 1
   };
   anoActual: number = new Date().getFullYear();
@@ -130,10 +135,10 @@ export class HomeComponent implements OnInit {
 
   private getEventos() {
     const params = new HttpParams()
-    .append('mes', this.mesSeleccionado.numero)
-    .append('ano', this.ano);
+      .append('mes', this.mesSeleccionado.numero)
+      .append('ano', this.ano);
 
-    this.httpService.realizarGet(this.url.getEventoCalendario, false, {params}).subscribe((data: any) => {
+    this.httpService.realizarGet(this.url.getEventoCalendario, false, { params }).subscribe((data: any) => {
       if (data.state === 'OK') {
         this.listaEventos = data.data;
       }
@@ -154,9 +159,9 @@ export class HomeComponent implements OnInit {
 
   cambiarMes(mes: number) {
     if (mes == -1) {
-      this.mesSeleccionado.numero = (this.mesSeleccionado.numero + mes == -1) ? 11 : this.mesSeleccionado.numero + mes;
+      this.mesSeleccionado.numero = (this.mesSeleccionado.numero + mes == 0) ? 12 : this.mesSeleccionado.numero + mes;
     } else {
-      this.mesSeleccionado.numero = (this.mesSeleccionado.numero + mes > 11) ? 11 : this.mesSeleccionado.numero + mes;
+      this.mesSeleccionado.numero = (this.mesSeleccionado.numero + mes > 12) ? 1 : this.mesSeleccionado.numero + mes;
     }
     this.mesSeleccionado.nombre = this.obtenerNombreMes(this.mesSeleccionado.numero);
     this.cambiarFechas();
@@ -169,7 +174,7 @@ export class HomeComponent implements OnInit {
   }
 
   obtenerDiaInicio(mes: number, ano: number): number {
-    const primerDia = new Date(ano, mes, 1).getDay();
+    const primerDia = new Date(ano, mes - 1, 1).getDay();
     return primerDia === 0 ? 7 : primerDia;
   }
 
@@ -184,19 +189,34 @@ export class HomeComponent implements OnInit {
 
   generarDiasDelMes() {
     const primerDia = new Date(this.ano, this.mesSeleccionado.numero, 1).getDate();
-    const ultimoDia = new Date(this.ano, this.mesSeleccionado.numero + 1, 0).getDate();
+    const ultimoDia = new Date(this.ano, this.mesSeleccionado.numero, 0).getDate();
 
     this.diaMes = [];
     for (let dia = 1; dia <= ultimoDia; dia++) {
       this.diaMes.push(dia);
-      console.log(dia);
     }
   }
 
   generarNumeroSemanas() {
     const totalSemanas = Math.ceil(this.diaMes.length / 7);
     this.numeroSemanas = Array(totalSemanas).fill(0).map((_, i) => i);
-    console.log(this.numeroSemanas);
+  }
+
+  esDiaEvento(dia: number, mes: number, ano: number, evento: any): boolean {
+    const fechaDia = new Date(ano, mes - 1, dia).setHours(0);
+    const fechaInicio = new Date(evento.fechaInicio).setHours(0);
+    const fechaFin = new Date(evento.fechaFin).setHours(0);
+
+    return fechaDia >= fechaInicio && fechaDia <= fechaFin;
+  }
+
+  obtenerClaseEvento(dia: number, mes: number, ano: number): string {
+    for (let evento of this.listaEventos) {
+      if (this.esDiaEvento(dia, mes, ano, evento)) {
+        return `evento-${evento.tipoEvento.toLowerCase()}`;
+      }
+    }
+    return '';
   }
 
   /* ------------------------------------to do-------------------------------------------*/

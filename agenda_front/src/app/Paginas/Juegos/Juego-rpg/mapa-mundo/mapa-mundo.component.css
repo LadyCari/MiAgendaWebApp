@@ -1,17 +1,18 @@
-body{
-    background-image: url("https://img.freepik.com/free-vector/gradient-pastel-sky-background_23-2148917404.jpg?w=2000");
-    padding-left: 10rem;
-    padding-right: 10rem;
-    padding-top: 1rem;
-    height: 100vh;
-}
-
-#mapa{
-    background-image: url("../../../../../assets/img/Juego/mapa.jpeg");
+.fondo { 
+    width: 100%;
     height: 100%;
+}
+#mapa { 
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+    background-image: url("/assets/img/Juego/mapa.jpeg");
+    height: 100%;
+}
+:host {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 #mapa button{
@@ -24,21 +25,21 @@ position: absolute;
 }
 
 #lago{
-    bottom: 170px;
-    right: 250px;
+    bottom: 5%;
+    right: 10%;
 }
 
 #mina{
-    top: 100px;
-    right: 500px;
+    top: 5%;
+    right: 30%;
 }
 
 #pueblo{
-    top: 500px;
-    left: 500px;
+    top: 50%;
+    left: 20%;
 }
 
 #bosque{
-    top: 300px;
-    right: 300px;
+    top: 30%;
+    right: 15%;
 }

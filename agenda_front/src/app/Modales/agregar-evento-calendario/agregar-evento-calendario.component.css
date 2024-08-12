@@ -23,13 +23,17 @@ h2 {
 
 .categoria select {
     font-size: 1rem;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 0.3rem;
     width: 60%;
-    background-color: var(--color-amarillo);
-    color: var(--color-celeste);
+    background-color: var(--color-celeste);
     color: black;
     border: 1px solid rgba(0, 0, 0, 0);
+}
+
+select:focus {
+    border: 1px solid var(--color-amarillo);
+    outline: none;
 }
 
 section {
@@ -41,35 +45,36 @@ section {
 p {
     font-family: 'Single Day', cursive;
     font-size: 2rem;
-    color: var(--color-celeste);
+    color: var(--color-amarillo);
     padding-top: 1rem;
     -webkit-text-stroke: 1px black;
-}
-
-input {
-    padding: 0.5rem;
-    border-radius: 20px;
-    border: none;
-    width: 60%;
-    background-color: var(--color-amarillo);
-    color: black;
-    border: 1px solid rgba(0, 0, 0, 0);
-}
-
-input:hover {
-    border: 1px solid var(--color-celeste);
-    outline: none;
-}
-
-input:focus {
-    border: 1px solid #000000;
-    outline: none;
 }
 
 mat-slide-toggle {
     padding: 0.5rem;
     display: flex;
     align-items: center;
+}
+
+input {
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    width: 60%;
+    background-color: var(--color-celeste);
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0);
+    text-align: center;
+}
+
+input:hover {
+    border: 1px solid var(--color-amarillo);
+    outline: none;
+}
+
+input:focus {
+    border: 1px solid var(--color-amarillo);
+    outline: none;
 }
 
 .botones {
@@ -81,13 +86,14 @@ mat-slide-toggle {
     background: none;
     border: none;
     padding: 0.3rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
     cursor: pointer;
     font-family: var(--estilo-letra-generico);
+    width: 30%;
 }
 
-.botones button p{
+.botones button p {
     margin: 0;
     padding: 0;
 }
@@ -102,4 +108,15 @@ mat-slide-toggle {
     border-radius: 10px;
     background-color: var(--color-verde) !important;
     box-shadow: var(--sombra-generica);
+}
+
+mat-form-field .mat-date-range-input input {
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    width: 60%; /* Ajusta según tus necesidades */
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0);
+    text-align: center;
 }

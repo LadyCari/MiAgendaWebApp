@@ -1,0 +1,36 @@
+#progresoLife{
+    display: flex;
+    align-items: center;
+}
+
+#progresoLife p{
+    margin: 0;
+    padding: 0;
+}
+
+mat-progress-bar{
+    margin: 0 1rem 0 1rem;
+}
+
+body{
+    padding: 2rem 1rem 2rem 1rem;
+}
+
+#listaPets h3{
+    text-align: center;
+}
+
+#listaPets{
+    margin-top: 1rem;
+}
+
+#miniaturaPet{
+    display: flex;
+    flex-direction: column;
+}
+
+#vistaMinuaturasPets{
+    display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+}

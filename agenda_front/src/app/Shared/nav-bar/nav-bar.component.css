@@ -16,7 +16,15 @@ header {
   z-index: 20;
 }
 
-#logoPortada {
+.noche{
+background-image: url(../../../assets/img/nochePortado.jpg);
+}
+
+.nocheTexto span{
+  color: white;
+}
+
+.logoPortada {
   display: flex;
   align-items: center;
   background-image: url("../../../assets/img/width_800.webp");
@@ -25,7 +33,11 @@ header {
   background-position: center 40%;
 }
 
-#logoPortada img {
+.logoNoche{
+  background-image: url("../../../assets/img/luna.webp");
+}
+
+.logoPortada img {
     width: 100px;
     height: auto;
     display: block;
@@ -37,7 +49,7 @@ h1 {
   margin: 0;
 }
 
-#logoPortada a {
+.logoPortada a {
   text-decoration: none;
   color: black;
 }

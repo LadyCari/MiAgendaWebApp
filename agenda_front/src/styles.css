@@ -1,14 +1,14 @@
 :root {
 
   /*colores*/
-  --color-rosa: #ffc6ff;
+  --color-rosa: #ffc6ffd0;
   --color-naranja: #ffdcad;
-  --color-verde: #c1ff8e;
-  --color-celeste: #a3c8ffb9;
+  --color-verde: #d1ffabd5;
+  --color-celeste: #a3c8ffbe;
   --color-celeste-transparente:#8ebbff7a;
-  --color-amarillo: rgb(255, 250, 176);
+  --color-amarillo: rgba(255, 250, 176, 0.767);
   --color-amarillo-transparente: rgba(254, 255, 170, 0.699);
-  --color-rojo: rgba(252, 107, 107, 0.767);
+  --color-rojo: rgba(255, 106, 106, 0.712);
 
   /* personalizacion generica*/
   --color-violeta-links: rgb(179, 98, 255);
@@ -45,6 +45,10 @@ a{
   font-family: var(--estilo-letra-generico);
   position: relative;
   flex-direction: column;
+}
+
+.noche{
+  background-image: url("../src/assets/img/nocheFondo.jpg");
 }
 
 /*------------------------------------------------------------------*/

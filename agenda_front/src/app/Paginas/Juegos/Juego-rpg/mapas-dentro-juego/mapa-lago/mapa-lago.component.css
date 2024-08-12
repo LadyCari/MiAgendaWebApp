@@ -1,17 +1,20 @@
-body {
-    background-image: url("https://img.freepik.com/free-vector/gradient-pastel-sky-background_23-2148917404.jpg?w=2000");
-    padding-left: 10rem;
-    padding-right: 10rem;
-    padding-top: 1rem;
-    height: 100vh;
+.fondo {
+    width: 100%;
+    height: 100%;
 }
 
 #mapa {
-    background-image: url("../../../../../../assets/img/Juego/lago.jpeg");
-    height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+    background-image: url("../../../../../../assets/img/Juego/lago.jpeg");
+    height: 100%;
+}
+
+:host {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 #mapa button {
@@ -24,16 +27,16 @@ body {
 }
 
 #pesca {
-bottom: 450px;
-left: 700px;
+    bottom: 40%;
+    left: 50%;
 }
 
 #tienda {
-left: 300px;
-top: 300px;
+    left: 10%;
+    top: 40%;
 }
 
 #mundo {
-    bottom: 10px;
-    left: 770px;
+    bottom: 3%;
+    left: 50%;
 }
