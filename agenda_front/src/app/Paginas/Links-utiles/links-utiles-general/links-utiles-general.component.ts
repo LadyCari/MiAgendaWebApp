@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { ModalLinkComponent } from 'src/app/Modales/modal-link/modal-link.component';
 import { HttpService } from 'src/app/Servicios/http.service';
+import { ModoOscuroService } from 'src/app/Servicios/modoOscuro/modo-oscuro.service';
 import { Url } from 'src/app/url';
 
 @Component({
@@ -19,8 +20,9 @@ export class LinksUtilesGeneralComponent implements OnInit {
   categoria: string = '';
   titulo: string = '';
   buscar: string = '';
+  noche: boolean = false;
 
-  constructor(private httpService: HttpService, private dialog: MatDialog, private router: Router) {
+  constructor(private httpService: HttpService, private dialog: MatDialog, private router: Router, private modoNoche: ModoOscuroService) {
   }
 
   ngOnInit(): void {
@@ -29,6 +31,9 @@ export class LinksUtilesGeneralComponent implements OnInit {
     this.categoria = segments[segments.length - 1];
     this.tituloComponente();
     this.obtenerLista(this.paginaActual, this.elementosPorPagina, this.categoria, '');
+    this.modoNoche.modoNoche$.subscribe(value => {
+      this.noche = value;
+    });
   }
 
   readonly url = Url;

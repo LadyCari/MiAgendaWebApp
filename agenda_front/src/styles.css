@@ -51,6 +51,8 @@ a{
   background-image: url("../src/assets/img/nocheFondo.jpg");
 }
 
+
+
 /*------------------------------------------------------------------*/
 
 
@@ -130,3 +132,10 @@ a{
   background-color: var(--color-primary);
   color: white;
 }
+
+
+  @media (max-width: 1080px) {
+    .mobile{
+      display: none;
+      }
+  }

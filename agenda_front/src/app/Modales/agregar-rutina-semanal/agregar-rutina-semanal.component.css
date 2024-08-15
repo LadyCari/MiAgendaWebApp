@@ -40,7 +40,7 @@ input {
     color: black;
     border: 1px solid rgba(0, 0, 0, 0);
     width: 40%;
-text-align: center;
+    text-align: center;
 }
 
 input:hover {
@@ -69,7 +69,7 @@ input:focus {
     width: 25%;
 }
 
-.botones button p{
+.botones button p {
     margin: 0;
     padding: 0;
 }
@@ -86,7 +86,7 @@ input:focus {
     box-shadow: var(--sombra-generica);
 }
 
-#listDays{
+#listDays {
     display: flex;
     align-items: center;
     font-family: 'Single Day', cursive;
@@ -98,12 +98,17 @@ input:focus {
     padding-right: 1.5rem;
 }
 
-.dia{
-margin: 1rem;
+.dia {
+    margin: 1rem;
 }
 
-.check{
-    margin: 0;
-    padding: 0;
-    width: auto;
+.check {
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid var(--color-amarillo);
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
 }

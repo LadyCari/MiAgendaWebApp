@@ -30,4 +30,9 @@ export class Url{
      public static getEventoCalendario = "http://localhost:8089/evento-calentario/get-eventos"
      public static postEventoCalendario = "http://localhost:8089/evento-calentario/crear"
      public static deleteEventoCalendario = "http://localhost:8089/evento-calentario/delete?id="
+     /*curso*/
+     public static getDatosCurso = "http://localhost:8089/datos-privados-curso/get-datos"
+      public static getCurso = "http://localhost:8089/datos-privados-curso/get-dato"
+     public static postDatosCurso = "http://localhost:8089/datos-privados-curso/crear-datos"
+     public static deleteDatosCurso = "http://localhost:8089/datos-privados-curso/delete-datos?id="
     }

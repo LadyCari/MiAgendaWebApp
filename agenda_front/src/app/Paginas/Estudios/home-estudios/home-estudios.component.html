@@ -1,17 +1,32 @@
-<body class="cuerpo-pagina">
+<body class="cuerpo-pagina" [class.noche]="noche">
 
   <section class="botones">
 
-    <div class="clasesSincronicas">
-      <h2 class="tituloTipoClase1" routerLink="cursos-cursando-home">Cursando</h2>
+    <div class="clasesSincronicas" [class.clasesSincronicasNoche]="noche">
+      <h2 class="tituloTipoClase1" (click)="getCursos(true)">Cursando</h2>
     </div>
 
-    <div class="clasesAsincronicas">
-      <h2 class="tituloTipoClase2" routerLink="cursos-finalizados-home">Terminados</h2>
+    <div class="agregarEstudio">
+      <button (click)="agregarCurso()">+</button>
+    </div>
+
+    <div class="clasesAsincronicas" [class.clasesAsincronicasNoche]="noche">
+      <h2 class="tituloTipoClase2" (click)="getCursos(false)">Terminados</h2>
     </div>
 
   </section>
 
-  <router-outlet></router-outlet>
+  <section>
+    <nav>
+      <ul *ngFor="let curso of listaCursos">
+        <li [routerLink]="curso.datosPrivadosCursoId">{{curso.nombre}}</li>
+      </ul>
+    </nav>
+
+    <section class="vistaPagina">
+      <router-outlet></router-outlet>
+    </section>
+
+  </section>
 
 </body>

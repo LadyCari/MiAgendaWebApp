@@ -3,13 +3,13 @@
   <nav>
     <ul id="botonera">
       <li>
-        <a href="/home-estudios" class="tituloBoton" *ngIf="!noche"><i class="fa-solid fa-graduation-cap" style="color: #74C0FC;"></i><span>Estudios</span></a> 
-         <a href="/home-estudios" class="tituloBoton" *ngIf="noche" [class.nocheTexto]="noche"><i class="fa-solid fa-graduation-cap" style="color: #00eeff;"></i><span>Estudios</span></a> 
+        <a href="/home-estudios" class="tituloBoton" *ngIf="!noche"><i class="fa-solid fa-graduation-cap" style="color: #74C0FC;"></i><span class="mobile">Estudios</span></a> 
+         <a href="/home-estudios" class="tituloBoton" *ngIf="noche" [class.nocheTexto]="noche"><i class="fa-solid fa-graduation-cap" style="color: #00eeff;"></i><span class="mobile">Estudios</span></a> 
       </li>
 
       <li>
-        <a href="/home-links-utiles/General" class="tituloBoton" *ngIf="!noche"><i class="fa-solid fa-laptop-code" style="color: #80aeff"></i><span> Links utiles</span></a>
-        <a href="/home-links-utiles/General" class="tituloBoton" *ngIf="noche" [class.nocheTexto]="noche"><i class="fa-solid fa-laptop-code" style="color: #00eeff"></i><span> Links utiles</span></a>
+        <a href="/home-links-utiles/General" class="tituloBoton" *ngIf="!noche"><i class="fa-solid fa-laptop-code" style="color: #80aeff"></i><span class="mobile"> Links utiles</span></a>
+        <a href="/home-links-utiles/General" class="tituloBoton" *ngIf="noche" [class.nocheTexto]="noche"><i class="fa-solid fa-laptop-code" style="color: #00eeff"></i><span class="mobile"> Links utiles</span></a>
       </li>
 
       <div class="logoPortada" [class.logoNoche]="noche">
@@ -24,13 +24,13 @@
       </div>
 
       <li>
-        <a href="/home-juegos" class="tituloBoton" *ngIf="!noche"><i class="fa-solid fa-ghost" style="color: hwb(289 62% 0%)"></i> <span>Juegos</span></a>
-        <a href="/home-juegos" class="tituloBoton" *ngIf="noche" [class.nocheTexto]="noche"><i class="fa-solid fa-ghost" style="color: hwb(289 16% 0%)"></i> <span>Juegos</span></a>
+        <a href="/home-juegos" class="tituloBoton" *ngIf="!noche"><i class="fa-solid fa-ghost" style="color: hwb(289 62% 0%)"></i> <span class="mobile">Juegos</span></a>
+        <a href="/home-juegos" class="tituloBoton" *ngIf="noche" [class.nocheTexto]="noche"><i class="fa-solid fa-ghost" style="color: hwb(289 16% 0%)"></i> <span class="mobile">Juegos</span></a>
       </li>
 
       <li>
-        <a href="/home-otro" class="tituloBoton" *ngIf="!noche"><i class="fa-solid fa-otter" style="color: #fc9aff;"></i><span>Otros</span></a>
-        <a href="/home-otro" class="tituloBoton" *ngIf="noche" [class.nocheTexto]="noche"><i class="fa-solid fa-otter" style="color: hwb(289 16% 0%);"></i><span>Otros</span></a>
+        <a href="/home-otro" class="tituloBoton" *ngIf="!noche"><i class="fa-solid fa-otter" style="color: #fc9aff;"></i><span class="mobile">Otros</span></a>
+        <a href="/home-otro" class="tituloBoton" *ngIf="noche" [class.nocheTexto]="noche"><i class="fa-solid fa-otter" style="color: hwb(289 16% 0%);"></i><span class="mobile">Otros</span></a>
       </li>
     </ul>
   </nav>

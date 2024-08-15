@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { lastValueFrom } from 'rxjs';
 import { ModalLinkComponent } from 'src/app/Modales/modal-link/modal-link.component';
 import { HttpService } from 'src/app/Servicios/http.service';
+import { ModoOscuroService } from 'src/app/Servicios/modoOscuro/modo-oscuro.service';
 import { Url } from 'src/app/url';
 
 @Component({
@@ -13,17 +14,20 @@ import { Url } from 'src/app/url';
 
 export class HomeLinksUtilesComponent implements OnInit {
 
-  constructor(private httpService: HttpService, private dialog: MatDialog) {
+  constructor(private httpService: HttpService, private dialog: MatDialog, private modoNoche: ModoOscuroService) {
   }
 
   ngOnInit(): void {
     this.obtenerLista();
+    this.modoNoche.modoNoche$.subscribe(value => {
+      this.noche = value;
+    });
   }
 
   readonly url = Url;
   listaLinks: any[] = [];
   nuevoLink: any;
-
+  noche: boolean = false;
 
   private obtenerLista() {
     this.httpService.realizarGet(`${this.url.getLinks}General&pagina=1&cantidad=10`).subscribe((data: any) => {

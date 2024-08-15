@@ -208,6 +208,7 @@ th {
 
 #listaRutinas {
   margin-top: 1rem;
+  display: flex;
 }
 
 #listaRutinas ul {
@@ -215,7 +216,7 @@ th {
 }
 
 #listaRutinas li {
-  margin: 0rem;
+  margin: 0 1rem 0 0;
 }
 
 /*-------------------------------------------------------*/

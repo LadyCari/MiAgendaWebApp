@@ -156,10 +156,10 @@
 
           <tbody>
             <tr *ngFor="let semana of numeroSemanas; let i = index">
-              <td *ngFor="let dia of [0,1,2,3,4,5,6]" [ngClass]="obtenerClaseEvento(((i * 7) + dia + 1 - diaInicio + 1), mesSeleccionado.numero, anoActual)">
+              <td *ngFor="let dia of [0,1,2,3,4,5,6]" [ngClass]="obtenerClaseEvento(((i * 7) + dia - diaInicio + 1), mesSeleccionado.numero, anoActual)">
                 <ng-container *ngIf="i === 0 && dia < diaInicio - 1; else elseBlock"></ng-container>
                 <ng-template #elseBlock>
-                  {{ ((i * 7) + dia + 1 - diaInicio + 1 <= diaMes.length) ? ((i * 7) + dia + 1 - diaInicio + 1) : '' }}
+                  {{ ((i * 7) + dia - diaInicio + 1 <= diaMes.length) ? ((i * 7) + dia + 1 - diaInicio + 1) : '' }}
                 </ng-template>
                 <div class="anotaciones">
                   <!-- Aquí puedes agregar el contenido de la anotación -->

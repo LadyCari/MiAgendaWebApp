@@ -13,12 +13,22 @@ h2 {
   box-shadow: var(--sombra-generica);
 }
 
+.clasesSincronicasNoche {
+  background-color: rgba(255, 65, 255, 0.692);
+  box-shadow: 3px 3px 5px rgb(247, 24, 255);
+}
+
 .clasesAsincronicas {
   width: 45%;
   height: 5rem;
   background-color: rgb(129, 209, 255);
   border-radius: 20px;
   box-shadow: var(--sombra-generica);
+}
+
+.clasesAsincronicasNoche {
+  background-color: rgba(65, 201, 255, 0.706);
+  box-shadow: 3px 3px 5px rgb(24, 247, 255);
 }
 
 .clasesSincronicas a {
@@ -43,4 +53,48 @@ body {
   display: flex;
   justify-content: space-evenly;
   margin: 3rem;
+}
+
+.noche {
+  color: white;
+}
+
+.agregarEstudio {
+  display: flex;
+}
+
+.agregarEstudio button {
+  border-radius: 50%;
+  background-color: #eca7fa00;
+  font-size: 2rem;
+}
+
+/*----------------------*/
+
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 800px;
+}
+
+ul {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+li {
+  margin-bottom: 2.5rem;
+  font-size: 1.5rem;
+  font-family: var(--estilo-letra-generico);
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: var(--color-celeste);
+  border-radius: 5px;
+  color: var(--color-rosa);
+  -webkit-text-stroke: 0.5px black;
+  text-align: center;
 }

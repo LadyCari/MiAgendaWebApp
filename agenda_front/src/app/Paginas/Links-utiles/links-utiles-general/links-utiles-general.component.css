@@ -18,6 +18,10 @@ h2 {
   align-items: center;
 }
 
+.tituloNoche{
+  color: yellow;
+}
+
 .mostrarLink {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;

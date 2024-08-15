@@ -1,0 +1,104 @@
+<body>
+
+    <section id="logoCurso">
+        <img src="{{curso.urlLogo}}" alt="logo{{curso.nombre}}" />
+    </section>
+
+    <section id="cosasImportantes">
+
+        <h3>Cosas importantes:</h3>
+
+        <ul>
+            <li>Dias: {{curso.dia}}</li>
+            <li>Horario: {{curso.horarioInicio}} - {{curso.horarioFin}}</li>
+            <li>Comision: {{curso.comision}}</li>
+        </ul>
+        <ul *ngFor="let link of links">
+            <li><a href="link.link" target="_blank">{{link.nombre}}</a></li>
+        </ul>
+    </section>
+
+    <nav class="clases">
+        <ul>
+            <li (click)="('logoCurso')">Cosas importantes</li>
+            <li (click)="('tituloClases')">Clase 0</li>
+            <li (click)="('clase0')">Clase 1</li>
+            <li (click)="('clase1')">Clase 2</li>
+            <li (click)="('clase2')">Clase 3</li>
+
+        </ul>
+    </nav>
+
+    <h2 id="tituloClases">Videos de las clases</h2>
+
+    <section class="video tipo1">
+
+        <h3 id="clase0" class="centro">Clase 0</h3>
+
+        <dl>
+            <dt>
+                <h4>Temas</h4>
+            </dt>
+            <dd>
+                Presentacion de la cursada
+            </dd>
+        </dl>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/K24dgDJI_b8?si=qoBH9875Q6ULQ6tN"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+    </section>
+
+    <section class="video tipo2">
+        <h3 id="clase1" class="centro">Clase 1</h3>
+
+        <dl>
+            <dt>
+                <h4>Temas</h4>
+            </dt>
+            <dd>
+                Teoria del testing parte I
+            </dd>
+        </dl>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/c1I3HMUkhA4?si=pFvT5jyUwXIODTWN"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+    </section>
+
+    <section class="video tipo3">
+        <h3 id="clase2" class="centro">Clase 2</h3>
+
+        <dl>
+            <dt>
+                <h4>Temas</h4>
+            </dt>
+            <dd>
+                Teoria del testing parte II
+            </dd>
+        </dl>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/YXYaHh843Vk?si=-cB1dA97EHu-6S3D"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+    </section>
+
+    <section class="video tipo4">
+        <h3 id="clase3" class="centro">Clase 3</h3>
+
+        <dl>
+            <dt>
+                <h4>Temas</h4>
+            </dt>
+            <dd>
+                Teoria del testing parte III
+            </dd>
+        </dl>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/47KGiDaxaXE?si=4YRXVGYiHyE-abDO"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+    </section>
+
+</body>

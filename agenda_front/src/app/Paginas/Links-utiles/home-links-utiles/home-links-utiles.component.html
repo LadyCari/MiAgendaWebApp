@@ -1,4 +1,4 @@
-<body class="cuerpo-pagina">
+<body class="cuerpo-pagina" [class.noche]="noche">
 
     <section class="containerLinks">
 
@@ -6,10 +6,10 @@
             <div class="logo">
                 <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/980045da-6c84-465e-9484-ac7ea72c01e7/ddnk46j-3c17f5dc-aa79-4d37-a401-070d7edb7ed3.png/v1/fill/w_1024,h_1345/chibi__lucifer_by_madyui0v0_ddnk46j-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTM0NSIsInBhdGgiOiJcL2ZcLzk4MDA0NWRhLTZjODQtNDY1ZS05NDg0LWFjN2VhNzJjMDFlN1wvZGRuazQ2ai0zYzE3ZjVkYy1hYTc5LTRkMzctYTQwMS0wNzBkN2VkYjdlZDMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.4hh4cXOMWywvuabLs4NfqolaIxB3f7cLR3MC0LQPv3s"
                     alt="nifty">
-                <h2>Cosas utiles</h2>
+                <h2 [class.tituloNoche]="noche">Cosas utiles</h2>
             </div>
 
-            <ul>
+            <ul [class.listaNoche]="noche">
                 <li routerLink="programacion">Programacion</li>
                 <li routerLink="manga-manhwa">Mangas/manhwas</li>
                 <li routerLink="estudioGeneral">Estudio general</li>

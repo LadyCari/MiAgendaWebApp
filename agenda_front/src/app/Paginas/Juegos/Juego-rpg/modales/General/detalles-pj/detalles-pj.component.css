@@ -1,5 +1,6 @@
 body {
-    background-image: url("../../../../../../../assets/img/Juego/fondoDetallePj.jpg");
+    background-image: url("../../../../../../../assets/img/Juego/fondoCuaderno.webp");
+    background-color: transparent;
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -10,11 +11,16 @@ body {
     color: white;
 }
 
-#izquierda {
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.izquierda {
     width: 50%;
 }
 
-#derecha {
+.derecha {
     width: 50%;
 }
 
@@ -25,32 +31,107 @@ h3 {
 
 /*------------- nombre, dinero, retrato---------*/
 
-#datosGeneralesPj {
+.datosGeneralesPj {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
 }
 
-#marcoPj {
+.marcoPj {
     width: 100px;
     height: 100px;
     overflow: hidden;
     margin-right: 1rem;
+    display: flex;
+    justify-content: center;
 }
 
-#marcoPj img {
+.marcoPj img {
     height: 300px;
     object-fit: cover;
 }
 
-#datosGeneralesPj div {
+.nombreMoney {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.dinero {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0 1rem 0 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.dinero img {
+    width: 10%;
+    height: 10%;
+    margin-right: 1rem;
+}
+
 /*----------- stats ---------*/
 
-#stats{
+.stats {
     margin-top: 2rem;
+}
+
+.container {
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.container ul{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container ul li{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 3rem;
+}
+
+/*------------ casa ------------*/
+
+.casa {
+display: flex;
+align-items: center;
+font-size: 2rem;
+}
+
+.casa img{
+    width: 20%;
+    margin-right: 1rem;
+}
+
+/*-----------------parte derecha ---------*/
+
+.setPj{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.listaArmaduras ul{
+list-style: none;
+}
+
+.listaArmaduras li{
+text-align: center;
+}
+
+.listaArmaduras img{
+    width: 20%;
+}
+
+.listaAccesorios ul{
+    list-style: none;
+}
+
+.listaAccesorios img{
+    width: 20%;
 }

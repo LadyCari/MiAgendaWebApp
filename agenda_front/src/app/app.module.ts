@@ -23,18 +23,14 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { VistaPersonajeBdoComponent } from './Paginas/Juegos/BlackDessert/vista-personaje-bdo/vista-personaje-bdo.component';
 import { HomeJuegosComponent } from './Paginas/Juegos/home-juegos/home-juegos.component';
 import { HomeLinksUtilesComponent } from './Paginas/Links-utiles/home-links-utiles/home-links-utiles.component';
-import { FullStackJavaCacComponent } from './Paginas/Estudios/finalizado/full-stack-java-cac/full-stack-java-cac.component';
-import { TestingQACacComponent } from './Paginas/Estudios/cursando/testing-qa-cac/testing-qa-cac.component';
 import { HomeComponent } from './Paginas/home/home.component';
 import { ModalLinkComponent } from './Modales/modal-link/modal-link.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { LinksUtilesGeneralComponent } from './Paginas/Links-utiles/links-utiles-general/links-utiles-general.component';
 import { HomeEstudiosComponent } from './Paginas/Estudios/home-estudios/home-estudios.component';
-import { HomeEstudioCursandoComponent } from './Paginas/Estudios/cursando/home-estudio-cursando/home-estudio-cursando.component';
-import { HomeEstudioFinalizadoComponent } from './Paginas/Estudios/finalizado/home-estudio-finalizado/home-estudio-finalizado.component';
 import { AgregarEventoCalendarioComponent } from './Modales/agregar-evento-calendario/agregar-evento-calendario.component';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {JsonPipe} from '@angular/common';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { JsonPipe } from '@angular/common';
 import { MatNativeDateModule } from '@angular/material/core';
 import { AgregarRutinaSemanalComponent } from './Modales/agregar-rutina-semanal/agregar-rutina-semanal.component';
 import { OtroHomeComponent } from './Paginas/otro/otro-home/otro-home.component';
@@ -50,9 +46,12 @@ import { ModalLifeRecoleccionComponent } from './Paginas/Juegos/Juego-rpg/modale
 import { HomeJuegoRpgComponent } from './Paginas/Juegos/Juego-rpg/home-juego-rpg/home-juego-rpg.component';
 import { HomeParteIzquierdaComponent } from './Paginas/Juegos/Juego-rpg/shared/home-parte-izquierda/home-parte-izquierda.component';
 import { HomeParteDerechaComponent } from './Paginas/Juegos/Juego-rpg/shared/home-parte-derecha/home-parte-derecha.component';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { DetallesPjComponent } from './Paginas/Juegos/Juego-rpg/modales/General/detalles-pj/detalles-pj.component';
 import { InventarioComponent } from './Paginas/Juegos/Juego-rpg/modales/General/inventario/inventario.component';
+import { MusicYoutubeComponent } from './Shared/music-youtube/music-youtube.component';
+import { AgregarCursoComponent } from './Modales/agregar-curso/agregar-curso.component';
+import { MuestraCursoComponent } from './Paginas/Estudios/muestra-curso/muestra-curso.component';
 
 @NgModule({
   declarations: [
@@ -66,14 +65,10 @@ import { InventarioComponent } from './Paginas/Juegos/Juego-rpg/modales/General/
     VistaPersonajeBdoComponent,
     HomeJuegosComponent,
     HomeLinksUtilesComponent,
-    FullStackJavaCacComponent,
     HomeComponent,
-    TestingQACacComponent,
     ModalLinkComponent,
     LinksUtilesGeneralComponent,
     HomeEstudiosComponent,
-    HomeEstudioCursandoComponent,
-    HomeEstudioFinalizadoComponent,
     AgregarEventoCalendarioComponent,
     AgregarRutinaSemanalComponent,
     OtroHomeComponent,
@@ -90,7 +85,10 @@ import { InventarioComponent } from './Paginas/Juegos/Juego-rpg/modales/General/
     HomeParteIzquierdaComponent,
     HomeParteDerechaComponent,
     DetallesPjComponent,
-    InventarioComponent
+    InventarioComponent,
+    MusicYoutubeComponent,
+    AgregarCursoComponent,
+    MuestraCursoComponent
 
   ],
   imports: [

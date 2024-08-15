@@ -7,10 +7,6 @@ import { VistaPersonajeBdoComponent } from './Paginas/Juegos/BlackDessert/vista-
 import { HomeComponent } from './Paginas/home/home.component';
 import { HomeEstudiosComponent } from './Paginas/Estudios/home-estudios/home-estudios.component';
 import { HomeLinksUtilesComponent } from './Paginas/Links-utiles/home-links-utiles/home-links-utiles.component';
-import { HomeEstudioCursandoComponent } from './Paginas/Estudios/cursando/home-estudio-cursando/home-estudio-cursando.component';
-import { HomeEstudioFinalizadoComponent } from './Paginas/Estudios/finalizado/home-estudio-finalizado/home-estudio-finalizado.component';
-import { TestingQACacComponent } from './Paginas/Estudios/cursando/testing-qa-cac/testing-qa-cac.component';
-import { FullStackJavaCacComponent } from './Paginas/Estudios/finalizado/full-stack-java-cac/full-stack-java-cac.component';
 import { LinksUtilesGeneralComponent } from './Paginas/Links-utiles/links-utiles-general/links-utiles-general.component';
 import { OtroHomeComponent } from './Paginas/otro/otro-home/otro-home.component';
 import { OtroRecetasComponent } from './Paginas/otro/otro-recetas/otro-recetas.component';
@@ -24,6 +20,7 @@ import { MapaPatioComponent } from './Paginas/Juegos/Juego-rpg/mapas-dentro-jueg
 import { HomeJuegoRpgComponent } from './Paginas/Juegos/Juego-rpg/home-juego-rpg/home-juego-rpg.component';
 import { HomeParteIzquierdaComponent } from './Paginas/Juegos/Juego-rpg/shared/home-parte-izquierda/home-parte-izquierda.component';
 import { HomeParteDerechaComponent } from './Paginas/Juegos/Juego-rpg/shared/home-parte-derecha/home-parte-derecha.component';
+import { MuestraCursoComponent } from './Paginas/Estudios/muestra-curso/muestra-curso.component';
 
 export const routes: Routes = [
   /*general*/
@@ -45,8 +42,8 @@ export const routes: Routes = [
       { path: 'mapa-pueblo', component: MapaPuebloComponent },
       { path: 'mapa-patio', component: MapaPatioComponent }],
   },
-  {path: 'izquierda-home', component: HomeParteIzquierdaComponent},
-  {path: 'derecha-home', component: HomeParteDerechaComponent},
+  { path: 'izquierda-home', component: HomeParteIzquierdaComponent },
+  { path: 'derecha-home', component: HomeParteDerechaComponent },
   /*bdo*/
   { path: 'home-bdo', component: HomeBdoComponent },
   { path: 'vista-personaje-bdo/:id', component: VistaPersonajeBdoComponent },
@@ -65,18 +62,8 @@ export const routes: Routes = [
   },
   /*estudios*/
   {
-    path: 'home-estudios', component: HomeEstudiosComponent, children: [
-      {
-        path: 'cursos-cursando-home', component: HomeEstudioCursandoComponent, children: [
-          { path: 'curso-testing&QA-cac', component: TestingQACacComponent },
-        ]
-      },
-      {
-        path: 'cursos-finalizados-home', component: HomeEstudioFinalizadoComponent, children: [
-          { path: 'curso-fullStackJava-cac', component: FullStackJavaCacComponent }
-        ]
-      },
-    ]
+    path: 'home-estudios', component: HomeEstudiosComponent, children: 
+    [{ path: ':id', component: MuestraCursoComponent }]
   },
   /*otro*/
   {

@@ -1,22 +1,22 @@
-#logoCurso{
-display: flex;
-justify-content: center;
+#logoCurso {
+  display: flex;
+  justify-content: center;
 }
 
-body div{
+body div {
   position: relative;
   width: 100%;
   padding-left: 4rem;
 
 }
 
-h3{
+h3 {
   font-size: 2rem;
   margin-bottom: 2rem;
   font-family: "Gluten", cursive;
 }
 
-a{
+a {
   text-decoration: none;
   color: rgb(179, 98, 255);
 }
@@ -32,7 +32,7 @@ a{
   padding-top: 1rem;
 }
 
-.video:hover{
+.video:hover {
   height: 30rem;
 }
 
@@ -40,7 +40,7 @@ section iframe {
   margin: 0 auto;
 }
 
-#tituloClases{
+#tituloClases {
   text-align: center;
   margin-top: 5rem;
   margin-bottom: 3rem;
@@ -48,38 +48,38 @@ section iframe {
   font-family: "Gluten", cursive;
 }
 
-.tipo1{
+.tipo1 {
   background-color: #ffce8e;
 }
 
-.tipo2{
+.tipo2 {
   background-color: #c1ff8e;
 }
 
-.tipo3{
+.tipo3 {
   background-color: #8ebbffb9;
 }
 
-.tipo4{
+.tipo4 {
   background-color: #fc89c2;
 }
 
-ul{
+ul {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
-li{
+li {
   margin-bottom: 0.5rem;
 }
 
-.clases{
+.clases {
   margin: 0;
   padding: 0;
   width: 100%;
 }
 
-.clases ul{
+.clases ul {
   display: flex;
   justify-content: space-evenly;
   list-style: none;
@@ -87,7 +87,7 @@ li{
   flex-wrap: wrap;
 }
 
-.clases ul li{
+.clases ul li {
   background-color: var(--color-celeste);
   padding: 0.5rem;
   display: flex;
@@ -99,6 +99,6 @@ li{
   margin-bottom: 0.5rem;
 }
 
-body{
+body {
   padding-left: 2rem;
 }
