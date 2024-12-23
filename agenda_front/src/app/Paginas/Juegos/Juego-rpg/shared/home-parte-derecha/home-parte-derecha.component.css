@@ -1,36 +1,61 @@
-#progresoLife{
-    display: flex;
-    align-items: center;
+/*-------------------Life-------------------*/
+
+h3 {
+    text-align: center;
 }
 
-#progresoLife p{
+#progresoLife {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.5rem;
+}
+
+#progresoLife p {
     margin: 0;
     padding: 0;
 }
 
-mat-progress-bar{
+#progresoLife img {
+    width: 2rem;
+    height: 2rem;
+}
+
+mat-progress-bar {
     margin: 0 1rem 0 1rem;
+    border-radius: 5px;
 }
 
-body{
-    padding: 2rem 1rem 2rem 1rem;
+
+body {
+    padding: 2rem 5rem 2rem 1rem;
 }
 
-#listaPets h3{
+/*-------------------Pets-------------------*/
+
+#listaPets h3 {
     text-align: center;
 }
 
-#listaPets{
+#listaPets {
     margin-top: 1rem;
 }
 
-#miniaturaPet{
+#vistaMinuaturasPets {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-#vistaMinuaturasPets{
+#miniaturaPet {
     display: flex;
-   flex-wrap: wrap;
-   justify-content: space-evenly;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem 0 0.3rem 0;
+}
+
+#miniaturaPet img {
+    width: 4rem;
+    height: 4rem;
 }

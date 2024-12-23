@@ -47,11 +47,12 @@ import { HomeJuegoRpgComponent } from './Paginas/Juegos/Juego-rpg/home-juego-rpg
 import { HomeParteIzquierdaComponent } from './Paginas/Juegos/Juego-rpg/shared/home-parte-izquierda/home-parte-izquierda.component';
 import { HomeParteDerechaComponent } from './Paginas/Juegos/Juego-rpg/shared/home-parte-derecha/home-parte-derecha.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { DetallesPjComponent } from './Paginas/Juegos/Juego-rpg/modales/General/detalles-pj/detalles-pj.component';
 import { InventarioComponent } from './Paginas/Juegos/Juego-rpg/modales/General/inventario/inventario.component';
-import { MusicYoutubeComponent } from './Shared/music-youtube/music-youtube.component';
 import { AgregarCursoComponent } from './Modales/agregar-curso/agregar-curso.component';
 import { MuestraCursoComponent } from './Paginas/Estudios/muestra-curso/muestra-curso.component';
+import { OtroPersonajesComponent } from './Paginas/otro/otro-personajes/otro-personajes.component';
+import { PanelAdmComponent } from './Paginas/Juegos/Juego-rpg/modales/panel-adm/panel-adm.component';
+import { DetallesPjComponent } from './Paginas/Juegos/Juego-rpg/modales/General/detalles-pj/detalles-pj.component';
 
 @NgModule({
   declarations: [
@@ -84,12 +85,12 @@ import { MuestraCursoComponent } from './Paginas/Estudios/muestra-curso/muestra-
     HomeJuegoRpgComponent,
     HomeParteIzquierdaComponent,
     HomeParteDerechaComponent,
-    DetallesPjComponent,
     InventarioComponent,
-    MusicYoutubeComponent,
     AgregarCursoComponent,
-    MuestraCursoComponent
-
+    MuestraCursoComponent,
+    OtroPersonajesComponent,
+    PanelAdmComponent,
+    DetallesPjComponent
   ],
   imports: [
     BrowserModule,

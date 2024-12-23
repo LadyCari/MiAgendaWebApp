@@ -1,6 +1,5 @@
 package com.carito.agenda.Entitys;
 
-import com.carito.agenda.Entitys.juegoRPG.Tipo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

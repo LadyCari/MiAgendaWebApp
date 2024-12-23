@@ -1,0 +1,24 @@
+.primerPlano {
+    height: 500px;
+    display: flex;
+    overflow: hidden;
+    margin-top: 5rem;
+    position: relative;
+}
+
+.primerPlano img {
+    position: absolute;
+    left: 5rem;
+    top: 20rem;
+    transform: scale(2.0);
+    transition: transform 0.2s ease-out; /* Suaviza la animación de rotación */
+}
+
+.primerPlano div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 9rem;
+    top: 2rem;
+    position: absolute;
+}

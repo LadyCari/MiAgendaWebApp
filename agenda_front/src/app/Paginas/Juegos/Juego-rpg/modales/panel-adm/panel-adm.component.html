@@ -1,0 +1,24 @@
+<form [formGroup]="formLife" (ngSubmit)="crearLife()">
+    <h2>life</h2>
+    <p>nombre</p>
+    <input type="text" formControlName="nombre">
+    <p>img</p>
+    <input type="file" accept="image/png, image/jpeg, image/gif" (change)="onFileSelected($event)" />
+    <p>nivel</p>
+    <input type="number" formControlName="nivel">
+    <p>experiencia</p>
+    <input type="number" formControlName="experienciaActual">
+    <button type="submit">Terminar</button>
+</form>
+
+
+<form [formGroup]="formPet" (ngSubmit)="crearPet()">
+    <h2>pet</h2>
+    <p>nombre</p>
+    <input type="text" formControlName="nombre">
+    <p>team</p>
+    <input type="checkbox" formControlName="activa">
+    <p>img</p>
+    <input type="file" accept="image/png, image/jpeg, image/gif" (change)="onFileSelected($event)" />
+    <button type="submit">Terminar</button>
+</form>

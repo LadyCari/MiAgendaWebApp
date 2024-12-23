@@ -1,1 +1,40 @@
-<p>inventario works!</p>
+<div class="container">
+    <div class="titulo">
+        <h2>Inventario</h2>
+    </div>
+
+    <div class="vistaItems" >
+        <div class="item" *ngFor="let item of listaItems">
+            <img src="" alt="">
+            <p>{{item}}</p>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center w-100" *ngIf="totalItems != 0">
+        <nav aria-label="Page navigation" class="mt-3">
+            <ul class="pagination cursor">
+                <li class="page-item" [class.disabled]="paginaActual === 1">
+                    <a class="page-link" (click)="cambiarPagina(paginaActual - 1)" aria-label="Previous">
+                        <span aria-hidden="true"><i class="fa-solid fa-carrot fa-rotate-by"
+                                style="color: #ffc054; --fa-rotate-angle: 40deg;"></i></span>
+                    </a>
+                </li>
+
+                <li class="page-item cursor" [class.disabled]="esPaginaActual(numPagina)"
+                    (click)="cambiarPagina(numPagina)" *ngFor="let numPagina of paginas()">
+                    {{ numPagina }}
+                </li>
+
+
+                <li class="page-item" (click)="cambiarPagina(paginaActual + 1)"
+                    [class.disabled]="paginaActual === totalPaginas()">
+                    <a class="page-link" aria-label="Next">
+                        <span aria-hidden="true"><i class="fa-solid fa-carrot fa-rotate-by"
+                                style="color: #ffc054; --fa-rotate-angle: 220deg;"></i></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+</div>

@@ -102,3 +102,27 @@ li {
 body {
   padding-left: 2rem;
 }
+
+.botones{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.botones button{
+  height: 2.5rem;
+  font-size: 2rem;
+  width: 10rem;
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  box-shadow: var(--sombra-generica);
+}
+
+#borrar{
+  background-color: var(--color-rojo);
+}
+
+#modificar{
+  background-color: var(--color-amarillo);
+}

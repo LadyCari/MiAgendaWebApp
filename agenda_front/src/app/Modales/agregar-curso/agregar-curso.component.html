@@ -1,55 +1,58 @@
 <form [formGroup]="nuevoCurso">
-<div>
-    <p>nombre</p>
-    <input type="text" formControlName="nombre">
-</div>
-
-<div>
-    <p>Seleccione dia</p>
-    <div id="listDays">
-        <div *ngFor="let dia of diasSemana">
-                <input type="checkbox" (change)="checkBox(dia)" class="check">
-                <label class="dia">{{ dia | titlecase }}</label>
+    <h2>Nuevo curso</h2>
+<section>
+    <div>
+        <p>nombre</p>
+        <input type="text" formControlName="nombre">
+    </div>
+    
+    <div>
+        <p>Seleccione dia</p>
+        <div id="listDays">
+            <div *ngFor="let dia of diasSemana">
+                    <input type="checkbox" (change)="checkBox(dia)" class="check">
+                    <label class="dia">{{ dia | titlecase }}</label>
+            </div>
         </div>
     </div>
-</div>
-
-<div>
-    <p>Seleccion horas</p>
-    <input type="time" formControlName="horarioInicio">
-    <input type="time" formControlName="horarioFin">
-</div>
-
-<div>
-    <p>Comision</p>
-    <input type="text" formControlName="comision">
-</div>
-
-<div>
-    <p>Links reunion</p>
-    <input type="text" formControlName="linksReunion">
-</div>
-
-<div>
-    <p>nombre cosa importante</p>
-    <input type="text"  formControlName="nombreLink">
-    <input type="text"  formControlName="link">
-    <button [disabled]="!nuevoCurso.get('nombreLink')?.value || !nuevoCurso.get('link')?.value" (click)="agregarLink()">agregar</button>
-</div>
-
-
-<div>
-    <p>Img curso</p>
-    <input type="text" formControlName="urlLogo">
-</div>
-
-<div>
-    <p>Cursa?</p>
-    <input type="checkbox" formControlName="cursando">
-</div>
-
-<div>
-    <button (click)="postCurso()">confirmar</button>
-    <button>cancelar</button>
-</div>
+    
+    <div>
+        <p>Seleccion horas</p>
+        <input type="time" formControlName="horarioInicio">
+        <input type="time" formControlName="horarioFin">
+    </div>
+    
+    <div>
+        <p>Comision</p>
+        <input type="text" formControlName="comision">
+    </div>
+    
+    <div>
+        <p>Links reunion</p>
+        <input type="text" formControlName="linksReunion">
+    </div>
+    
+    <div>
+        <p>nombre cosa importante</p>
+        <input type="text"  formControlName="nombreLink">
+        <input type="text"  formControlName="link">
+        <button [disabled]="!nuevoCurso.get('nombreLink')?.value || !nuevoCurso.get('link')?.value" (click)="agregarLink()">agregar</button>
+    </div>
+    
+    
+    <div>
+        <p>Img curso</p>
+        <input type="text" formControlName="urlLogo">
+    </div>
+    
+    <div>
+        <p>Cursa?</p>
+        <input type="checkbox" formControlName="cursando">
+    </div>
+    
+    <div>
+        <button (click)="postCurso()">confirmar</button>
+        <button>cancelar</button>
+    </div>
+</section>
 </form>

@@ -36,4 +36,20 @@ export class MuestraCursoComponent implements OnInit {
       }
     });
   }
+
+  /*
+  public deleteLink(curso: any) {
+    console.log(link)
+    this.httpService.realizarDelete(this.url.deleteDatosCurso + curso.linkImportanteId).subscribe((data: any) => {
+      if (data.state == "OK") {
+        const index = this.listaLinks.findIndex((pendiente: any) => pendiente === link);
+        if (index !== -1) {
+          this.listaLinks.splice(index, 1);
+        }
+      }
+    })
+  }
+*/
 }
+
+

@@ -1,20 +1,23 @@
 <body>
 
     <section id="listaLifes">
-        <div id="progresoLife">
-            <p>iconoLife</p>
-            <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
-            <p>lvl</p>
+        <div>
+            <h3>Lifes skills</h3>
+        </div>
+        <div id="progresoLife" *ngFor="let life of listaLifes">
+            <img [src]="getImagenSrc(life.imagen)" alt="" title="{{life.nombre}}">
+            <mat-progress-bar mode="determinate" value="{{obtenerExperiencia(life.experienciaActual, life.nivel)}}"></mat-progress-bar>
+            <p>{{life.nivel}}</p>
         </div>
     </section>
 
     <section id="listaPets">
         <h3>Pets activas</h3>
-<div id="vistaMinuaturasPets">
-    <div id="miniaturaPet">
-        <p>img pet</p>
-        <p>nombre</p>
-    </div>
-</div>
+        <div id="vistaMinuaturasPets">
+            <div id="miniaturaPet" *ngFor="let mascota of listaPets">
+                <img [src]="getImagenSrc(mascota.imagen)" alt="" title="{{mascota.nombre}}">
+                <p>{{mascota.nombre}}</p>
+            </div>
+        </div>
     </section>
 </body>

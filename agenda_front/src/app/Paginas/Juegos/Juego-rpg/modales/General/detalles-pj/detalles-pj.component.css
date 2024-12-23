@@ -1,5 +1,5 @@
 body {
-    background-image: url("../../../../../../../assets/img/Juego/fondoCuaderno.webp");
+    background-image: url("https://t3.ftcdn.net/jpg/02/04/69/00/360_F_204690037_aEFcF8RiqS95F8pJJp3q3Xk0fumRIAjj.jpg");
     background-color: transparent;
     height: 100%;
     background-position: center;
@@ -8,7 +8,7 @@ body {
     display: flex;
     padding: 1rem 3rem 1rem 3rem;
     background-size: cover;
-    color: white;
+    color: black;
 }
 
 p {

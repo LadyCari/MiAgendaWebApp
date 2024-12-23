@@ -6,7 +6,7 @@ h2 {
 }
 
 .clasesSincronicas {
-  width: 45%;
+  width: 35%;
   height: 5rem;
   background-color: #eca7fa;
   border-radius: 20px;
@@ -19,7 +19,7 @@ h2 {
 }
 
 .clasesAsincronicas {
-  width: 45%;
+  width: 35%;
   height: 5rem;
   background-color: rgb(129, 209, 255);
   border-radius: 20px;
@@ -46,7 +46,6 @@ h2 {
 body {
   padding-left: 2rem;
   padding-right: 2rem;
-  height: 100vh;
 }
 
 .botones {
@@ -65,8 +64,11 @@ body {
 
 .agregarEstudio button {
   border-radius: 50%;
-  background-color: #eca7fa00;
-  font-size: 2rem;
+  background-color: var(--color-amarillo);
+  font-size: 3rem;
+  width: 5rem;
+  border: 0;
+  box-shadow: var(--sombra-generica);
 }
 
 /*----------------------*/
@@ -79,7 +81,6 @@ nav {
 }
 
 ul {
-  height: 100%;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -97,4 +98,12 @@ li {
   color: var(--color-rosa);
   -webkit-text-stroke: 0.5px black;
   text-align: center;
+}
+
+.vistaCurso{
+  display: flex;
+}
+
+.vistaPagina{
+  width: 75%;
 }

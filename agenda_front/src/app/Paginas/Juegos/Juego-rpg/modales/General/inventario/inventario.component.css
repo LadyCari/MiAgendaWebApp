@@ -1,0 +1,44 @@
+/*--------------------cuerpo--------------------*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/*--------------------titulo--------------------*/
+
+.titulo h2 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+}
+
+/*--------------------items--------------------*/
+
+.vistaItems{
+    padding: 1rem 3rem 1rem 3rem;
+    display: flex;
+    align-items: center;
+}
+
+
+.item{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item img{
+    width: 3rem;
+    height: 3rem;
+    background-color: black;
+}
+
+.item p{
+    text-align: center;
+}
+
+
+

@@ -21,6 +21,7 @@ import { HomeJuegoRpgComponent } from './Paginas/Juegos/Juego-rpg/home-juego-rpg
 import { HomeParteIzquierdaComponent } from './Paginas/Juegos/Juego-rpg/shared/home-parte-izquierda/home-parte-izquierda.component';
 import { HomeParteDerechaComponent } from './Paginas/Juegos/Juego-rpg/shared/home-parte-derecha/home-parte-derecha.component';
 import { MuestraCursoComponent } from './Paginas/Estudios/muestra-curso/muestra-curso.component';
+import { OtroPersonajesComponent } from './Paginas/otro/otro-personajes/otro-personajes.component';
 
 export const routes: Routes = [
   /*general*/
@@ -68,7 +69,8 @@ export const routes: Routes = [
   /*otro*/
   {
     path: 'home-otro', component: OtroHomeComponent, children: [
-      { path: 'recetas-otro', component: OtroRecetasComponent }
+      { path: 'recetas-otro', component: OtroRecetasComponent },
+      { path: 'personajes-otro', component: OtroPersonajesComponent }
     ]
   },
 ];

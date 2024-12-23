@@ -219,6 +219,12 @@ th {
   margin: 0 1rem 0 0;
 }
 
+.imgHorarioNoche{
+  width: 12rem !important;
+left: 35rem !important;
+position: absolute;
+}
+
 /*-------------------------------------------------------*/
 
 /*-------------------------------------------------------*/

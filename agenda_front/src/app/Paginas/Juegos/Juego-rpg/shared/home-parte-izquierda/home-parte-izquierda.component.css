@@ -27,13 +27,41 @@
 #inventario {
     display: flex;
     justify-content: center;
+    margin-right: 1rem;
+    padding: 1rem;
 }
 
 #inventario img {
-    width: 100px;
+    width: 4rem;
 }
 
 button{
     background-color: rgba(250, 235, 215, 0);
     border: 0;
+}
+
+.estadisticas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+
+.estadisticas img{
+    width: 2rem;
+    height: 2rem;
+}
+
+.imgMasNum{
+display: flex;
+}
+
+.stats{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.informacion{
+    display: flex;
 }

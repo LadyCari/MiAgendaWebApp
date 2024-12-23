@@ -2,17 +2,44 @@
 
     <section id="titulo">
         <img src="../../../../../../assets/img/Juego/cartelPj.png" alt="cartel name">
-        <h3>nombrePj</h3>
+        <h3>{{pj.nombre}}</h3>
     </section>
 
-    <section id="avatar">
-        <button (click)="detallePj()"> <img src="../../../../../../assets/img/Juego/Tiendas/pj.png" alt="avatar pj">
+    <section id="avatar" (click)="abrirDatosPj()">
+        <button> <img src="../../../../../../assets/img/Juego/Tiendas/pj.png" alt="avatar pj">
         </button>
     </section>
 
+<div class="informacion">
     <section id="inventario">
         <button (click)="abrirInventario()"> <img src="../../../../../../assets/img/Juego/mochila.webp" alt="">
         </button>
     </section>
+
+    <section class="estadisticas">
+        <div>
+            <h3>stats</h3>
+        </div>
+        <div class="stats">
+            <div class="imgMasNum">
+                <img src="https://png.pngtree.com/png-clipart/20240302/original/pngtree-pixel-art-pink-heart-illustration-png-image_14481392.png"
+                    alt="">
+                <p>40</p>
+            </div>
+
+            <div class="imgMasNum">
+                <img src="https://static.vecteezy.com/system/resources/previews/027/517/710/non_2x/pixel-art-thunder-icon-png.png"
+                    alt="">
+                <p>60</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <section>
+        <button (click)="abrirPanelAdmin()">adm</button>
+    </section>
+
+
 
 </body>

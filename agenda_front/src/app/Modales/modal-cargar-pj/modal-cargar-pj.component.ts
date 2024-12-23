@@ -96,7 +96,6 @@ export class ModalCargarPjComponent implements OnInit {
     this.fileToByteArray(archivoCapturado).then((imagen: any) => {
       (this.formNuevoPersonaje.get(foto) as FormControl).setValue(imagen.base);
     })
-
   }
 
   fileToByteArray(file: File): Promise<{ base: string, type: string }> {
